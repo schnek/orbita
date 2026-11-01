@@ -1,0 +1,113 @@
+name: WoW 2008 Preview
+
+on:
+  push:
+    branches:
+      - feature/wow-2008-theme
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Prepare environment
+        run: cp .env.dist .env
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: frontend
+        env:
+          NODE_ENV: production
+          SITE_NAME: World of Warcraft
+          SITE_URL: http://127.0.0.1:3000/
+          API_URL: /api/
+          SOCKET_SECRET: preview-secret
+        run: npm run build
+
+      - name: Install Playwright
+        working-directory: frontend
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+
+      - name: Start preview server
+        working-directory: frontend
+        env:
+          NODE_ENV: production
+          NITRO_HOST: 127.0.0.1
+          NITRO_PORT: 3000
+          PORT: 3000
+          HOST: 127.0.0.1
+          SITE_NAME: World of Warcraft
+          SITE_URL: http://127.0.0.1:3000/
+          API_URL: /api/
+          SOCKET_SECRET: preview-secret
+        run: |
+          node .output/server/index.mjs > /tmp/orbita-preview.log 2>&1 &
+          echo $! > /tmp/orbita-preview.pid
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:3000/ > /dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/orbita-preview.log
+          exit 1
+
+      - name: Capture screenshots
+        working-directory: frontend
+        run: |
+          node --input-type=module <<'NODE'
+          import { chromium } from 'playwright'
+
+          const browser = await chromium.launch({ headless: true })
+          const page = await browser.newPage({
+            viewport: { width: 1440, height: 1000 },
+            deviceScaleFactor: 1
+          })
+
+          page.on('pageerror', error => console.error('PAGE ERROR:', error.message))
+          await page.goto('http://127.0.0.1:3000/', {
+            waitUntil: 'networkidle',
+            timeout: 60000
+          })
+          await page.screenshot({ path: 'wow2008-home-desktop.png', fullPage: true })
+          await page.setViewportSize({ width: 390, height: 844 })
+          await page.screenshot({ path: 'wow2008-home-mobile.png', fullPage: true })
+          await browser.close()
+          NODE
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wow2008-homepage-preview
+          path: |
+            frontend/wow2008-home-desktop.png
+            frontend/wow2008-home-mobile.png
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Show preview server log on failure
+        if: failure()
+        run: cat /tmp/orbita-preview.log || true
