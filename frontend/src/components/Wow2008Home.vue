@@ -22,17 +22,13 @@
     <div class="wow2008-frame">
       <header class="wow2008-header">
         <a class="wow2008-logo" href="/" aria-label="World of Warcraft home">
-          <span class="wow2008-logo__world">WORLD</span>
-          <span class="wow2008-logo__warcraft">WARCRAFT</span>
-          <span class="wow2008-logo__expansion">BURNING CRUSADE</span>
+          <img src="/wow2008/images/wowlogo2.gif" alt="World of Warcraft">
         </a>
       </header>
 
       <div class="wow2008-layout">
         <aside class="wow2008-left" aria-label="Main navigation">
-          <div class="wow2008-character-art" aria-hidden="true">
-            <span>Burning Crusade artwork</span>
-          </div>
+          <div class="wow2008-character-art" aria-hidden="true"></div>
           <nav class="wow2008-nav">
             <section v-for="group in navigation" :key="group.title" class="wow2008-nav__group">
               <h2><span class="wow2008-nav__crest"></span>{{ group.title }}</h2>
@@ -56,9 +52,9 @@
               <div class="wow2008-archive"><a href="#">View News Archives</a></div>
 
               <div class="wow2008-promo-grid">
-                <a class="wow2008-promo wow2008-promo--contest" href="#"><strong>Contests</strong><span>Comic Contest!</span><b>More</b></a>
-                <a class="wow2008-promo wow2008-promo--fanart" href="#"><strong>Fan Art</strong><span>Community creations</span><b>More</b></a>
-                <a class="wow2008-promo wow2008-promo--wallpaper" href="#"><strong>Wallpapers</strong><span>Download artwork</span><b>More</b></a>
+                <a class="wow2008-promo wow2008-promo--contest" href="#"><strong>Contests</strong><b>More</b></a>
+                <a class="wow2008-promo wow2008-promo--fanart" href="#"><strong>Fan Art</strong><b>More</b></a>
+                <a class="wow2008-promo wow2008-promo--wallpaper" href="#"><strong>Wallpapers</strong><b>More</b></a>
               </div>
 
               <section class="wow2008-community">
@@ -107,11 +103,11 @@
               </section>
               <section class="wow2008-screenshot">
                 <h2>Screenshot of the Day</h2>
-                <div class="wow2008-screenshot__image">Screenshot gallery</div>
+                <div class="wow2008-screenshot__image" role="img" aria-label="Screenshot of the day"></div>
               </section>
             </aside>
           </div>
-          <footer class="wow2008-footer"><span>BLIZZARD</span><small>ENTERTAINMENT</small></footer>
+          <footer class="wow2008-footer"><img src="/wow2008/images/bottom-blizzlogo.gif" alt="Blizzard Entertainment"></footer>
         </main>
       </div>
     </div>
@@ -139,17 +135,17 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-search{display:flex;gap:4px;align-items:center}
 .wow2008-search input{width:150px;background:#080b10;border:2px inset #777;color:#fff;height:22px}
 .wow2008-search select,.wow2008-search button{height:22px;background:#17120c;color:#f5c400;border:1px solid #8d6d32;font-size:10px}
-.wow2008-frame{width:930px;min-height:calc(100vh - 43px);margin:0 auto;position:relative;background:#17130f url('/wow2008/images/page-bg.gif') repeat;border-left:5px ridge #6f654d;border-right:5px ridge #6f654d;box-shadow:0 0 20px #000}
-.wow2008-header{height:78px;position:relative;background:linear-gradient(180deg,#0a0b0c 0%,#151719 60%,#51432b 62%,#090909 100%);border-bottom:5px ridge #766443}
-.wow2008-logo{position:absolute;z-index:2;top:0;left:-24px;width:190px;height:104px;text-align:center;text-decoration:none!important;color:#f5d45c;text-shadow:2px 3px 2px #000;transform:rotate(-2deg);background:radial-gradient(ellipse,#a88a36 0%,#26445b 42%,#10151b 70%,transparent 72%);border-radius:50%}
+.wow2008-frame{width:930px;min-height:calc(100vh - 43px);margin:0 auto;position:relative;background:#17130f url('/wow2008/images/page-bg.jpg') repeat;border-left:5px ridge #6f654d;border-right:5px ridge #6f654d;box-shadow:0 0 20px #000}
+.wow2008-header{height:78px;position:relative;background:#080b10 url('/wow2008/images/page-bg-alt3_1.jpg') center top/cover no-repeat;border-bottom:5px ridge #766443}
+.wow2008-logo{position:absolute;z-index:2;top:0;left:-24px;width:190px;height:104px;text-align:center;text-decoration:none!important;color:#f5d45c;text-shadow:2px 3px 2px #000;transform:rotate(-2deg);background:transparent}
 .wow2008-logo__world,.wow2008-logo__warcraft,.wow2008-logo__expansion{display:block;font-family:Georgia,serif;font-weight:bold;line-height:.9}
 .wow2008-logo__world{font-size:21px;letter-spacing:4px;margin-top:15px}
 .wow2008-logo__warcraft{font-size:30px;color:#e7bd4b;-webkit-text-stroke:1px #211509}
 .wow2008-logo__expansion{font-size:10px;color:#f4d66b;margin-top:5px}
 .wow2008-layout{display:grid;grid-template-columns:155px 1fr;gap:8px;min-height:900px;padding:0 8px 0 0;background:linear-gradient(90deg,#080908 0 155px,#5b492a 155px,#e5d1a5 160px,#e7d4aa 100%)}
-.wow2008-left{position:relative;min-height:900px;padding-top:0;background:linear-gradient(90deg,#070908,#151711 78%,#4b3c27);border-right:3px ridge #8a754d}
-.wow2008-character-art{height:340px;margin-top:0;background:radial-gradient(ellipse at 50% 30%,#5a8b82 0,#263e39 20%,#101713 48%,transparent 70%);position:relative}
-.wow2008-character-art span{position:absolute;bottom:8px;left:5px;right:5px;text-align:center;color:#817b60;font-size:9px;text-shadow:1px 1px #000}
+.wow2008-left{position:relative;min-height:900px;padding-top:0;background:#080a0b url('/wow2008/images/orc-nav-bg.jpg') center top/cover repeat-y;border-right:3px ridge #8a754d}
+.wow2008-character-art{height:340px;margin-top:0;background:#080b0d url('/wow2008/images/orc-center.jpg') center top/cover no-repeat;position:relative}
+
 .wow2008-nav{position:relative;z-index:1;margin-top:-10px}
 .wow2008-nav__group{margin:0 0 6px;border:2px ridge #827044;background:linear-gradient(90deg,#050607,#10151b);box-shadow:0 1px 4px #000}
 .wow2008-nav__group h2,.wow2008-community h2,.wow2008-quicklinks h2,.wow2008-screenshot h2{margin:0;padding:4px 6px;color:#e9bd31;font: bold 14px Georgia,serif;text-shadow:1px 1px #000;background:linear-gradient(90deg,#071322,#17283a 75%,#07090d);border-bottom:1px solid #9d844a}
@@ -159,7 +155,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-nav a{color:#e3bd00;text-decoration:none;font-weight:bold;font-size:11px;text-shadow:1px 1px #000}
 .wow2008-nav a:before{content:'· ';color:#d5a900}
 .wow2008-center{min-width:0;position:relative;padding:14px 8px 0 4px;background:linear-gradient(90deg,#6b552f 0,#e9d6aa 8px,#e8d4a8 98%,#70572e 100%)}
-.wow2008-news-area{display:grid;grid-template-columns:minmax(0,1fr) 208px;gap:9px;min-height:850px;padding:0 0 20px;background:#e8d5aa url('/wow2008/images/background/parchment.jpg') center top/cover repeat-y;border:1px solid #9e824d;box-shadow:inset 0 0 12px #b49a69}
+.wow2008-news-area{display:grid;grid-template-columns:minmax(0,1fr) 208px;gap:9px;min-height:850px;padding:0 0 20px;background:#e8d5aa url('/wow2008/images/page-bg-alt4.jpg') center top/cover repeat-y;border:1px solid #9e824d;box-shadow:inset 0 0 12px #b49a69}
 .wow2008-news-column{padding:215px 0 0 10px;min-width:0}
 .wow2008-news-heading{display:none}
 .wow2008-news-column :deep(.topics){padding:0 4px}
@@ -170,12 +166,12 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-archive{text-align:center;padding:9px;border-top:1px solid #b99b62}
 .wow2008-archive a{font-size:10px;text-transform:uppercase;background:#eee0bc;padding:2px 12px}
 .wow2008-promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
-.wow2008-promo,.wow2008-banner{height:100px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:5px;color:#f2cf4b!important;text-decoration:none!important;border:3px ridge #9a7840;background:linear-gradient(135deg,#152c42,#05080c 55%,#4a2918);box-shadow:0 2px 4px #604d2b}
+.wow2008-promo,.wow2008-banner{height:100px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:5px;color:#f2cf4b!important;text-decoration:none!important;border:3px ridge #9a7840;background-color:#10151b;box-shadow:0 2px 4px #604d2b}
 .wow2008-promo strong,.wow2008-banner strong{font: bold 13px Georgia,serif;text-shadow:1px 1px #000}
 .wow2008-promo span{align-self:center;color:#fff;font-weight:bold;text-shadow:1px 1px #000}
 .wow2008-promo b,.wow2008-banner b{align-self:flex-end;background:#6e1308;padding:2px 12px;font-size:9px;text-transform:uppercase}
-.wow2008-promo--fanart{background:linear-gradient(135deg,#423b60,#121522 60%,#8d5b27)}
-.wow2008-promo--wallpaper{background:linear-gradient(135deg,#642b13,#170d0a 60%,#d04d12)}
+.wow2008-promo--contest{background:url('/wow2008/images/visual-smallTeaser-contests.gif') center/cover no-repeat}
+.wow2008-promo--fanart{background:url('/wow2008/images/visual-smallTeaser-fanarts.gif') center/cover no-repeat}.wow2008-promo--wallpaper{background:url('/wow2008/images/visual-smallTeaser-wallp.gif') center/cover no-repeat}
 .wow2008-community{margin:10px 0;border:3px ridge #927646;background:#e7d5ad;box-shadow:0 2px 4px #79633e}
 .wow2008-community h2{font-size:15px}
 .wow2008-community__title{padding:6px 9px;background:#071a30;color:#f2cb45;font-weight:bold}
@@ -186,8 +182,8 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-community__actions a{background:#4c1009;border:2px ridge #ad873e;color:#ffd33c;padding:4px 12px;text-decoration:none}
 .wow2008-banner-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 18px}
 .wow2008-banner{height:70px}
-.wow2008-banner--help{background:linear-gradient(120deg,#16491c,#061009 70%)}
-.wow2008-banner--jobs{background:linear-gradient(120deg,#174c8b,#091326 70%)}
+.wow2008-banner--help{background:url('/wow2008/images/needhelp-bg.jpg') center/cover no-repeat}
+.wow2008-banner--jobs{background:url('/wow2008/images/jobs-bg.jpg') center/cover no-repeat}
 .wow2008-link-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 16px;padding:0 5px 20px}
 .wow2008-link-group{min-height:75px;border-top:2px solid #8b7549}
 .wow2008-link-group h3{margin:-10px 0 7px;padding:0 5px;display:table;background:#e8d5aa;color:#173d63;font:bold 12px Georgia,serif}
@@ -195,7 +191,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-link-group li{line-height:14px}
 .wow2008-link-group p{margin:0 0 4px;font-size:11px}
 .wow2008-right{padding:135px 5px 0 0}
-.wow2008-expansion-banner{height:88px;display:flex;align-items:flex-end;justify-content:center;padding:5px;color:#f2d36c!important;font:bold 12px Georgia,serif;text-decoration:none!important;text-shadow:1px 1px #000;border:4px ridge #887044;background:linear-gradient(135deg,#081b32,#356184 45%,#07111d);box-shadow:0 2px 4px #65502e}
+.wow2008-expansion-banner{height:88px;display:flex;align-items:flex-end;justify-content:center;padding:5px;color:#f2d36c!important;font:bold 12px Georgia,serif;text-decoration:none!important;text-shadow:1px 1px #000;border:4px ridge #887044;background:#081b32 url('/wow2008/images/page-bg-alt3_2.jpg') center/cover no-repeat;box-shadow:0 2px 4px #65502e}
 .wow2008-quicklinks{margin:10px 0 14px;border:4px ridge #9a7845;background:#e7d2a4;box-shadow:0 2px 5px #5b4829}
 .wow2008-quicklinks h2,.wow2008-screenshot h2{font-size:13px}
 .wow2008-quicklinks ul{list-style:none;margin:0;padding:6px 10px}
@@ -203,9 +199,8 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-quicklinks a{font-size:11px;font-weight:bold}
 .wow2008-quicklinks a:before{content:'✦';display:inline-block;width:20px;color:#174c79}
 .wow2008-screenshot{border:3px ridge #987b48;background:#07090a;padding:2px}
-.wow2008-screenshot__image{height:145px;display:grid;place-items:center;color:#81785e;font-size:10px;background:#030405}
-.wow2008-footer{height:45px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:80px;margin:0 auto;background:#08090a;border:3px ridge #a48a4d;color:#d5ad39;font:bold 17px Georgia,serif;text-shadow:1px 1px #000}
-.wow2008-footer small{font:6px Arial,sans-serif;letter-spacing:2px}
+.wow2008-screenshot__image{height:145px;background:#030405 url('/wow2008/images/visual-infoBox-ssotd.gif') center/cover no-repeat}
+.wow2008-footer{height:55px;display:flex;align-items:center;justify-content:center;margin:0 auto;background:#08090a url('/wow2008/images/bottom-bg.gif') center/cover no-repeat}.wow2008-footer img{max-width:120px;height:auto;object-fit:contain}
 .wow2008-bottom-bar{height:18px;background:linear-gradient(#292b2d,#090a0b 45%,#62543b 48%,#111);border-top:4px ridge #756548}
 @media(max-width:950px){.wow2008-frame{width:100%;}.wow2008-topbar__inner{padding:0 10px}.wow2008-layout{grid-template-columns:145px minmax(0,1fr)}.wow2008-news-area{grid-template-columns:minmax(0,1fr) 185px}}
 @media(max-width:700px){.wow2008-topbar nav{display:none}.wow2008-search{margin-left:auto}.wow2008-frame{border:0}.wow2008-layout{display:block;padding:0}.wow2008-left{min-height:0;padding:100px 8px 8px;border:0}.wow2008-character-art{display:none}.wow2008-nav{display:grid;grid-template-columns:1fr 1fr;gap:5px}.wow2008-nav__group{margin:0}.wow2008-center{padding:8px}.wow2008-news-area{display:block}.wow2008-news-column{padding:8px}.wow2008-right{padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.wow2008-screenshot{display:none}.wow2008-expansion-banner{height:70px}.wow2008-promo-grid{gap:4px}.wow2008-promo{height:75px;padding:3px}.wow2008-promo strong{font-size:11px}.wow2008-link-grid{gap:15px 8px}}
