@@ -143,8 +143,8 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-logo__warcraft{font-size:30px;color:#e7bd4b;-webkit-text-stroke:1px #211509}
 .wow2008-logo__expansion{font-size:10px;color:#f4d66b;margin-top:5px}
 .wow2008-layout{display:grid;grid-template-columns:155px 1fr;gap:8px;min-height:900px;padding:0 8px 0 0;background:linear-gradient(90deg,#080908 0 155px,#5b492a 155px,#e5d1a5 160px,#e7d4aa 100%)}
-.wow2008-left{position:relative;min-height:900px;padding-top:0;background:#080a0b url('/wow2008/images/orc-nav-bg.jpg') center top/cover repeat-y;border-right:3px ridge #8a754d}
-.wow2008-character-art{height:340px;margin-top:0;background:#080b0d url('/wow2008/images/orc-center.jpg') center top/cover no-repeat;position:relative}
+.wow2008-left{position:relative;min-height:900px;padding-top:0;background:#080a0b url('/wow2008/images/orc-nav-bg.jpg') center top repeat-y;border-right:3px ridge #8a754d}
+.wow2008-character-art{height:340px;margin-top:0;background:#080b0d url('/wow2008/images/orc-center.jpg') center top no-repeat;position:relative}
 
 .wow2008-nav{position:relative;z-index:1;margin-top:-10px}
 .wow2008-nav__group{margin:0 0 6px;border:2px ridge #827044;background:linear-gradient(90deg,#050607,#10151b);box-shadow:0 1px 4px #000}
@@ -200,7 +200,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-quicklinks a:before{content:'✦';display:inline-block;width:20px;color:#174c79}
 .wow2008-screenshot{border:3px ridge #987b48;background:#07090a;padding:2px}
 .wow2008-screenshot__image{height:145px;background:#030405 url('/wow2008/images/visual-infoBox-ssotd.gif') center/cover no-repeat}
-.wow2008-footer{height:55px;display:flex;align-items:center;justify-content:center;margin:0 auto;background:#08090a url('/wow2008/images/bottom-bg.gif') center/cover no-repeat}.wow2008-footer img{max-width:120px;height:auto;object-fit:contain}
+.wow2008-footer{height:55px;display:flex;align-items:center;justify-content:center;margin:0 auto;background:#08090a url('/wow2008/images/bottom-bg.gif') center top repeat-x}.wow2008-footer img{width:auto;max-width:none;height:auto;max-height:100%;object-fit:contain}
 .wow2008-bottom-bar{height:18px;background:linear-gradient(#292b2d,#090a0b 45%,#62543b 48%,#111);border-top:4px ridge #756548}
 @media(max-width:950px){.wow2008-frame{width:100%;}.wow2008-topbar__inner{padding:0 10px}.wow2008-layout{grid-template-columns:145px minmax(0,1fr)}.wow2008-news-area{grid-template-columns:minmax(0,1fr) 185px}}
 @media(max-width:700px){.wow2008-topbar nav{display:none}.wow2008-search{margin-left:auto}.wow2008-frame{border:0}.wow2008-layout{display:block;padding:0}.wow2008-left{min-height:0;padding:100px 8px 8px;border:0}.wow2008-character-art{display:none}.wow2008-nav{display:grid;grid-template-columns:1fr 1fr;gap:5px}.wow2008-nav__group{margin:0}.wow2008-center{padding:8px}.wow2008-news-area{display:block}.wow2008-news-column{padding:8px}.wow2008-right{padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.wow2008-screenshot{display:none}.wow2008-expansion-banner{height:70px}.wow2008-promo-grid{gap:4px}.wow2008-promo{height:75px;padding:3px}.wow2008-promo strong{font-size:11px}.wow2008-link-grid{gap:15px 8px}}
