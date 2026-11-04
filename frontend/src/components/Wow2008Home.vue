@@ -32,7 +32,7 @@
     <div class="wow2008-stage">
       <header class="wow2008-header">
         <a class="wow2008-logo" href="/" aria-label="World of Warcraft home">
-          <img src="/wow2008/images/templates/The_Burning_Crusade/wowlogo-front.gif" alt="World of Warcraft The Burning Crusade">
+          <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/wowlogo-front.gif" alt="World of Warcraft The Burning Crusade">
         </a>
       </header>
 
@@ -116,7 +116,7 @@
                         <div class="wow2008-cnt-main">
                           <div class="wow2008-news-column">
                             <div class="wow2008-flash-container">
-                              <img class="wow2008-flash-placeholder" src="/wow2008/images/no-flash.jpg" alt="Welcome to World of Warcraft.com">
+                              <img class="wow2008-flash-placeholder" src="/ascemu_tbc/images/no-flash.jpg" alt="Welcome to World of Warcraft.com">
                             </div>
                             <div class="wow2008-news-heading">Latest News</div>
                             <slot>
@@ -132,7 +132,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--contest"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--contest"><span>Contests</span></h3>
-                                  <img src="/wow2008/images/featured/contest.jpg" alt="World of Warcraft screenshot contest">
+                                  <img src="/ascemu_tbc/images/featured/contest.jpg" alt="World of Warcraft screenshot contest">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -140,7 +140,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--fanart"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--fanart"><span>Fan Art</span></h3>
-                                  <img src="/wow2008/images/featured/fanart.jpg" alt="World of Warcraft fan art">
+                                  <img src="/ascemu_tbc/images/featured/fanart.jpg" alt="World of Warcraft fan art">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -148,7 +148,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--wallpaper"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--wallpaper"><span>Wallpapers</span></h3>
-                                  <img src="/wow2008/images/featured/wallpaper.jpg" alt="World of Warcraft wallpaper">
+                                  <img src="/ascemu_tbc/images/featured/wallpaper.jpg" alt="World of Warcraft wallpaper">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -230,9 +230,9 @@
 
                 <aside class="wow2008-right">
                   <section class="wow2008-bc-upgrade">
-                    <h2><img src="/wow2008/images/templates/The_Burning_Crusade/header-expansion.jpg" alt="The Burning Crusade"></h2>
+                    <h2><img src="/ascemu_tbc/images/templates/The_Burning_Crusade/header-expansion.jpg" alt="The Burning Crusade"></h2>
                     <div class="wow2008-bc-upgrade__content">
-                      <img src="/wow2008/images/image-retailbox.gif" alt="World of Warcraft The Burning Crusade">
+                      <img src="/ascemu_tbc/images/image-retailbox.gif" alt="World of Warcraft The Burning Crusade">
                       <div>
                         <strong>Digital Upgrade</strong>
                         <span>Burning Crusade</span>
@@ -275,12 +275,12 @@
                     </div>
                     <div class="wow2008-newcomers-body">
                       <div class="wow2008-newcomers-entry">
-                        <img src="/wow2008/images/bg-newcomers.jpg" alt="">
+                        <img src="/ascemu_tbc/images/bg-newcomers.jpg" alt="">
                         <strong>Looking to purchase World of Warcraft?</strong>
                         <span>Follow the links below to learn more.</span>
                       </div>
                       <div class="wow2008-newcomers-entry">
-                        <img src="/wow2008/images/bg-discover.jpg" alt="">
+                        <img src="/ascemu_tbc/images/bg-discover.jpg" alt="">
                         <strong>Lost in Azeroth?</strong>
                         <span>Find your way with our Beginner's Guide.</span>
                       </div>
@@ -297,13 +297,13 @@
         <footer class="wow2008-main-bottom">
           <div><div>
             <div class="wow2008-blizz-logo">
-              <img src="/wow2008/images/new/bot-blizzlogo.gif" alt="Blizzard Entertainment">
+              <img src="/ascemu_tbc/images/new/bot-blizzlogo.gif" alt="Blizzard Entertainment">
             </div>
           </div></div>
         </footer>
       </main>
 
-      <img class="wow2008-statue-left" src="/wow2008/images/templates/The_Burning_Crusade/statue-left.jpg" alt="">
+      <img class="wow2008-statue-left" src="/ascemu_tbc/images/templates/The_Burning_Crusade/statue-left.jpg" alt="">
     </div>
 
     <div class="wow2008-iron-frame"></div>
@@ -313,7 +313,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const menuAssets = '/wow2008/images/menu/leftMenu/'
+const menuAssets = '/ascemu_tbc/images/menu/leftMenu/'
 const navigation = [
   {
     key: 'news',
@@ -400,7 +400,7 @@ const quickLinks = [
   overflow: hidden;
   color: #17120a;
   font: 12px Arial, Helvetica, sans-serif;
-  background: #000 url('/wow2008/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x center top;
+  background: #000 url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x center top;
 }
 .wow2008-page-bg-top {
   position: absolute;
@@ -410,8 +410,8 @@ const quickLinks = [
   right: 0;
   height: 180px;
   background:
-    url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top2.jpg') no-repeat center top,
-    url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top;
+    url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top2.jpg') no-repeat center top,
+    url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top;
   pointer-events: none;
 }
 .wow2008 a {
@@ -422,7 +422,7 @@ const quickLinks = [
   height: 32px;
   position: relative;
   z-index: 20;
-  background: #072540 url('/wow2008/images/templates/The_Burning_Crusade/bg.gif') 50% 0 repeat-x;
+  background: #072540 url('/ascemu_tbc/images/templates/The_Burning_Crusade/bg.gif') 50% 0 repeat-x;
   border-bottom: 1px solid #143352;
 }
 .wow2008-topbar__inner {
@@ -435,7 +435,7 @@ const quickLinks = [
   justify-content: space-between;
   padding: 0 17px;
   box-sizing: border-box;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
 }
 .wow2008-topbar nav {
   display: flex;
@@ -466,14 +466,14 @@ const quickLinks = [
 .wow2008-search__left {
   width: 16px;
   height: 34px;
-  background: url('/wow2008/images/layout/search/search-left.gif') no-repeat;
+  background: url('/ascemu_tbc/images/layout/search/search-left.gif') no-repeat;
 }
 .wow2008-search__body {
   width: 396px;
   height: 34px;
   display: flex;
   align-items: center;
-  background: url('/wow2008/images/layout/search/search-bg.gif') repeat-x;
+  background: url('/ascemu_tbc/images/layout/search/search-bg.gif') repeat-x;
 }
 .wow2008-search input {
   width: 230px;
@@ -507,7 +507,7 @@ const quickLinks = [
 .wow2008-search__right {
   width: 8px;
   height: 34px;
-  background: url('/wow2008/images/layout/search/search-right.gif') no-repeat;
+  background: url('/ascemu_tbc/images/layout/search/search-right.gif') no-repeat;
 }
 .wow2008-stage {
   width: 1175px;
@@ -520,7 +520,7 @@ const quickLinks = [
   display: grid;
   grid-template-columns: 157px 1018px;
   align-items: stretch;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
 }
 .wow2008-header {
   position: absolute;
@@ -547,7 +547,7 @@ const quickLinks = [
   position: relative;
   margin: 0;
   padding: 0;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x 0 0;
   box-sizing: border-box;
 }
 .wow2008-ne-top-left {
@@ -556,7 +556,7 @@ const quickLinks = [
   left: -314px;
   width: 264px;
   height: 346px;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-top-left.jpg') no-repeat;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-top-left.jpg') no-repeat;
   pointer-events: none;
 }
 .wow2008-ne-center {
@@ -565,7 +565,7 @@ const quickLinks = [
   left: -50px;
   width: 64px;
   height: 578px;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-center.jpg') no-repeat;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-center.jpg') no-repeat;
   pointer-events: none;
 }
 .wow2008-ne-bottom-left {
@@ -574,7 +574,7 @@ const quickLinks = [
   left: -176px;
   width: 144px;
   height: 126px;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-bottom-left.jpg') no-repeat;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-bottom-left.jpg') no-repeat;
   pointer-events: none;
 }
 .wow2008-ne-nav-bg {
@@ -583,7 +583,7 @@ const quickLinks = [
   left: 11px;
   width: 146px;
   height: 546px;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-nav-bg.jpg') no-repeat;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-nav-bg.jpg') no-repeat;
   pointer-events: none;
 }
 .wow2008-nav {
@@ -613,10 +613,10 @@ const quickLinks = [
   background-position: 1px 0;
 }
 .wow2008-nav-button.menu-button-on {
-  background-image: url('/wow2008/images/menu/leftMenu/leftMenu-button-on.gif');
+  background-image: url('/ascemu_tbc/images/menu/leftMenu/leftMenu-button-on.gif');
 }
 .wow2008-nav-button.menu-button-off {
-  background-image: url('/wow2008/images/menu/leftMenu/leftMenu-button-off.gif');
+  background-image: url('/ascemu_tbc/images/menu/leftMenu/leftMenu-button-off.gif');
 }
 .wow2008-nav-icon {
   width: 24px;
@@ -651,10 +651,10 @@ const quickLinks = [
   background-position: 0 0;
 }
 .wow2008-nav-collapse.is-open {
-  background-image: url('/wow2008/images/leftmenu-minus.gif');
+  background-image: url('/ascemu_tbc/images/leftmenu-minus.gif');
 }
 .wow2008-nav-collapse.is-closed {
-  background-image: url('/wow2008/images/leftmenu-plus.gif');
+  background-image: url('/ascemu_tbc/images/leftmenu-plus.gif');
 }
 .wow2008-nav-right-border {
   width: 9px;
@@ -663,7 +663,7 @@ const quickLinks = [
   right: 5px;
   top: -4px;
   display: block;
-  background: url('/wow2008/images/menu-add.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/menu-add.gif') no-repeat 0 0;
 }
 .wow2008-nav-inner {
   width: 145px;
@@ -675,17 +675,17 @@ const quickLinks = [
 .leftMenu-cont-top {
   width: 145px;
   height: 6px;
-  background: url('/wow2008/images/leftMenu-cont-top.png') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/leftMenu-cont-top.png') no-repeat 0 0;
 }
 .leftMenu-cont-mid {
   width: 145px;
-  background: url('/wow2008/images/menu/mainmenu/leftMenu-back.png') repeat 0 0;
+  background: url('/ascemu_tbc/images/menu/mainmenu/leftMenu-back.png') repeat 0 0;
 }
 .leftMenu-cont-mid .m-left {
-  background: url('/wow2008/images/leftMenu-cont-mid-left.jpg') repeat-y top left;
+  background: url('/ascemu_tbc/images/leftMenu-cont-mid-left.jpg') repeat-y top left;
 }
 .leftMenu-cont-mid .m-left .m-right {
-  background: url('/wow2008/images/leftMenu-cont-mid-right.jpg') repeat-y top right;
+  background: url('/ascemu_tbc/images/leftMenu-cont-mid-right.jpg') repeat-y top right;
 }
 .leftMenu-cnt {
   padding-left: 5px;
@@ -693,7 +693,7 @@ const quickLinks = [
 .leftMenu-cont-bot {
   width: 145px;
   height: 8px;
-  background: url('/wow2008/images/leftMenu-cont-bot.png') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/leftMenu-cont-bot.png') no-repeat 0 0;
 }
 .mainNav {
   list-style: none;
@@ -712,7 +712,7 @@ const quickLinks = [
   margin: 0;
   padding: 0 0 0 10px;
   box-sizing: border-box;
-  background: url('/wow2008/images/menu/mainmenu/bullet-trans-bg.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/menu/mainmenu/bullet-trans-bg.gif') no-repeat 0 0;
   font: bold 11px/15px Arial, Helvetica, sans-serif;
 }
 .wow2008-menu-entry a,
@@ -744,23 +744,23 @@ const quickLinks = [
   position: relative;
   top: 0;
   z-index: 2;
-  background: url('/wow2008/images/layout/frame_top-bg.jpg') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/layout/frame_top-bg.jpg') repeat-x 0 0;
 }
 .wow2008-main-top > div {
   height: 25px;
-  background: url('/wow2008/images/layout/frame_top-left.jpg') no-repeat top left;
+  background: url('/ascemu_tbc/images/layout/frame_top-left.jpg') no-repeat top left;
 }
 .wow2008-main-top > div > div {
   height: 25px;
-  background: url('/wow2008/images/layout/frame_top-right.jpg') no-repeat top right;
+  background: url('/ascemu_tbc/images/layout/frame_top-right.jpg') no-repeat top right;
 }
 .wow2008-main-content-wrapper {
   min-height: 820px;
-  background: url('/wow2008/images/layout/frame_left-bg.jpg') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/layout/frame_left-bg.jpg') repeat-y 0 0;
 }
 .wow2008-main-content {
   min-height: 820px;
-  background: url('/wow2008/images/layout/frame_right-bg.jpg') repeat-y top right;
+  background: url('/ascemu_tbc/images/layout/frame_right-bg.jpg') repeat-y top right;
 }
 .wow2008-content-padding {
   min-height: 820px;
@@ -783,43 +783,43 @@ const quickLinks = [
 }
 .wow2008-cnt-paper {
   width: 735px;
-  background: url('/wow2008/images/layout/light.jpg') repeat 0 0;
+  background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 .wow2008-cnt-top {
   height: 13px;
-  background: url('/wow2008/images/layout/cnt-paper-top.jpg') repeat-x top left;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-top.jpg') repeat-x top left;
 }
 .wow2008-cnt-top > div {
   height: 13px;
-  background: url('/wow2008/images/layout/cnt-paper-topleft.jpg') no-repeat top left;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-topleft.jpg') no-repeat top left;
 }
 .wow2008-cnt-top > div > div {
   height: 13px;
-  background: url('/wow2008/images/layout/cnt-paper-topright.jpg') no-repeat top right;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-topright.jpg') no-repeat top right;
 }
 .wow2008-content-left {
-  background: url('/wow2008/images/layout/cnt-paper-left.jpg') repeat-y top left;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-left.jpg') repeat-y top left;
 }
 .wow2008-content-right {
   min-height: 600px;
-  background: url('/wow2008/images/layout/cnt-paper-right.jpg') repeat-y top right;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-right.jpg') repeat-y top right;
 }
 .wow2008-cnt-main {
   min-height: 600px;
   padding: 0 12px 10px;
-  background: url('/wow2008/images/layout/light.jpg') repeat 0 0;
+  background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 .wow2008-cnt-bot {
   height: 7px;
-  background: url('/wow2008/images/layout/cnt-paper-bot.jpg') repeat-x bottom left;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-bot.jpg') repeat-x bottom left;
 }
 .wow2008-cnt-bot > div {
   height: 7px;
-  background: url('/wow2008/images/layout/cnt-paper-botleft.jpg') no-repeat 0 100%;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-botleft.jpg') no-repeat 0 100%;
 }
 .wow2008-cnt-bot > div > div {
   height: 7px;
-  background: url('/wow2008/images/layout/cnt-paper-botright.jpg') no-repeat bottom right;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-botright.jpg') no-repeat bottom right;
 }
 .wow2008-news-area {
   display: grid;
@@ -899,7 +899,7 @@ const quickLinks = [
   padding: 0;
   color: #f2cf4b;
   text-decoration: none;
-  background: url('/wow2008/images/smallTeaser-bg.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/smallTeaser-bg.gif') no-repeat 0 0;
 }
 .wow2008-promo-frame {
   width: 150px;
@@ -923,15 +923,15 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 .wow2008-promo-icon--contest {
-  background-image: url('/wow2008/images/visual-smallTeaser-contests.gif');
+  background-image: url('/ascemu_tbc/images/visual-smallTeaser-contests.gif');
 }
 .wow2008-promo-icon--fanart {
-  background-image: url('/wow2008/images/visual-smallTeaser-fanarts.gif');
+  background-image: url('/ascemu_tbc/images/visual-smallTeaser-fanarts.gif');
 }
 .wow2008-promo-icon--wallpaper {
   top: -12px;
   height: 43px;
-  background-image: url('/wow2008/images/visual-smallTeaser-wallp.gif');
+  background-image: url('/ascemu_tbc/images/visual-smallTeaser-wallp.gif');
 }
 .wow2008-promo-title {
   height: 20px;
@@ -949,13 +949,13 @@ const quickLinks = [
   display: none;
 }
 .wow2008-promo-title--contest {
-  background-image: url('/wow2008/images/header-contest.gif');
+  background-image: url('/ascemu_tbc/images/header-contest.gif');
 }
 .wow2008-promo-title--fanart {
-  background-image: url('/wow2008/images/header-fanarts.gif');
+  background-image: url('/ascemu_tbc/images/header-fanarts.gif');
 }
 .wow2008-promo-title--wallpaper {
-  background-image: url('/wow2008/images/header-wallpapers.gif');
+  background-image: url('/ascemu_tbc/images/header-wallpapers.gif');
 }
 .wow2008-read-more {
   width: 75px;
@@ -965,19 +965,19 @@ const quickLinks = [
   right: 6px;
   bottom: 8px;
   display: block;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat;
 }
 .wow2008-community {
   width: 470px;
   min-height: 180px;
   margin: 10px 0 12px;
   position: relative;
-  background: url('/wow2008/images/phatLootBox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
 }
 .wow2008-community-top {
   height: 27px;
   margin: 0 4px;
-  background: url('/wow2008/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
 }
 .wow2008-community-top h2 {
   margin: 0;
@@ -989,7 +989,7 @@ const quickLinks = [
   min-height: 125px;
   padding: 10px 14px 18px;
   color: #17120a;
-  background: url('/wow2008/images/community-bg.jpg') repeat-y;
+  background: url('/ascemu_tbc/images/community-bg.jpg') repeat-y;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community__note {
@@ -1011,7 +1011,7 @@ const quickLinks = [
 }
 .wow2008-community-bottom {
   height: 20px;
-  background: url('/wow2008/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
+  background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
 }
 .wow2008-banner-row {
   display: grid;
@@ -1024,15 +1024,15 @@ const quickLinks = [
   height: 91px;
   position: relative;
   display: block;
-  background: url('/wow2008/images/2column-smallTeaser-bg.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/2column-smallTeaser-bg.gif') no-repeat 0 0;
 }
 .wow2008-banner--help {
-  background-image: url('/wow2008/images/2column-smallTeaser-bg.gif'), url('/wow2008/images/needhelp-bg.jpg');
+  background-image: url('/ascemu_tbc/images/2column-smallTeaser-bg.gif'), url('/ascemu_tbc/images/needhelp-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 8px 23px;
 }
 .wow2008-banner--jobs {
-  background-image: url('/wow2008/images/2column-smallTeaser-bg.gif'), url('/wow2008/images/jobs-bg.jpg');
+  background-image: url('/ascemu_tbc/images/2column-smallTeaser-bg.gif'), url('/ascemu_tbc/images/jobs-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 8px 23px;
 }
@@ -1046,10 +1046,10 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 .wow2008-banner-icon--help {
-  background-image: url('/wow2008/images/visual-smallTeaser-needhelp.gif');
+  background-image: url('/ascemu_tbc/images/visual-smallTeaser-needhelp.gif');
 }
 .wow2008-banner-icon--jobs {
-  background-image: url('/wow2008/images/visual-smallTeaser-jobs.gif');
+  background-image: url('/ascemu_tbc/images/visual-smallTeaser-jobs.gif');
 }
 .wow2008-banner-label {
   height: 20px;
@@ -1060,10 +1060,10 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 .wow2008-banner-label--help {
-  background-image: url('/wow2008/images/header-needhelp.gif');
+  background-image: url('/ascemu_tbc/images/header-needhelp.gif');
 }
 .wow2008-banner-label--jobs {
-  background-image: url('/wow2008/images/header-jobs.gif');
+  background-image: url('/ascemu_tbc/images/header-jobs.gif');
 }
 .wow2008-link-grid {
   display: grid;
@@ -1109,7 +1109,7 @@ const quickLinks = [
 .wow2008-bc-upgrade h2 {
   height: 27px;
   margin: 0;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 43px 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 43px 0;
 }
 .wow2008-bc-upgrade h2 img {
   width: 121px;
@@ -1123,7 +1123,7 @@ const quickLinks = [
   align-items: flex-start;
   gap: 8px;
   padding: 6px 9px;
-  background: url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
   box-sizing: border-box;
   font: 11px/1.25 Arial, sans-serif;
 }
@@ -1157,7 +1157,7 @@ const quickLinks = [
   width: 213px;
   height: 27px;
   position: relative;
-  background: url('/wow2008/images/marginal-infoBox-top-ie.jpg') no-repeat 43px 0;
+  background: url('/ascemu_tbc/images/marginal-infoBox-top-ie.jpg') no-repeat 43px 0;
 }
 .wow2008-marginal-top h2 {
   height: 20px;
@@ -1170,13 +1170,13 @@ const quickLinks = [
   background-position: 0 0;
 }
 .wow2008-quicklinks .wow2008-marginal-top h2 {
-  background-image: url('/wow2008/images/header-quick_links.jpg');
+  background-image: url('/ascemu_tbc/images/header-quick_links.jpg');
 }
 .wow2008-screenshot .wow2008-marginal-top h2 {
-  background-image: url('/wow2008/images/header-ssotd.gif');
+  background-image: url('/ascemu_tbc/images/header-ssotd.gif');
 }
 .wow2008-newcomers .wow2008-marginal-top h2 {
-  background-image: url('/wow2008/images/header-newcomers.jpg');
+  background-image: url('/ascemu_tbc/images/header-newcomers.jpg');
 }
 .wow2008-marginal-icon {
   position: absolute;
@@ -1188,21 +1188,21 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 .wow2008-marginal-icon--quicklinks {
-  background-image: url('/wow2008/images/visual-infoBox-bg.gif');
+  background-image: url('/ascemu_tbc/images/visual-infoBox-bg.gif');
 }
 .wow2008-marginal-icon--ssotd {
   top: -6px;
-  background-image: url('/wow2008/images/visual-infoBox-ssotd.gif');
+  background-image: url('/ascemu_tbc/images/visual-infoBox-ssotd.gif');
 }
 .wow2008-marginal-icon--newcomers {
   top: -6px;
-  background-image: url('/wow2008/images/visual-infoBox-ng.gif');
+  background-image: url('/ascemu_tbc/images/visual-infoBox-ng.gif');
 }
 .wow2008-marginal-body {
   width: 213px;
   box-sizing: border-box;
   padding: 0 8px 6px;
-  background: url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
 }
 .wow2008-quicklinks ul {
   list-style: none;
@@ -1219,7 +1219,7 @@ const quickLinks = [
   padding-left: 20px;
   color: #1e4378;
   font: bold 11px Arial, sans-serif;
-  background: url('/wow2008/images/icons/bullet.gif') no-repeat 0 40%;
+  background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 40%;
   text-decoration: none;
 }
 .wow2008-quicklinks a:hover {
@@ -1227,16 +1227,16 @@ const quickLinks = [
 }
 .wow2008-marginal-bottom {
   height: 10px;
-  background: url('/wow2008/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
 }
 .wow2008-screenshot-body {
   padding: 0 8px 6px;
-  background: #050607 url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  background: #050607 url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
 }
 .wow2008-screenshot__image {
   width: 197px;
   height: 125px;
-  background: #030405 url('/wow2008/images/visual-infoBox-ssotd.gif') no-repeat 0 0;
+  background: #030405 url('/ascemu_tbc/images/visual-infoBox-ssotd.gif') no-repeat 0 0;
 }
 .wow2008-screenshot select {
   width: 179px;
@@ -1252,7 +1252,7 @@ const quickLinks = [
   width: 213px;
   padding: 7px 10px 8px;
   box-sizing: border-box;
-  background: url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
   color: #17120a;
   font: 10px/1.25 Arial, sans-serif;
 }
@@ -1292,15 +1292,15 @@ const quickLinks = [
   position: relative;
   z-index: 10;
   margin-bottom: -16px;
-  background: url('/wow2008/images/layout/frame_bottom-bg.jpg') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x 0 0;
 }
 .wow2008-main-bottom > div {
   height: 41px;
-  background: url('/wow2008/images/layout/frame_bottom-left.jpg') no-repeat top left;
+  background: url('/ascemu_tbc/images/layout/frame_bottom-left.jpg') no-repeat top left;
 }
 .wow2008-main-bottom > div > div {
   height: 41px;
-  background: url('/wow2008/images/layout/frame_bottom-right.jpg') no-repeat top right;
+  background: url('/ascemu_tbc/images/layout/frame_bottom-right.jpg') no-repeat top right;
 }
 .wow2008-blizz-logo {
   position: relative;
@@ -1329,7 +1329,7 @@ const quickLinks = [
   margin-top: -2px;
   position: relative;
   z-index: 0;
-  background: #000 url('/wow2008/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x top;
+  background: #000 url('/ascemu_tbc/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x top;
 }
 .visually-hidden {
   position: absolute;
