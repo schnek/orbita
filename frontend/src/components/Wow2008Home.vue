@@ -1033,7 +1033,11 @@ const quickLinks = [
   min-height: 125px;
   padding: 10px 14px 18px;
   color: #17120a;
-  background: url('/ascemu_tbc/images/community-bg.jpg') repeat-y 6px 51px;
+  background-image:
+    url('/ascemu_tbc/images/community-bg.jpg'),
+    url('/ascemu_tbc/images/community-bg.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 6px 51px, 6px 152px;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community__note {
