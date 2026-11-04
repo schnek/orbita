@@ -579,7 +579,7 @@ const quickLinks = [
   z-index: 4;
   margin: 39px 0 0;
   padding: 0;
-  right: -26px;
+  right: -16px;
   box-sizing: border-box;
 }
 .wow2008-nav-section {
