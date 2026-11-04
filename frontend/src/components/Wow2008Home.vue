@@ -886,7 +886,7 @@ const quickLinks = [
   padding: 0;
   color: #f2cf4b;
   text-decoration: none;
-  background: url('/ascemu_tbc/images/smallTeaser-bg.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/community-smallteaser-bg.gif') no-repeat 0 0;
 }
 .wow2008-promo-frame {
   width: 150px;
@@ -959,7 +959,7 @@ const quickLinks = [
   min-height: 180px;
   margin: 10px 0 12px;
   position: relative;
-  background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-bg.gif') repeat-y 0 0;
 }
 .wow2008-community-top {
   height: 25px;
@@ -972,8 +972,10 @@ const quickLinks = [
   left: 38px;
   margin: 0;
   padding: 0;
-  color: #fff;
-  font: bold 13px/17px "Trebuchet MS", Arial, sans-serif;
+  width: 117px;
+  background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
+  color: transparent;
+  font-size: 0;
 }
 .wow2008-community-body {
   min-height: 125px;
@@ -1001,7 +1003,7 @@ const quickLinks = [
 }
 .wow2008-community-bottom {
   height: 20px;
-  background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-bottom.jpg') no-repeat 0 -1px;
 }
 .wow2008-banner-row {
   display: grid;
@@ -1014,15 +1016,15 @@ const quickLinks = [
   height: 91px;
   position: relative;
   display: block;
-  background: url('/ascemu_tbc/images/2column-smallTeaser-bg.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif') no-repeat 0 0;
 }
 .wow2008-banner--help {
-  background-image: url('/ascemu_tbc/images/2column-smallTeaser-bg.gif'), url('/ascemu_tbc/images/needhelp-bg.jpg');
+  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif'), url('/ascemu_tbc/images/needhelp-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 8px 23px;
 }
 .wow2008-banner--jobs {
-  background-image: url('/ascemu_tbc/images/2column-smallTeaser-bg.gif'), url('/ascemu_tbc/images/jobs-bg.jpg');
+  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif'), url('/ascemu_tbc/images/jobs-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 8px 23px;
 }
