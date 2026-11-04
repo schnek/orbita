@@ -22,7 +22,7 @@
     <div class="wow2008-frame">
       <header class="wow2008-header">
         <a class="wow2008-logo" href="/" aria-label="World of Warcraft home">
-          <img src="/wow2008/images/wowlogo2.gif" alt="World of Warcraft">
+          <img src="/wow2008/images/wowlogo-horde.gif" alt="World of Warcraft Community Site">
         </a>
       </header>
 
@@ -137,7 +137,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-search select,.wow2008-search button{height:22px;background:#17120c;color:#f5c400;border:1px solid #8d6d32;font-size:10px}
 .wow2008-frame{width:930px;min-height:calc(100vh - 43px);margin:0 auto;position:relative;background:#17130f url('/wow2008/images/page-bg.jpg') repeat;border-left:5px ridge #6f654d;border-right:5px ridge #6f654d;box-shadow:0 0 20px #000}
 .wow2008-header{height:78px;position:relative;background:#080b10 url('/wow2008/images/page-bg-alt3_1.jpg') center top/cover no-repeat;border-bottom:5px ridge #766443}
-.wow2008-logo{position:absolute;z-index:2;top:0;left:-24px;width:190px;height:104px;text-align:center;text-decoration:none!important;color:#f5d45c;text-shadow:2px 3px 2px #000;transform:rotate(-2deg);background:transparent}
+.wow2008-logo{position:absolute;z-index:2;top:0;left:-24px;width:184px;height:94px;text-decoration:none!important;background:transparent}.wow2008-logo img{display:block;width:184px;height:94px}
 .wow2008-logo__world,.wow2008-logo__warcraft,.wow2008-logo__expansion{display:block;font-family:Georgia,serif;font-weight:bold;line-height:.9}
 .wow2008-logo__world{font-size:21px;letter-spacing:4px;margin-top:15px}
 .wow2008-logo__warcraft{font-size:30px;color:#e7bd4b;-webkit-text-stroke:1px #211509}
