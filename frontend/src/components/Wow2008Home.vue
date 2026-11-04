@@ -1065,7 +1065,6 @@ const quickLinks = [
 .wow2008-community .community-top {
   min-height: 25px;
   padding: 3px 8px 0 10px;
-  background: url('/ascemu_tbc/images/community-bg.jpg') no-repeat 0 0;
   box-sizing: border-box;
 }
 .wow2008-community .community-top h3 {
