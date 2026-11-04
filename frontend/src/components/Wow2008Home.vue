@@ -123,7 +123,11 @@
                                 <p>Connect your Orbita news topics to publish announcements here.</p>
                               </article>
                             </slot>
-                            <div class="wow2008-archive"><a href="#">View News Archives</a></div>
+                            <div class="wow2008-archive">
+                              <a href="#" aria-label="View News Archives">
+                                <img src="/ascemu_tbc/images/news-archives.gif" alt="View News Archives">
+                              </a>
+                            </div>
 
                             <div class="wow2008-promo-grid">
                               <a class="wow2008-promo" href="#" aria-label="Contests">
@@ -878,15 +882,24 @@ const quickLinks = [
   color: #17416a;
 }
 .wow2008-archive {
-  text-align: center;
-  padding: 9px;
-  border-top: 1px solid #b99b62;
+  width: 470px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('/ascemu_tbc/images/archives.jpg') no-repeat center top;
 }
 .wow2008-archive a {
-  font-size: 10px;
-  text-transform: uppercase;
-  background: #eee0bc;
-  padding: 2px 12px;
+  display: block;
+  width: 134px;
+  height: 14px;
+  line-height: 0;
+}
+.wow2008-archive img {
+  display: block;
+  width: 134px;
+  height: 14px;
+  border: 0;
 }
 .wow2008-promo-grid {
   display: grid;
