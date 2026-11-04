@@ -164,9 +164,7 @@
                                   <h3>Community Spotlight<i> - sch on 04/04/08 </i></h3>
                                 </div>
                                 <div class="community-cnt">
-                                  <div class="community-portrait" aria-hidden="true">
-                                    <img alt="" src="/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif">
-                                  </div>
+                                  <div class="community-portrait" aria-hidden="true"></div>
                                   <p>
                                     This week we've come across some extremely beautiful and interesting artistic editing of in-game screenshots and characters.
                                     Wyndforge.com is home to an array of screenshots which he’s taken and dressed up with various filters, backdrops, and
@@ -1045,16 +1043,6 @@ const quickLinks = [
   display: block;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
 }
-.wow2008-community-top .arrow-readmore {
-  position: absolute;
-  right: 12px;
-  bottom: 8px;
-  font: bold 10px Arial, sans-serif;
-}
-.wow2008-community-top .arrow-readmore a {
-  color: #f2cf4b;
-  text-decoration: none;
-}
 .wow2008-community-wrapper {
   min-height: 210px;
   padding: 0 12px 10px;
@@ -1064,7 +1052,7 @@ const quickLinks = [
 .wow2008-community .community-top {
   min-height: 25px;
   padding: 3px 8px 0 10px;
-  background: url('/ascemu_tbc/images/community-bg.jpg') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.gif') repeat-x 0 0;
   box-sizing: border-box;
 }
 .wow2008-community .community-top h3 {
@@ -1080,7 +1068,6 @@ const quickLinks = [
   min-height: 175px;
   position: relative;
   padding: 9px 10px 8px;
-  background-size: 100% 101px;
   box-sizing: border-box;
 }
 .wow2008-community .community-cnt > p {
@@ -1093,17 +1080,22 @@ const quickLinks = [
   color: #17416a;
   text-decoration: underline;
 }
+.wow2008-community .community-cnt a:hover {
+  color: #9b1c12;
+}
+.wow2008-community .community-cnt a:focus-visible,
+.wow2008-community-heading:focus-visible,
+.wow2008-community-visual:focus-visible,
+.wow2008-community-read-more:focus-visible {
+  outline: 1px dotted #f2cf4b;
+  outline-offset: 2px;
+}
 .wow2008-community .community-portrait {
   width: 82px;
   height: 93px;
   float: left;
   margin: 0 9px 6px 0;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif') no-repeat 0 0;
-}
-.wow2008-community .community-portrait img {
-  width: 82px;
-  height: 93px;
-  display: block;
 }
 .wow2008-community .community-watch {
   clear: both;
