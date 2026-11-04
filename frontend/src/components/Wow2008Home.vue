@@ -130,7 +130,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--contest"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--contest"><span>Contests</span></h3>
-                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-1teaser.gif" alt="World of Warcraft screenshot contest">
+                                  <img src="/ascemu_tbc/images/featured/contest.jpg" alt="World of Warcraft screenshot contest">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -138,7 +138,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--fanart"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--fanart"><span>Fan Art</span></h3>
-                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-image-bc.gif" alt="World of Warcraft fan art">
+                                  <img src="/ascemu_tbc/images/featured/fanart.jpg" alt="World of Warcraft fan art">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -146,7 +146,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--wallpaper"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--wallpaper"><span>Wallpapers</span></h3>
-                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-icon-insider.gif" alt="World of Warcraft wallpaper">
+                                  <img src="/ascemu_tbc/images/featured/wallpaper.jpg" alt="World of Warcraft wallpaper">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -579,7 +579,7 @@ const quickLinks = [
   z-index: 4;
   margin: 39px 0 0;
   padding: 0;
-  right: -11px;
+  right: -26px;
   box-sizing: border-box;
 }
 .wow2008-nav-section {
@@ -910,7 +910,7 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 .wow2008-promo-icon--contest {
-  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/misc-icon-movies.gif');
+  background-image: url('/ascemu_tbc/images/visual-smallTeaser-contests.gif');
 }
 .wow2008-promo-icon--fanart {
   background-image: url('/ascemu_tbc/images/visual-smallTeaser-fanarts.gif');
@@ -972,19 +972,8 @@ const quickLinks = [
   left: 38px;
   margin: 0;
   padding: 0;
-  width: 117px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/header-comm.gif') no-repeat 0 0;
-  color: transparent;
-  font-size: 0;
-}
-.wow2008-community-top::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 46px;
-  height: 46px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/icon_communityspotlight.gif') no-repeat 0 0;
+  color: #fff;
+  font: bold 13px/17px "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community-body {
   min-height: 125px;
@@ -1083,7 +1072,7 @@ const quickLinks = [
   display: table;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') no-repeat 0 0;
   color: #173d63;
-  font: bold 12px Georgia, serif;
+  font: bold 10px Georgia, serif;
 }
 .wow2008-link-group ul {
   list-style: none;
