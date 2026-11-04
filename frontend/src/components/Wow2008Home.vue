@@ -666,7 +666,7 @@ const quickLinks = [
   width: 9px;
   height: 35px;
   position: absolute;
-  right: 5px;
+  right: -10px;
   top: -4px;
   display: block;
   background: url('/ascemu_tbc/images/menu-add.gif') no-repeat 0 0;
