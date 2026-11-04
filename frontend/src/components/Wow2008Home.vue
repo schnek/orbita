@@ -1018,7 +1018,7 @@ const quickLinks = [
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community-top {
-  height: 48px;
+  height: 25px;
   position: relative;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/phatlootbox-top.gif') no-repeat 0 0;
 }
