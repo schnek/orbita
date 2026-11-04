@@ -416,7 +416,7 @@ const quickLinks = [
   top: 32px;
   left: 0;
   right: 0;
-  height: 220px;
+  height: 88px;
   z-index: 0;
   pointer-events: none;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') no-repeat center top;
@@ -571,7 +571,7 @@ const quickLinks = [
   position: absolute;
   top: -73px;
   left: -50px;
-  width: 64px;
+  width: 61px;
   height: 578px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-center.jpg') no-repeat;
   pointer-events: none;
@@ -580,8 +580,8 @@ const quickLinks = [
   position: absolute;
   top: 267px;
   left: -176px;
-  width: 144px;
-  height: 126px;
+  width: 126px;
+  height: 144px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-bottom-left.jpg') no-repeat;
   pointer-events: none;
 }
@@ -589,8 +589,8 @@ const quickLinks = [
   position: absolute;
   top: -23px;
   left: 11px;
-  width: 157px;
-  height: 546px;
+  width: 142px;
+  height: 528px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ne-nav-bg.jpg') no-repeat;
   pointer-events: none;
 }
