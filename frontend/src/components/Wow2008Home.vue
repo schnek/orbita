@@ -130,7 +130,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--contest"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--contest"><span>Contests</span></h3>
-                                  <img src="/ascemu_tbc/images/featured/contest.jpg" alt="World of Warcraft screenshot contest">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-1teaser.gif" alt="World of Warcraft screenshot contest">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -138,7 +138,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--fanart"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--fanart"><span>Fan Art</span></h3>
-                                  <img src="/ascemu_tbc/images/featured/fanart.jpg" alt="World of Warcraft fan art">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-image-bc.gif" alt="World of Warcraft fan art">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -146,7 +146,7 @@
                                 <div class="wow2008-promo-frame">
                                   <span class="wow2008-promo-icon wow2008-promo-icon--wallpaper"></span>
                                   <h3 class="wow2008-promo-title wow2008-promo-title--wallpaper"><span>Wallpapers</span></h3>
-                                  <img src="/ascemu_tbc/images/featured/wallpaper.jpg" alt="World of Warcraft wallpaper">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-icon-insider.gif" alt="World of Warcraft wallpaper">
                                   <span class="wow2008-read-more"></span>
                                 </div>
                               </a>
@@ -910,7 +910,7 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 .wow2008-promo-icon--contest {
-  background-image: url('/ascemu_tbc/images/visual-smallTeaser-contests.gif');
+  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/misc-icon-movies.gif');
 }
 .wow2008-promo-icon--fanart {
   background-image: url('/ascemu_tbc/images/visual-smallTeaser-fanarts.gif');
@@ -963,7 +963,7 @@ const quickLinks = [
 }
 .wow2008-community-top {
   height: 25px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/phatlootbox-top.gif') no-repeat 0 0;
 }
 .wow2008-community-top h2 {
   height: 17px;
@@ -973,7 +973,7 @@ const quickLinks = [
   margin: 0;
   padding: 0;
   width: 117px;
-  background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/header-comm.gif') no-repeat 0 0;
   color: transparent;
   font-size: 0;
 }
@@ -982,9 +982,9 @@ const quickLinks = [
   position: absolute;
   top: -4px;
   left: 0;
-  width: 33px;
-  height: 29px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
+  width: 46px;
+  height: 46px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/icon_communityspotlight.gif') no-repeat 0 0;
 }
 .wow2008-community-body {
   min-height: 125px;
@@ -1077,19 +1077,24 @@ const quickLinks = [
   border-top: 2px solid #8b7549;
 }
 .wow2008-link-group h3 {
+  min-height: 24px;
   margin: -10px 0 7px;
   padding: 0 5px;
   display: table;
-  background: #e5d3a8;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') no-repeat 0 0;
   color: #173d63;
   font: bold 12px Georgia, serif;
 }
 .wow2008-link-group ul {
+  list-style: none;
   margin: 0;
-  padding-left: 18px;
+  padding: 0;
 }
 .wow2008-link-group li {
+  min-height: 14px;
+  padding-left: 12px;
   line-height: 14px;
+  background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 3px;
 }
 .wow2008-link-group p {
   margin: 0 0 4px;
