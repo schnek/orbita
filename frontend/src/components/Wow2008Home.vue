@@ -1022,7 +1022,7 @@ const quickLinks = [
   min-height: 125px;
   padding: 10px 14px 18px;
   color: #17120a;
-  background: url('/ascemu_tbc/images/community-bg.jpg') repeat-y 6px 11px;
+  background: url('/ascemu_tbc/images/community-bg.jpg') repeat-y 6px 51px;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community__note {
@@ -1052,7 +1052,7 @@ const quickLinks = [
   height: 15px;
   position: absolute;
   right: 6px;
-  bottom: 13px;
+  bottom: 16px;
   display: block;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat 0 0;
 }
