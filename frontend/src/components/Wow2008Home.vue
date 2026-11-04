@@ -1106,15 +1106,27 @@ const quickLinks = [
   width: 82px;
   height: 93px;
   float: right;
+  position: relative;
   margin: 0 0 6px 9px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif') no-repeat 0 0;
 }
 .wow2008-community .community-portrait img {
   display: block;
   width: 72px;
   height: 83px;
-  margin: 5px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
   object-fit: cover;
+}
+.wow2008-community .community-portrait::after {
+  content: "";
+  width: 82px;
+  height: 93px;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif') no-repeat 0 0;
 }
 .wow2008-community .community-watch {
   clear: both;
