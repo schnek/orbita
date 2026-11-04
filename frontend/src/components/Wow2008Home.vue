@@ -928,14 +928,17 @@ const quickLinks = [
 }
 .wow2008-promo-icon--contest {
   background-image: url('/ascemu_tbc/images/visual-smallTeaser-contests.gif');
+  background-position: 0 -20px;
 }
 .wow2008-promo-icon--fanart {
   background-image: url('/ascemu_tbc/images/visual-smallTeaser-fanarts.gif');
+  background-position: 0 -20px;
 }
 .wow2008-promo-icon--wallpaper {
   top: -12px;
   height: 43px;
   background-image: url('/ascemu_tbc/images/visual-smallTeaser-wallp.gif');
+  background-position: 0 -20px;
 }
 .wow2008-promo-title {
   height: 20px;
@@ -954,12 +957,15 @@ const quickLinks = [
 }
 .wow2008-promo-title--contest {
   background-image: url('/ascemu_tbc/images/header-contest.gif');
+  background-position: 0 -17px;
 }
 .wow2008-promo-title--fanart {
   background-image: url('/ascemu_tbc/images/header-fanarts.gif');
+  background-position: 0 -17px;
 }
 .wow2008-promo-title--wallpaper {
   background-image: url('/ascemu_tbc/images/header-wallpapers.gif');
+  background-position: 0 -17px;
 }
 .wow2008-read-more {
   width: 75px;
@@ -969,7 +975,7 @@ const quickLinks = [
   right: 6px;
   bottom: 8px;
   display: block;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat 0 -20px;
 }
 .wow2008-community {
   width: 470px;
