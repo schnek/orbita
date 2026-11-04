@@ -1037,6 +1037,9 @@ const quickLinks = [
     url('/ascemu_tbc/images/community-bg.jpg'),
     url('/ascemu_tbc/images/community-bg.jpg');
   background-repeat: no-repeat, no-repeat;
+  background-size:
+    calc(100% - 12px) 101px,
+    calc(100% - 12px) 101px;
   background-position: 6px 51px, 6px 152px;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
