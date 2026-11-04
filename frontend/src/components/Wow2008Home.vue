@@ -164,7 +164,7 @@
                                   <h3>Community Spotlight<i> - sch on 04/04/08 </i></h3>
                                 </div>
                                 <div class="community-cnt">
-                                  <div class="community-portrait" aria-hidden="true"></div>
+                                  <div class="community-portrait" aria-hidden="true"><img src="/ascemu_tbc/images/icon_communityspotlight.gif" alt=""></div>
                                   <p>
                                     This week we've come across some extremely beautiful and interesting artistic editing of in-game screenshots and characters.
                                     Wyndforge.com is home to an array of screenshots which he’s taken and dressed up with various filters, backdrops, and
@@ -1039,8 +1039,7 @@ const quickLinks = [
   position: absolute;
   z-index: 2;
   top: -9px;
-  right: 0;
-  left: auto;
+  left: 0;
   display: block;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
 }
@@ -1106,9 +1105,16 @@ const quickLinks = [
 .wow2008-community .community-portrait {
   width: 82px;
   height: 93px;
-  float: left;
-  margin: 0 9px 6px 0;
+  float: right;
+  margin: 0 0 6px 9px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif') no-repeat 0 0;
+}
+.wow2008-community .community-portrait img {
+  display: block;
+  width: 72px;
+  height: 83px;
+  margin: 5px;
+  object-fit: cover;
 }
 .wow2008-community .community-watch {
   clear: both;
