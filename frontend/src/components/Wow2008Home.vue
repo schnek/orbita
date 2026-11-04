@@ -893,6 +893,7 @@ const quickLinks = [
   height: 15px;
   background: url('/ascemu_tbc/images/news-archives.gif') no-repeat 0 0;
   line-height: 0;
+  transform: translateY(-5px);
 }
 .wow2008-archive-button:hover,
 .wow2008-archive-button:focus-visible,
