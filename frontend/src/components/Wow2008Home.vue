@@ -903,7 +903,7 @@ const quickLinks = [
   display: block;
   width: 133px;
   height: 93px;
-  margin: 0 0 0 7px;
+  margin: 17px 0 0 7px;
   border: 0;
 }
 .wow2008-promo-icon {
