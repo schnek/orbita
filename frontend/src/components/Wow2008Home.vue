@@ -373,7 +373,7 @@ const navigation = [
   },
 ]
 
-const openGroups = ref(navigation.map(group => group.key))
+const openGroups = ref(['account'])
 const toggleGroup = (key: string) => {
   openGroups.value = openGroups.value.includes(key)
     ? openGroups.value.filter(group => group !== key)
