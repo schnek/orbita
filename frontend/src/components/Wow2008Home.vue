@@ -136,7 +136,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-search{display:flex;gap:4px;align-items:center}
 .wow2008-search input{width:150px;background:#080b10;border:2px inset #777;color:#fff;height:22px}
 .wow2008-search select,.wow2008-search button{height:22px;background:#17120c;color:#f5c400;border:1px solid #8d6d32;font-size:10px}
-.wow2008-frame{width:930px;min-height:calc(100vh - 43px);margin:0 auto;position:relative;background:#17130f url('/wow2008/images/page-bg.jpg') repeat;border-left:5px ridge #6f654d;border-right:5px ridge #6f654d;box-shadow:0 0 20px #000}
+.wow2008-frame{width:930px;min-height:calc(100vh - 43px);margin:0 auto;position:relative;background:#17130f url('/wow2008/images/blog-content-bg.jpg') repeat;border-left:5px ridge #6f654d;border-right:5px ridge #6f654d;box-shadow:0 0 20px #000}
 .wow2008-header{height:78px;position:relative;background:#080b10 url('/wow2008/images/page-bg-alt3_1.jpg') center top/cover no-repeat;border-bottom:5px ridge #766443}
 .wow2008-logo{position:absolute;z-index:2;top:0;left:-24px;width:184px;height:94px;text-decoration:none!important;background:transparent}.wow2008-logo img{display:block;width:184px;height:94px}
 .wow2008-logo__world,.wow2008-logo__warcraft,.wow2008-logo__expansion{display:block;font-family:Georgia,serif;font-weight:bold;line-height:.9}
