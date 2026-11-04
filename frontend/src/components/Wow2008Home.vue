@@ -1104,26 +1104,25 @@ const quickLinks = [
 }
 .wow2008-community .community-portrait {
   width: 82px;
-  height: 93px;
+  height: 83px;
   float: right;
   position: relative;
   margin: 0 0 6px 9px;
 }
 .wow2008-community .community-portrait img {
   display: block;
-  width: 72px;
-  height: 83px;
+  width: 64px;
+  height: 64px;
   max-width: none;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 0;
+  left: 9px;
   object-fit: cover;
-  box-sizing: border-box;
 }
 .wow2008-community .community-portrait::after {
   content: "";
   width: 82px;
-  height: 93px;
+  height: 83px;
   position: absolute;
   inset: 0;
   z-index: 1;
