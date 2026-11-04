@@ -974,15 +974,18 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
 }
 .wow2008-community-top {
-  height: 27px;
-  margin: 0 4px;
-  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
+  height: 25px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/phatlootbox-top.gif') no-repeat 0 0;
 }
 .wow2008-community-top h2 {
+  height: 17px;
+  position: relative;
+  top: 5px;
+  left: 38px;
   margin: 0;
-  padding: 4px 0 0 10px;
+  padding: 0;
   color: #fff;
-  font: bold 13px "Trebuchet MS", Arial, sans-serif;
+  font: bold 13px/17px "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community-body {
   min-height: 125px;
