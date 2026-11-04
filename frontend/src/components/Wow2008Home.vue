@@ -1039,7 +1039,8 @@ const quickLinks = [
   position: absolute;
   z-index: 2;
   top: -9px;
-  left: 0;
+  right: 0;
+  left: auto;
   display: block;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
 }
@@ -1051,12 +1052,23 @@ const quickLinks = [
 }
 .wow2008-community .community-top {
   min-height: 25px;
+  position: relative;
   padding: 3px 8px 0 10px;
-  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x -8px -3px;
-  background-size: calc(100% + 15px) auto;
   box-sizing: border-box;
 }
+.wow2008-community .community-top::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -3px;
+  right: -7px;
+  bottom: 0;
+  left: -8px;
+  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
+}
 .wow2008-community .community-top h3 {
+  position: relative;
+  z-index: 1;
   margin: 0;
   color: #173d63;
   font: bold 12px/20px Georgia, "Times New Roman", serif;
