@@ -164,7 +164,7 @@
                                   <h3>Community Spotlight<i> - sch on 04/04/08 </i></h3>
                                 </div>
                                 <div class="community-cnt">
-                                  <div class="community-portrait" aria-hidden="true"><img src="/ascemu_tbc/images/icon_communityspotlight.gif" alt=""></div>
+                                  <div class="community-portrait" aria-hidden="true"><img src="/ascemu_tbc/images/templates/The_Burning_Crusade/icon_communityspotlight.gif" alt=""></div>
                                   <p>
                                     This week we've come across some extremely beautiful and interesting artistic editing of in-game screenshots and characters.
                                     Wyndforge.com is home to an array of screenshots which he’s taken and dressed up with various filters, backdrops, and
