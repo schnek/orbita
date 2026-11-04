@@ -1052,7 +1052,7 @@ const quickLinks = [
 .wow2008-community .community-top {
   min-height: 25px;
   padding: 3px 8px 0 10px;
-  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x -8px 0;
+  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x -8px -3px;
   background-size: calc(100% + 15px) auto;
   box-sizing: border-box;
 }
