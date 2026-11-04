@@ -959,11 +959,11 @@ const quickLinks = [
   min-height: 180px;
   margin: 10px 0 12px;
   position: relative;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
 }
 .wow2008-community-top {
   height: 25px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/phatlootbox-top.gif') no-repeat 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') no-repeat 0 0;
 }
 .wow2008-community-top h2 {
   height: 17px;
@@ -976,6 +976,15 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
   color: transparent;
   font-size: 0;
+}
+.wow2008-community-top::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 33px;
+  height: 29px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
 }
 .wow2008-community-body {
   min-height: 125px;
@@ -1003,7 +1012,7 @@ const quickLinks = [
 }
 .wow2008-community-bottom {
   height: 20px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-bottom.jpg') no-repeat 0 -1px;
+  background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
 }
 .wow2008-banner-row {
   display: grid;
