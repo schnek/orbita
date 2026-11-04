@@ -408,8 +408,10 @@ const quickLinks = [
   top: 0;
   left: 0;
   right: 0;
-  height: 88px;
-  background: url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x 0 0;
+  height: 180px;
+  background:
+    url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top2.jpg') no-repeat center top,
+    url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top;
   pointer-events: none;
 }
 .wow2008 a {
@@ -963,7 +965,7 @@ const quickLinks = [
   right: 6px;
   bottom: 8px;
   display: block;
-  background: url('/wow2008/images/button-readmore.gif') no-repeat;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat;
 }
 .wow2008-community {
   width: 470px;
@@ -1316,9 +1318,10 @@ const quickLinks = [
   width: 243px;
   height: 445px;
   position: absolute;
-  left: -243px;
+  left: -185px;
   bottom: 41px;
   z-index: 2;
+  pointer-events: none;
 }
 .wow2008-iron-frame {
   width: 100%;
@@ -1337,8 +1340,13 @@ const quickLinks = [
   white-space: nowrap;
 }
 @media (max-width: 1175px) {
+  .wow2008 {
+    width: 1175px;
+    zoom: calc(100vw / 1175);
+  }
+
   .wow2008-stage {
-    margin-left: 0;
+    margin-left:: 0;
     margin-right: 0;
   }
 }
