@@ -1084,7 +1084,7 @@ const quickLinks = [
 }
 .wow2008-community .community-cnt > p {
   margin: 0 0 8px;
-  padding-left: 91px;
+  padding: 0 91px 0 0;
   color: #17120a;
   font: 11px/1.4 "Trebuchet MS", Arial, sans-serif;
 }
@@ -1113,10 +1113,12 @@ const quickLinks = [
   display: block;
   width: 72px;
   height: 83px;
+  max-width: none;
   position: absolute;
   top: 5px;
   left: 5px;
   object-fit: cover;
+  box-sizing: border-box;
 }
 .wow2008-community .community-portrait::after {
   content: "";
