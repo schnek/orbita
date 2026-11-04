@@ -159,7 +159,7 @@
                                 <span class="wow2008-community-icon" aria-hidden="true"></span>
                                 <h2>
                                   <span class="wow2008-community-title" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Community Spotlight</span>
+                                  <span class="wow2008-community-subtitle">Community Spotlight</span>
                                 </h2>
                               </div>
                               <div class="wow2008-community-body">
@@ -1018,8 +1018,7 @@ const quickLinks = [
   display: block;
   background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
 }
-.wow2008-community-title::after {
-  content: "Community Spotlight";
+.wow2008-community-subtitle {
   width: 150px;
   height: 16px;
   display: block;
