@@ -1,7 +1,5 @@
 <template>
   <div class="wow2008">
-    <div class="wow2008-page-bg-top" aria-hidden="true"></div>
-
     <div class="wow2008-topbar">
       <div class="wow2008-topbar__inner">
         <nav aria-label="External links">
@@ -401,16 +399,6 @@ const quickLinks = [
   color: #17120a;
   font: 12px Arial, Helvetica, sans-serif;
   background: #000 url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x center top;
-}
-.wow2008-page-bg-top {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 88px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x 0 0;
-  pointer-events: none;
 }
 .wow2008 a {
   color: #1e4378;
