@@ -158,7 +158,6 @@
                               <div class="phatLootBox-top wow2008-community-top">
                                 <a href="/community/" class="wow2008-community-heading"><h2 class="community"><span class="visually-hidden">Community</span></h2></a>
                                 <a href="/community/" class="wow2008-community-visual" aria-label="Community"></a>
-                                <span class="arrow-readmore"><a href="/community/"><span>read more...</span></a></span>
                               </div>
                               <div class="phatLootBox-wrapper wow2008-community-wrapper">
                                 <div class="community-top">
