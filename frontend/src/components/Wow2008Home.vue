@@ -3,8 +3,8 @@
     <div class="wow2008-topbar">
       <div class="wow2008-topbar__inner">
         <nav aria-label="External links">
-          <a href="#">WorldofWarcraft.com</a><img src="/wow2008/images/topnav_div.gif" alt="">
-          <a href="#">The Armory</a><img src="/wow2008/images/topnav_div.gif" alt="">
+          <a href="#">WorldofWarcraft.com</a>
+          <a href="#">The Armory</a>
           <a href="#">Forums</a>
         </nav>
         <form class="wow2008-search" role="search" @submit.prevent>
@@ -148,7 +148,7 @@ const quickLinks = ['Account Management','Parental Controls','Support Site','Rea
 .wow2008-topbar__inner{height:32px;width:1175px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 12px;box-sizing:border-box}
 .wow2008-topbar nav{display:flex;align-items:center;gap:12px;height:100%;white-space:nowrap}
 .wow2008-topbar nav a{color:#d5e7ff;font:bold 11px Tahoma,Arial,sans-serif;text-decoration:none;text-shadow:1px 1px #001027}
-.wow2008-topbar nav img{width:2px;height:18px;object-fit:contain}
+.wow2008-topbar nav a+a:before{content:"";display:inline-block;width:2px;height:18px;margin:0 12px 0 0;vertical-align:middle;background:linear-gradient(90deg,#172d46,#91a7b8 45%,#172d46)}
 .wow2008-search{display:flex;gap:4px;align-items:center}.wow2008-search input{width:120px;background:#080b10;color:#fff;border:1px solid #7189a4}.wow2008-search select,.wow2008-search button{height:22px;background:#172b45;color:#e4edfa;border:1px solid #7189a4;font-size:10px}
 .wow2008-stage{width:1175px;margin:0 auto;display:grid;grid-template-columns:475px 700px;position:relative;align-items:stretch;z-index:1}
 .wow2008-frame{display:contents}
