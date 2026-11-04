@@ -124,9 +124,7 @@
                               </article>
                             </slot>
                             <div class="wow2008-archive">
-                              <a href="#" aria-label="View News Archives">
-                                <img src="/ascemu_tbc/images/news-archives.gif" alt="View News Archives">
-                              </a>
+                              <a class="wow2008-archive-button" href="#" aria-label="View News Archives"></a>
                             </div>
 
                             <div class="wow2008-promo-grid">
@@ -889,17 +887,17 @@ const quickLinks = [
   justify-content: center;
   background: url('/ascemu_tbc/images/archives.jpg') no-repeat center top;
 }
-.wow2008-archive a {
+.wow2008-archive-button {
   display: block;
-  width: 134px;
-  height: 14px;
+  width: 136px;
+  height: 15px;
+  background: url('/ascemu_tbc/images/news-archives.gif') no-repeat 0 0;
   line-height: 0;
 }
-.wow2008-archive img {
-  display: block;
-  width: 134px;
-  height: 14px;
-  border: 0;
+.wow2008-archive-button:hover,
+.wow2008-archive-button:focus-visible,
+.wow2008-archive-button:active {
+  background-position: 0 -15px;
 }
 .wow2008-promo-grid {
   display: grid;
