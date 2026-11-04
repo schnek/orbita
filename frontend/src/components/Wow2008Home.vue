@@ -1,258 +1,1345 @@
 <template>
   <div class="wow2008">
+    <div class="wow2008-page-bg-top" aria-hidden="true"></div>
+
     <div class="wow2008-topbar">
       <div class="wow2008-topbar__inner">
         <nav aria-label="External links">
           <a href="#">WorldofWarcraft.com</a>
+          <span class="wow2008-topbar__divider"></span>
           <a href="#">The Armory</a>
+          <span class="wow2008-topbar__divider"></span>
           <a href="#">Forums</a>
         </nav>
         <form class="wow2008-search" role="search" @submit.prevent>
           <label class="visually-hidden" for="wow-search">Search</label>
-          <input id="wow-search" type="search">
-          <select aria-label="Search area">
-            <option>Community Site</option>
-            <option>World of Warcraft</option>
-          </select>
-          <button type="submit">Search</button>
+          <span class="wow2008-search__left"></span>
+          <span class="wow2008-search__body">
+            <input id="wow-search" type="search">
+            <select aria-label="Search area">
+              <option>Community Site</option>
+              <option>Encyclopedia</option>
+              <option>In-game Support</option>
+              <option>Tech Support</option>
+            </select>
+            <button type="submit">Search</button>
+          </span>
+          <span class="wow2008-search__right"></span>
         </form>
       </div>
     </div>
 
     <div class="wow2008-stage">
-      <div class="wow2008-frame">
       <header class="wow2008-header">
         <a class="wow2008-logo" href="/" aria-label="World of Warcraft home">
-          <img src="/wow2008/images/templates/The_Burning_Crusade/wowlogo-front.gif" alt="World of Warcraft">
+          <img src="/wow2008/images/templates/The_Burning_Crusade/wowlogo-front.gif" alt="World of Warcraft The Burning Crusade">
         </a>
       </header>
 
-      <div class="wow2008-layout">
-        <aside class="wow2008-left" aria-label="Main navigation">
-          <div class="wow2008-character-art" aria-hidden="true"><span class="wow2008-ne-top-left"></span><span class="wow2008-ne-center"></span><span class="wow2008-ne-bottom-left"></span></div>
-          <div class="wow2008-nav-background" aria-hidden="true"></div>
-          <nav class="wow2008-nav" aria-label="World of Warcraft sections">
-            <section v-for="group in navigation" :key="group.key" class="wow2008-nav__group">
-              <div class="wow2008-nav__heading">
-                <span
-                  class="wow2008-nav__icon"
-                  :class="`wow2008-nav__icon--${group.asset}`"
-                  aria-hidden="true"
-                ></span>
-                <button
-                  type="button"
-                  class="wow2008-nav__toggle"
-                  :class="{ 'is-open': openGroups.includes(group.key) }"
-                  :aria-expanded="openGroups.includes(group.key)"
-                  :aria-label="`${openGroups.includes(group.key) ? 'Collapse' : 'Expand'} ${group.title}`"
-                  @click="toggleGroup(group.key)"
-                >
-                  <span
-                    class="wow2008-nav__title"
-                    :class="`wow2008-nav__title--${group.asset}`"
-                    :aria-label="group.title"
-                    role="img"
-                  ></span>
-                </button>
-              </div>
-              <ul v-if="openGroups.includes(group.key)" class="wow2008-nav__links">
-                <li v-for="link in group.links" :key="link"><a href="#">{{ link }}</a></li>
-              </ul>
-            </section>
-          </nav>
-        </aside>
+      <aside class="wow2008-left" aria-label="Main navigation">
+        <div class="wow2008-ne-top-left" aria-hidden="true"></div>
+        <div class="wow2008-ne-center" aria-hidden="true"></div>
+        <div class="wow2008-ne-bottom-left" aria-hidden="true"></div>
+        <div class="wow2008-ne-nav-bg" aria-hidden="true"></div>
 
-        <main class="wow2008-center">
-          <div class="wow2008-news-area">
-            <div class="wow2008-news-column">
-              <img class="wow2008-flash-placeholder" src="/wow2008/images/no-flash.jpg" alt="Welcome to World of Warcraft.com">
-              <div class="wow2008-news-heading">Latest News</div>
-              <slot>
-                <article class="wow2008-news-card">
-                  <h1>Welcome to World of Warcraft</h1>
-                  <p>Connect your Orbita news topics to publish announcements here.</p>
-                </article>
-              </slot>
-              <div class="wow2008-archive"><a href="#">View News Archives</a></div>
-
-              <div class="wow2008-promo-grid">
-                <a class="wow2008-promo wow2008-promo--contest" href="#"><strong>Contests</strong><b>More</b></a>
-                <a class="wow2008-promo wow2008-promo--fanart" href="#"><strong>Fan Art</strong><b>More</b></a>
-                <a class="wow2008-promo wow2008-promo--wallpaper" href="#"><strong>Wallpapers</strong><b>More</b></a>
-              </div>
-
-              <section class="wow2008-community">
-                <h2>Community</h2>
-                <div class="wow2008-community__title">Community Spotlight <span>• News and creations</span></div>
-                <div class="wow2008-community__body">
-                  <p>Discover artwork, stories, screenshots and creations from the World of Warcraft community.</p>
-                  <p class="wow2008-community__note">Have something you would like to share with the community? Send us a link.</p>
-                  <div class="wow2008-community__actions"><a href="#">Warcraft Weekly</a><a href="#">Spotlight Archive</a></div>
-                </div>
-              </section>
-
-              <div class="wow2008-banner-row">
-                <a class="wow2008-banner wow2008-banner--help" href="#" aria-label="Need Help"></a>
-                <a class="wow2008-banner wow2008-banner--jobs" href="#" aria-label="Jobs"></a>
-              </div>
-
-              <div class="wow2008-link-grid">
-                <section class="wow2008-link-group">
-                  <h3>WoW: Wrath of the Lich King</h3>
-                  <ul><li><a href="#">Bestiary</a></li><li><a href="#">Dragonblight</a></li><li><a href="#">Screenshots</a></li><li><a href="#">Features</a></li><li><a href="#">Movies</a></li></ul>
-                </section>
-                <section class="wow2008-link-group">
-                  <h3>Movies and Trailers</h3>
-                  <ul><li><a href="#">Sunwell Plateau</a></li><li><a href="#">Verne Troyer</a></li><li><a href="#">M.P.T.</a></li><li><a href="#">William Shatner</a></li></ul>
-                </section>
-                <section class="wow2008-link-group">
-                  <h3>World of Warcraft Insider</h3>
-                  <p>Your number one source of up-to-date, behind the scenes information about World of Warcraft!</p>
-                  <ul><li><a href="#">Latest issue</a></li><li><a href="#">Subscribe now</a></li></ul>
-                </section>
-                <section class="wow2008-link-group">
-                  <h3>Online Store</h3>
-                  <ul><li><a href="#">World of Warcraft Battle Chest</a></li><li><a href="#">World of Warcraft 2008 Daily Calendar</a></li><li><a href="#">Burning Crusade Strategy Guide</a></li><li><a href="#">TCG: Onyxia Raid Deck</a></li></ul>
-                </section>
-              </div>
+        <nav class="wow2008-nav" aria-label="World of Warcraft sections">
+          <section v-for="group in navigation" :key="group.key" class="wow2008-nav-section">
+            <div
+              class="wow2008-nav-button"
+              :class="openGroups.includes(group.key) ? 'menu-button-on' : 'menu-button-off'"
+              role="button"
+              tabindex="0"
+              :aria-expanded="openGroups.includes(group.key)"
+              :aria-label="(openGroups.includes(group.key) ? 'Collapse ' : 'Expand ') + group.title"
+              @click="toggleGroup(group.key)"
+              @keydown.enter.prevent="toggleGroup(group.key)"
+              @keydown.space.prevent="toggleGroup(group.key)"
+            >
+              <span
+                class="wow2008-nav-icon"
+                :class="{ 'is-wide': group.icon === 'interactive' || group.icon === 'support' }"
+                :style="{ backgroundImage: 'url(' + menuAssets + 'icon-' + group.icon + '-' + (openGroups.includes(group.key) ? 'on' : 'off') + '.gif)' }"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="wow2008-nav-title"
+                :style="{ backgroundImage: 'url(' + menuAssets + 'header-' + group.header + '-' + (openGroups.includes(group.key) ? 'on' : 'off') + '.gif)' }"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="wow2008-nav-collapse"
+                :class="openGroups.includes(group.key) ? 'is-open' : 'is-closed'"
+                aria-hidden="true"
+              ></span>
+              <span class="wow2008-nav-right-border" aria-hidden="true"></span>
             </div>
 
-            <aside class="wow2008-right">
-              <a class="wow2008-expansion-banner" href="#">Wrath of the Lich King</a>
-              <section class="wow2008-quicklinks">
-                <h2>Quick Links</h2>
-                <ul>
-                  <li v-for="link in quickLinks" :key="link"><a href="#">{{ link }}</a></li>
-                </ul>
-              </section>
-              <section class="wow2008-screenshot">
-                <h2>Screenshot of the Day</h2>
-                <div class="wow2008-screenshot__image" role="img" aria-label="Screenshot of the day"></div>
-              </section>
-            </aside>
+            <div v-if="openGroups.includes(group.key)" class="wow2008-nav-inner">
+              <div class="leftMenu-cont-top"></div>
+              <div class="leftMenu-cont-mid">
+                <div class="m-left">
+                  <div class="m-right">
+                    <div class="leftMenu-cnt">
+                      <ul class="mainNav">
+                        <li v-for="link in group.links" :key="link">
+                          <div class="wow2008-menu-entry">
+                            <a href="#" class="menuFiller">{{ link }}</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leftMenu-cont-bot"></div>
+            </div>
+          </section>
+        </nav>
+      </aside>
+
+      <main class="wow2008-center">
+        <div class="wow2008-main-top">
+          <div><div></div></div>
+        </div>
+
+        <div class="wow2008-main-content-wrapper">
+          <div class="wow2008-main-content">
+            <div class="wow2008-content-padding">
+              <div class="wow2008-content-columns">
+                <section class="wow2008-main-column">
+                  <div class="wow2008-cnt-paper">
+                    <div class="wow2008-cnt-top">
+                      <div><div></div></div>
+                    </div>
+                    <div class="wow2008-content-left">
+                      <div class="wow2008-content-right">
+                        <div class="wow2008-cnt-main">
+                          <div class="wow2008-news-column">
+                            <div class="wow2008-flash-container">
+                              <img class="wow2008-flash-placeholder" src="/wow2008/images/no-flash.jpg" alt="Welcome to World of Warcraft.com">
+                            </div>
+                            <div class="wow2008-news-heading">Latest News</div>
+                            <slot>
+                              <article class="wow2008-news-card">
+                                <h1>Welcome to World of Warcraft</h1>
+                                <p>Connect your Orbita news topics to publish announcements here.</p>
+                              </article>
+                            </slot>
+                            <div class="wow2008-archive"><a href="#">View News Archives</a></div>
+
+                            <div class="wow2008-promo-grid">
+                              <a class="wow2008-promo" href="#" aria-label="Contests">
+                                <div class="wow2008-promo-frame">
+                                  <span class="wow2008-promo-icon wow2008-promo-icon--contest"></span>
+                                  <h3 class="wow2008-promo-title wow2008-promo-title--contest"><span>Contests</span></h3>
+                                  <img src="/wow2008/images/featured/contest.jpg" alt="World of Warcraft screenshot contest">
+                                  <span class="wow2008-read-more"></span>
+                                </div>
+                              </a>
+                              <a class="wow2008-promo" href="#" aria-label="Fan Art">
+                                <div class="wow2008-promo-frame">
+                                  <span class="wow2008-promo-icon wow2008-promo-icon--fanart"></span>
+                                  <h3 class="wow2008-promo-title wow2008-promo-title--fanart"><span>Fan Art</span></h3>
+                                  <img src="/wow2008/images/featured/fanart.jpg" alt="World of Warcraft fan art">
+                                  <span class="wow2008-read-more"></span>
+                                </div>
+                              </a>
+                              <a class="wow2008-promo" href="#" aria-label="Wallpapers">
+                                <div class="wow2008-promo-frame">
+                                  <span class="wow2008-promo-icon wow2008-promo-icon--wallpaper"></span>
+                                  <h3 class="wow2008-promo-title wow2008-promo-title--wallpaper"><span>Wallpapers</span></h3>
+                                  <img src="/wow2008/images/featured/wallpaper.jpg" alt="World of Warcraft wallpaper">
+                                  <span class="wow2008-read-more"></span>
+                                </div>
+                              </a>
+                            </div>
+
+                            <section class="wow2008-community">
+                              <div class="wow2008-community-top">
+                                <h2>Community Spotlight</h2>
+                              </div>
+                              <div class="wow2008-community-body">
+                                <p>Discover artwork, stories, screenshots and creations from the World of Warcraft community.</p>
+                                <p class="wow2008-community__note">Have something you would like to share with the community? Send us a link.</p>
+                                <div class="wow2008-community__actions">
+                                  <a href="#">Warcraft Weekly</a>
+                                  <a href="#">Spotlight Archive</a>
+                                </div>
+                              </div>
+                              <div class="wow2008-community-bottom"></div>
+                            </section>
+
+                            <div class="wow2008-banner-row">
+                              <a class="wow2008-banner wow2008-banner--help" href="#" aria-label="Need Help">
+                                <span class="wow2008-banner-icon wow2008-banner-icon--help"></span>
+                                <span class="wow2008-banner-label wow2008-banner-label--help"></span>
+                              </a>
+                              <a class="wow2008-banner wow2008-banner--jobs" href="#" aria-label="Jobs">
+                                <span class="wow2008-banner-icon wow2008-banner-icon--jobs"></span>
+                                <span class="wow2008-banner-label wow2008-banner-label--jobs"></span>
+                              </a>
+                            </div>
+
+                            <div class="wow2008-link-grid">
+                              <section class="wow2008-link-group">
+                                <h3>WoW: Wrath of the Lich King</h3>
+                                <ul>
+                                  <li><a href="#">Bestiary</a></li>
+                                  <li><a href="#">Dragonblight</a></li>
+                                  <li><a href="#">Screenshots</a></li>
+                                  <li><a href="#">Features</a></li>
+                                  <li><a href="#">Movies</a></li>
+                                </ul>
+                              </section>
+                              <section class="wow2008-link-group">
+                                <h3>Movies and Trailers</h3>
+                                <ul>
+                                  <li><a href="#">Sunwell Plateau</a></li>
+                                  <li><a href="#">Verne Troyer</a></li>
+                                  <li><a href="#">M.P.T.</a></li>
+                                  <li><a href="#">William Shatner</a></li>
+                                </ul>
+                              </section>
+                              <section class="wow2008-link-group">
+                                <h3>World of Warcraft Insider</h3>
+                                <p>Your number one source of up-to-date, behind the scenes information about World of Warcraft!</p>
+                                <ul>
+                                  <li><a href="#">Latest issue</a></li>
+                                  <li><a href="#">Subscribe now</a></li>
+                                </ul>
+                              </section>
+                              <section class="wow2008-link-group">
+                                <h3>Online Store</h3>
+                                <ul>
+                                  <li><a href="#">World of Warcraft Battle Chest</a></li>
+                                  <li><a href="#">World of Warcraft 2008 Daily Calendar</a></li>
+                                  <li><a href="#">Burning Crusade Strategy Guide</a></li>
+                                  <li><a href="#">TCG: Onyxia Raid Deck</a></li>
+                                </ul>
+                              </section>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wow2008-cnt-bot">
+                      <div><div></div></div>
+                    </div>
+                  </div>
+                </section>
+
+                <aside class="wow2008-right">
+                  <section class="wow2008-bc-upgrade">
+                    <h2><img src="/wow2008/images/templates/The_Burning_Crusade/header-expansion.jpg" alt="The Burning Crusade"></h2>
+                    <div class="wow2008-bc-upgrade__content">
+                      <img src="/wow2008/images/image-retailbox.gif" alt="World of Warcraft The Burning Crusade">
+                      <div>
+                        <strong>Digital Upgrade</strong>
+                        <span>Burning Crusade</span>
+                        <a href="#">Download Now</a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="wow2008-quicklinks">
+                    <div class="wow2008-marginal-top">
+                      <span class="wow2008-marginal-icon wow2008-marginal-icon--quicklinks"></span>
+                      <h2></h2>
+                    </div>
+                    <div class="wow2008-marginal-body">
+                      <ul>
+                        <li v-for="link in quickLinks" :key="link"><a href="#">{{ link }}</a></li>
+                      </ul>
+                    </div>
+                    <div class="wow2008-marginal-bottom"></div>
+                  </section>
+
+                  <section class="wow2008-screenshot">
+                    <div class="wow2008-marginal-top">
+                      <span class="wow2008-marginal-icon wow2008-marginal-icon--ssotd"></span>
+                      <h2></h2>
+                    </div>
+                    <div class="wow2008-marginal-body wow2008-screenshot-body">
+                      <div class="wow2008-screenshot__image" role="img" aria-label="Screenshot of the day"></div>
+                      <select aria-label="Screenshot gallery">
+                        <option>Screenshot Galleries</option>
+                      </select>
+                    </div>
+                    <div class="wow2008-marginal-bottom"></div>
+                  </section>
+
+                  <section class="wow2008-newcomers">
+                    <div class="wow2008-marginal-top">
+                      <span class="wow2008-marginal-icon wow2008-marginal-icon--newcomers"></span>
+                      <h2>Newcomers Section</h2>
+                    </div>
+                    <div class="wow2008-newcomers-body">
+                      <div class="wow2008-newcomers-entry">
+                        <img src="/wow2008/images/bg-newcomers.jpg" alt="">
+                        <strong>Looking to purchase World of Warcraft?</strong>
+                        <span>Follow the links below to learn more.</span>
+                      </div>
+                      <div class="wow2008-newcomers-entry">
+                        <img src="/wow2008/images/bg-discover.jpg" alt="">
+                        <strong>Lost in Azeroth?</strong>
+                        <span>Find your way with our Beginner's Guide.</span>
+                      </div>
+                      <a href="#" class="wow2008-newcomers-button">General FAQ</a>
+                    </div>
+                    <div class="wow2008-marginal-bottom"></div>
+                  </section>
+                </aside>
+              </div>
+            </div>
           </div>
-          <footer class="wow2008-footer"><img src="/wow2008/images/templates/The_Burning_Crusade/statue-left.jpg" alt="" class="wow2008-statue-left"><img src="/wow2008/images/new/bot-blizzlogo.gif" alt="Blizzard Entertainment"></footer>
-        </main>
-      </div>
-      </div>
+        </div>
+
+        <footer class="wow2008-main-bottom">
+          <div><div>
+            <div class="wow2008-blizz-logo">
+              <img src="/wow2008/images/new/bot-blizzlogo.gif" alt="Blizzard Entertainment">
+            </div>
+          </div></div>
+        </footer>
+      </main>
+
+      <img class="wow2008-statue-left" src="/wow2008/images/templates/The_Burning_Crusade/statue-left.jpg" alt="">
     </div>
-    <div class="wow2008-bottom-bar"></div>
+
+    <div class="wow2008-iron-frame"></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-const themeAssets = '/wow2008/images/templates/The_Burning_Crusade/'
+
+const menuAssets = '/wow2008/images/menu/leftMenu/'
 const navigation = [
- {key:'news',asset:'news',title:'News',links:['Current News','Archived News','Awards and Honors','Press Releases']},
- {key:'account',asset:'account',title:'Account',links:['Create Account','Manage Account','Retrieve Password','Character Move','Paid Char Transfer','Recruit-A-Friend','Scroll of Resurrection','Parental Controls','Realm Status','Public Test Realm']},
- {key:'gameguide',asset:'gameguide',title:'Game Guide',links:['Game Guide','Introduction','Getting Started','Character','Reputations','Items','The World','Transportation','Player Interaction','Player vs Player','FAQ','Story','Burning Crusade','Wrath of the Lich King','Under Development','Previous Patches']},
- {key:'community',asset:'community',title:'Community',links:['Community News','Contests','Fan Art']},
- {key:'forums',asset:'forums',title:'Forums',links:['Forums','Guild Forums']},
- {key:'media',asset:'media',title:'Media',links:['Screenshots','Wallpapers','Movies']},
- {key:'support',asset:'support',title:'Support',links:['Support','Submit a Ticket','Known Issues']},
- {key:'workshop',asset:'interactive',title:'Workshop',links:['Armory','Arena','Encyclopedia','Talent Calculators','Events Calendar','Armor Sets']},
+  {
+    key: 'news',
+    title: 'News',
+    icon: 'news',
+    header: 'news',
+    links: ['Current News', 'Archived News', 'Awards and Honors', 'Press Releases'],
+  },
+  {
+    key: 'account',
+    title: 'Account',
+    icon: 'account',
+    header: 'account',
+    links: ['Create Account', 'Manage Account', 'Retrieve Password', 'Character Move', 'Paid Char Transfer', 'Recruit-A-Friend', 'Scroll of Resurrection', 'Parental Controls', 'Realm Status', 'Public Test Realm'],
+  },
+  {
+    key: 'gameguide',
+    title: 'Game Guide',
+    icon: 'gameguide',
+    header: 'gameguide',
+    links: ['Game Guide', 'Introduction', 'Getting Started', 'Character', 'Reputations', 'Items', 'The World', 'Transportation', 'Player Interaction', 'Player vs Player', 'FAQ', 'Story', 'Burning Crusade', 'Wrath of the Lich King', 'Under Development', 'Previous Patches'],
+  },
+  {
+    key: 'workshop',
+    title: 'Workshop',
+    icon: 'interactive',
+    header: 'workshop',
+    links: ['Armory', 'Arena', 'Encyclopedia', 'Talent Calculators', 'Events Calendar', 'Armor Sets', 'World Map', 'Battlegrounds'],
+  },
+  {
+    key: 'media',
+    title: 'Media',
+    icon: 'media',
+    header: 'media',
+    links: ['Overview', 'Screenshots', 'Movies', 'Music', 'Wallpapers', 'Other Downloads', 'Gadgetzan Times', 'Blizzard Store', 'BlizzCast'],
+  },
+  {
+    key: 'forums',
+    title: 'Forums',
+    icon: 'forums',
+    header: 'forums',
+    links: ['General', 'Class Forums', 'Realm Forums', 'Guild Recruitment', 'Guild Relations', 'Support'],
+  },
+  {
+    key: 'community',
+    title: 'Community',
+    icon: 'community',
+    header: 'community',
+    links: ['Overview', 'Comics', 'Machinima', 'Community Spotlight', 'Contests', 'Guild Relations', 'Real-Life Events', 'Fan Art', 'Fan Sites', 'Fan Wallpapers'],
+  },
+  {
+    key: 'support',
+    title: 'Support',
+    icon: 'support',
+    header: 'support',
+    links: ['Support News', 'Account Admin', 'Billing and Account', 'Technical Support', 'In-Game Support', 'Support Tools', 'Game Policies'],
+  },
 ]
-const openGroups = ref(['news','account','gameguide'])
-const toggleGroup = (key:string) => { openGroups.value = openGroups.value.includes(key) ? openGroups.value.filter(x => x !== key) : [...openGroups.value,key] }
-const quickLinks = ['Account Management','Parental Controls','Support Site','Realm Status','Account Creation','Retrieve Password','Account Security','Latest Patch Notes','Free 10-Day WoW Trial']
+
+const openGroups = ref(navigation.map(group => group.key))
+const toggleGroup = (key: string) => {
+  openGroups.value = openGroups.value.includes(key)
+    ? openGroups.value.filter(group => group !== key)
+    : [...openGroups.value, key]
+}
+
+const quickLinks = [
+  'Account Management',
+  'Parental Controls',
+  'Support Site',
+  'Realm Status',
+  'Account Creation',
+  'Retrieve Password',
+  'Account Security',
+  'Latest Patch Notes',
+  'Free 10-Day WoW Trial',
+]
 </script>
 
 <style scoped>
-.wow2008{min-height:100vh;background:#000 url('/wow2008/images/templates/The_Burning_Crusade/page-bg.jpg') center top repeat-x;color:#17120a;font:12px Arial,Helvetica,sans-serif;overflow:hidden;position:relative}
-.wow2008:before{content:"";position:absolute;z-index:0;top:0;left:0;right:0;height:180px;background:url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top2.jpg') center top repeat-x;pointer-events:none}
-.wow2008 a{color:#003c80;text-decoration:underline}
-.wow2008-topbar{height:32px;background:#072540 url('/wow2008/images/templates/The_Burning_Crusade/bg.gif') center top repeat-x;position:relative;z-index:10;border-bottom:1px solid #143352}
-.wow2008-topbar__inner{height:32px;width:1175px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 12px;box-sizing:border-box}
-.wow2008-topbar nav{display:flex;align-items:center;gap:12px;height:100%;white-space:nowrap}
-.wow2008-topbar nav a{color:#d5e7ff;font:bold 11px Tahoma,Arial,sans-serif;text-decoration:none;text-shadow:1px 1px #001027}
-.wow2008-topbar nav a+a:before{content:"";display:inline-block;width:2px;height:18px;margin:0 12px 0 0;vertical-align:middle;background:linear-gradient(90deg,#172d46,#91a7b8 45%,#172d46)}
-.wow2008-search{display:flex;gap:4px;align-items:center}.wow2008-search input{width:120px;background:#080b10;color:#fff;border:1px solid #7189a4}.wow2008-search select,.wow2008-search button{height:22px;background:#172b45;color:#e4edfa;border:1px solid #7189a4;font-size:10px}
-.wow2008-stage{width:1175px;margin:0 auto;display:grid;grid-template-columns:475px 700px;position:relative;align-items:stretch;z-index:1}
-.wow2008-frame{display:contents}
-.wow2008-header{position:absolute;z-index:12;top:-32px;left:475px;width:700px;height:105px;pointer-events:none;background:url('/wow2008/images/templates/The_Burning_Crusade/topbg2.gif') center 32px no-repeat}
-.wow2008-logo{pointer-events:auto;position:absolute;top:0;left:-90px;width:252px;height:103px;display:block;background:url('/wow2008/images/templates/The_Burning_Crusade/wowlogo-wrathtrans.gif') left top no-repeat}
-.wow2008-logo img{display:block;width:252px;height:103px;object-fit:contain}
-.wow2008-layout{display:contents}
-.wow2008-left{grid-column:1;grid-row:1;width:475px;min-height:900px;position:relative;background:#000 url('/wow2008/images/templates/The_Burning_Crusade/ne-nav-bg.jpg') 11px 0 no-repeat;box-sizing:border-box}
-.wow2008-character-art{height:578px;width:475px;position:relative;background:none}.wow2008-ne-top-left{position:absolute;top:-73px;left:-314px;width:264px;height:346px;background:url('/wow2008/images/templates/The_Burning_Crusade/ne-top-left.jpg') no-repeat}.wow2008-ne-center{position:absolute;top:-73px;left:-50px;width:64px;height:578px;background:url('/wow2008/images/templates/The_Burning_Crusade/ne-center.jpg') no-repeat}.wow2008-ne-bottom-left{position:absolute;top:267px;left:-176px;width:144px;height:126px;background:url('/wow2008/images/templates/The_Burning_Crusade/ne-bottom-left.jpg') no-repeat}
-.wow2008-left{background:none}
-.wow2008-nav-background{position:absolute;top:-10px;left:11px;width:157px;height:546px;background:url('/wow2008/images/templates/The_Burning_Crusade/ne-nav-bg.jpg') no-repeat 0 0;z-index:1;pointer-events:none}
-.wow2008-nav{position:absolute;top:13px;left:11px;width:157px;margin:0;padding:0 8px 30px;box-sizing:border-box;z-index:2}
-.wow2008-nav__group{position:relative;margin:0;min-height:27px}
-.wow2008-nav__heading{height:27px;position:relative;margin:0;padding:0}
-.wow2008-nav__icon{position:absolute;display:block;left:5px;top:3px;width:24px;height:21px;background-repeat:no-repeat;background-position:0 0}
-.wow2008-nav__icon--news{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-news-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--news{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-news-on.gif')}
-.wow2008-nav__icon--account{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-account-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--account{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-account-on.gif')}
-.wow2008-nav__icon--gameguide{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-gameguide-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--gameguide{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-gameguide-on.gif')}
-.wow2008-nav__icon--interactive{width:25px;background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-interactive-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--interactive{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-interactive-on.gif')}
-.wow2008-nav__icon--community{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-community-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--community{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-community-on.gif')}
-.wow2008-nav__icon--forums{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-forums-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--forums{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-forums-on.gif')}
-.wow2008-nav__icon--media{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-media-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--media{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-media-on.gif')}
-.wow2008-nav__icon--support{width:25px;background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-support-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__icon--support{background-image:url('/wow2008/images/templates/The_Burning_Crusade/icon-support-on.gif')}
-.wow2008-nav__toggle{position:absolute;inset:0 0 0 0;width:100%;height:27px;margin:0;padding:0;border:0;background:transparent url('/wow2008/images/templates/The_Burning_Crusade/leftmenu-button-off.gif') no-repeat 1px 0;cursor:pointer}
-.wow2008-nav__toggle.is-open{background-image:url('/wow2008/images/templates/The_Burning_Crusade/leftmenu-button-on.gif')}
-.wow2008-nav__title{position:absolute;display:block;left:30px;top:6px;width:105px;height:14px;background-repeat:no-repeat;background-position:0 0}
-.wow2008-nav__title--news{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-news-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--news{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-news-on.gif')}
-.wow2008-nav__title--account{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-account-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--account{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-account-on.gif')}
-.wow2008-nav__title--gameguide{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-gameguide-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--gameguide{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-gameguide-on.gif')}
-.wow2008-nav__title--interactive{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-interactive-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--interactive{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-interactive-on.gif')}
-.wow2008-nav__title--community{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-community-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--community{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-community-on.gif')}
-.wow2008-nav__title--media{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-media-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--media{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-media-on.gif')}
-.wow2008-nav__title--support{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-support-off.gif')}
-.wow2008-nav__group:has(.wow2008-nav__links) .wow2008-nav__title--support{background-image:url('/wow2008/images/templates/The_Burning_Crusade/header-support-on.gif')}
-.wow2008-nav__title--forums{width:auto;height:auto;top:6px;color:#d7b94b;font:bold 11px Georgia,serif}
-.wow2008-nav__title--forums:after{content:'Forums'}
-.wow2008-nav__links{position:relative;list-style:none;margin:0 0 5px;padding:0 3px 5px 22px;background:transparent}
-.wow2008-nav__links li{height:16px;line-height:16px;margin:0;padding:0}
-.wow2008-nav__links a{display:block;padding-left:9px;color:#e4d4a0;text-decoration:none;font:10px/16px Arial,Helvetica,sans-serif;background:url('/wow2008/images/templates/The_Burning_Crusade/bullet.gif') no-repeat 0 3px}
-.wow2008-nav__links a:hover{color:#fff;text-decoration:underline}
-.wow2008-center{grid-column:2;grid-row:1;width:700px;min-width:0;position:relative;padding:0 14px 70px;background:#ead3a5 url('/wow2008/images/blog-content-bg.jpg') repeat;box-sizing:border-box;min-height:900px}
-.wow2008-center:before,.wow2008-center:after{content:"";position:absolute;top:0;bottom:0;width:14px;z-index:5;pointer-events:none}
-.wow2008-center:before{left:0;background:url('/wow2008/images/ss-border-left.gif') repeat-y left top}
-.wow2008-center:after{right:0;background:url('/wow2008/images/ss-border-right.gif') repeat-y right top}
-.wow2008-news-area{display:grid;grid-template-columns:minmax(0,1fr) 175px;gap:8px;min-height:800px;padding:100px 8px 20px;background:#ead3a5 url('/wow2008/images/blog-content-bg.jpg') repeat;position:relative}
-.wow2008-news-area:before{content:"";position:absolute;top:0;left:0;right:0;height:20px;background:url('/wow2008/images/blog-content-top.jpg') repeat-x}
-.wow2008-news-column{padding:0 0 0 5px;min-width:0}.wow2008-flash-placeholder{display:block;width:100%;max-width:474px;height:auto;margin:0 auto 10px}
-.wow2008-news-heading{display:none}.wow2008-news-column :deep(.topics){padding:0 4px}.wow2008-news-column :deep(.topic-intro){margin-bottom:8px}.wow2008-news-column :deep(.card){border:1px solid #c6a65d;background:#f5e6bd}
-.wow2008-news-card{padding:16px;background:#f1dfb4;border:1px solid #c2a15b}.wow2008-news-card h1{font:22px Georgia,serif;color:#17416a}
-.wow2008-archive{text-align:center;padding:9px;border-top:1px solid #b99b62}.wow2008-archive a{font-size:10px;text-transform:uppercase;background:#eee0bc;padding:2px 12px}
-.wow2008-promo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0}
-.wow2008-promo{height:90px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:5px;color:#f2cf4b!important;text-decoration:none!important;background-color:#10151b}
-.wow2008-promo strong,.wow2008-banner strong{font:bold 13px Georgia,serif;text-shadow:1px 1px #000}.wow2008-promo b,.wow2008-banner b{align-self:flex-end;background:#6e1308;padding:2px 12px;font-size:9px}
-.wow2008-promo--contest{background:url('/wow2008/images/visual-smallTeaser-contests.gif') center/cover no-repeat}.wow2008-promo--fanart{background:url('/wow2008/images/visual-smallTeaser-fanarts.gif') center/cover no-repeat}.wow2008-promo--wallpaper{background:url('/wow2008/images/visual-smallTeaser-wallp.gif') center/cover no-repeat}
-.wow2008-community{margin:10px 0;background:#e7d5ad url('/wow2008/images/templates/The_Burning_Crusade/community-smallteaser-bg.gif') no-repeat}.wow2008-community h2,.wow2008-quicklinks h2,.wow2008-screenshot h2{margin:0;padding:4px 6px 4px 42px;color:#e9bd31;font:bold 14px Georgia,serif;background:#17283a url('/wow2008/images/templates/The_Burning_Crusade/header-generalnews.gif') no-repeat 38px 5px}
-.wow2008-community__title{padding:6px 9px;background:#071a30;color:#f2cb45;font-weight:bold}.wow2008-community__title span{color:#8bd3ee;font-style:italic;font-size:10px}
-.wow2008-community__body{padding:12px;color:#17120a;font-size:11px;line-height:1.35}.wow2008-community__note{padding:8px;background:#dfc99a;border:1px solid #c2a675}
-.wow2008-community__actions{display:flex;justify-content:center;gap:8px}.wow2008-community__actions a{background:#4c1009;color:#ffd33c;padding:4px 12px;text-decoration:none}
-.wow2008-banner-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
-.wow2008-banner{height:86px;display:block;position:relative;background:url('/wow2008/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif') no-repeat left top}
-.wow2008-banner--help:before,.wow2008-banner--jobs:before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-repeat:no-repeat;background-position:0 0;pointer-events:none}
-.wow2008-banner--help:before{background-image:url('/wow2008/images/visual-smallTeaser-needhelp.gif')}
-.wow2008-banner--jobs:before{background-image:url('/wow2008/images/visual-smallTeaser-wallp.gif')}
-.wow2008-link-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 12px;padding:0 5px 20px}.wow2008-link-group{min-height:75px;border-top:2px solid #8b7549}
-.wow2008-link-group h3{margin:-10px 0 7px;padding:0 5px;display:table;background:#ead3a5;color:#173d63;font:bold 12px Georgia,serif}.wow2008-link-group ul{margin:0;padding-left:18px}.wow2008-link-group li{line-height:14px}.wow2008-link-group p{margin:0 0 4px;font-size:11px}
-.wow2008-right{padding:0}.wow2008-expansion-banner{height:80px;display:flex;align-items:flex-end;justify-content:center;padding:5px;color:#f2d36c!important;font:bold 12px Georgia,serif;text-decoration:none!important;background:#081b32 url('/wow2008/images/page-bg-alt3_2.jpg') center/cover no-repeat}
-.wow2008-quicklinks{margin:10px 0;padding-top:24px;background:#e7d2a4 url('/wow2008/images/templates/The_Burning_Crusade/marginal-infobox-top-ql.gif') no-repeat 43px 0}.wow2008-quicklinks ul{list-style:none;margin:0;padding:6px 10px}.wow2008-quicklinks li{padding:5px 0;border-bottom:1px solid #c0a979}.wow2008-quicklinks a{font-size:11px;font-weight:bold}
-.wow2008-screenshot{background:#07090a;padding:24px 2px 2px;background-image:url('/wow2008/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg');background-repeat:no-repeat;background-position:43px 0}.wow2008-screenshot__image{height:130px;background:#030405 url('/wow2008/images/visual-infoBox-ssotd.gif') center/cover no-repeat}
-.wow2008-footer{height:70px;position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:center;align-items:center;background:url('/wow2008/images/bottom-bg.gif') repeat-x;z-index:6}
-.wow2008-footer img:not(.wow2008-statue-left){width:150px;height:auto;object-fit:contain}
-.wow2008-statue-left{position:absolute;left:-14px;bottom:0;width:90px;height:auto}
-.wow2008-bottom-bar{height:0}
-@media(max-width:1180px){.wow2008-stage{width:100%;grid-template-columns:minmax(220px,40%) minmax(0,700px)}.wow2008-left{width:100%}.wow2008-center{width:100%}}
-@media(max-width:700px){.wow2008-stage{display:block}.wow2008-left{width:100%;min-height:0}.wow2008-character-art{display:none}.wow2008-nav{width:auto;display:grid;grid-template-columns:1fr 1fr}.wow2008-center{width:100%;padding:12px 10px 70px}.wow2008-news-area{display:block}.wow2008-right{padding:8px;display:grid;grid-template-columns:1fr 1fr}.wow2008-screenshot{display:none}.wow2008-logo{left:10px;top:-50px;transform:scale(.7);transform-origin:top left}}
+.wow2008 {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: #17120a;
+  font: 12px Arial, Helvetica, sans-serif;
+  background: #000 url('/wow2008/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x center top;
+}
+.wow2008-page-bg-top {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 88px;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x 0 0;
+  pointer-events: none;
+}
+.wow2008 a {
+  color: #1e4378;
+  text-decoration: underline;
+}
+.wow2008-topbar {
+  height: 32px;
+  position: relative;
+  z-index: 20;
+  background: #072540 url('/wow2008/images/templates/The_Burning_Crusade/bg.gif') 50% 0 repeat-x;
+  border-bottom: 1px solid #143352;
+}
+.wow2008-topbar__inner {
+  width: 955px;
+  max-width: 100%;
+  height: 32px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17px;
+  box-sizing: border-box;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
+}
+.wow2008-topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  white-space: nowrap;
+}
+.wow2008-topbar nav a {
+  color: #fbb917;
+  font: bold 11px Tahoma, Arial, sans-serif;
+  text-decoration: none;
+  text-shadow: 1px 1px #001027;
+}
+.wow2008-topbar__divider {
+  display: block;
+  width: 2px;
+  height: 18px;
+  background: linear-gradient(90deg, #172d46, #91a7b8 45%, #172d46);
+}
+.wow2008-search {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+}
+.wow2008-search__left {
+  width: 16px;
+  height: 34px;
+  background: url('/wow2008/images/layout/search/search-left.gif') no-repeat;
+}
+.wow2008-search__body {
+  width: 396px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  background: url('/wow2008/images/layout/search/search-bg.gif') repeat-x;
+}
+.wow2008-search input {
+  width: 230px;
+  margin: 0 2px;
+  padding: 2px 4px;
+  height: 18px;
+  border: 1px solid #7f7f7f;
+  box-sizing: border-box;
+  background: #040d1a;
+  color: #ffac04;
+}
+.wow2008-search select {
+  width: 112px;
+  height: 20px;
+  margin: 0 2px;
+  border: 1px solid #7f7f7f;
+  background: #040d1a;
+  color: #ffac04;
+  font-size: 10px;
+}
+.wow2008-search button {
+  width: 55px;
+  height: 19px;
+  margin-left: 3px;
+  border: 1px solid #8d5e17;
+  background: #8d1f0b;
+  color: #ffdb59;
+  font: bold 10px Arial, sans-serif;
+  cursor: pointer;
+}
+.wow2008-search__right {
+  width: 8px;
+  height: 34px;
+  background: url('/wow2008/images/layout/search/search-right.gif') no-repeat;
+}
+.wow2008-stage {
+  width: 1175px;
+  max-width: none;
+  min-height: 950px;
+  margin: -85px auto 0;
+  padding-top: 60px;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 157px 1018px;
+  align-items: stretch;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
+}
+.wow2008-header {
+  position: absolute;
+  top: 0;
+  left: -28px;
+  z-index: 30;
+  width: 252px;
+  height: 103px;
+}
+.wow2008-logo,
+.wow2008-logo img {
+  display: block;
+  width: 252px;
+  height: 103px;
+}
+.wow2008-logo img {
+  border: 0;
+}
+.wow2008-left {
+  grid-column: 1;
+  grid-row: 1;
+  width: 157px;
+  min-height: 900px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x 0 0;
+  box-sizing: border-box;
+}
+.wow2008-ne-top-left {
+  position: absolute;
+  top: -86px;
+  left: -314px;
+  width: 264px;
+  height: 346px;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-top-left.jpg') no-repeat;
+  pointer-events: none;
+}
+.wow2008-ne-center {
+  position: absolute;
+  top: -86px;
+  left: -50px;
+  width: 64px;
+  height: 578px;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-center.jpg') no-repeat;
+  pointer-events: none;
+}
+.wow2008-ne-bottom-left {
+  position: absolute;
+  top: 260px;
+  left: -176px;
+  width: 144px;
+  height: 126px;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-bottom-left.jpg') no-repeat;
+  pointer-events: none;
+}
+.wow2008-ne-nav-bg {
+  position: absolute;
+  top: -36px;
+  left: 11px;
+  width: 146px;
+  height: 546px;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/ne-nav-bg.jpg') no-repeat;
+  pointer-events: none;
+}
+.wow2008-nav {
+  width: 157px;
+  position: relative;
+  z-index: 4;
+  margin: 39px 0 0;
+  padding: 0;
+  right: -11px;
+  box-sizing: border-box;
+}
+.wow2008-nav-section {
+  height: auto;
+  min-height: 31px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.wow2008-nav-button {
+  height: 27px;
+  width: 142px;
+  margin-top: 1px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 1px 0;
+}
+.wow2008-nav-button.menu-button-on {
+  background-image: url('/wow2008/images/menu/leftMenu/leftMenu-button-on.gif');
+}
+.wow2008-nav-button.menu-button-off {
+  background-image: url('/wow2008/images/menu/leftMenu/leftMenu-button-off.gif');
+}
+.wow2008-nav-icon {
+  width: 24px;
+  height: 21px;
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  display: block;
+  background-repeat: no-repeat;
+}
+.wow2008-nav-icon.is-wide {
+  width: 25px;
+}
+.wow2008-nav-title {
+  width: 105px;
+  height: 25px;
+  position: absolute;
+  left: 30px;
+  top: 1px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+}
+.wow2008-nav-collapse {
+  width: 15px;
+  height: 14px;
+  position: absolute;
+  top: 9px;
+  right: 13px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.wow2008-nav-collapse.is-open {
+  background-image: url('/wow2008/images/leftmenu-minus.gif');
+}
+.wow2008-nav-collapse.is-closed {
+  background-image: url('/wow2008/images/leftmenu-plus.gif');
+}
+.wow2008-nav-right-border {
+  width: 9px;
+  height: 35px;
+  position: absolute;
+  right: 5px;
+  top: -4px;
+  display: block;
+  background: url('/wow2008/images/menu-add.gif') no-repeat 0 0;
+}
+.wow2008-nav-inner {
+  width: 145px;
+  position: relative;
+  z-index: 2;
+  padding: 0 0 0 4px;
+  box-sizing: content-box;
+}
+.leftMenu-cont-top {
+  width: 145px;
+  height: 6px;
+  background: url('/wow2008/images/leftMenu-cont-top.png') no-repeat 0 0;
+}
+.leftMenu-cont-mid {
+  width: 145px;
+  background: url('/wow2008/images/menu/mainmenu/leftMenu-back.png') repeat 0 0;
+}
+.leftMenu-cont-mid .m-left {
+  background: url('/wow2008/images/leftMenu-cont-mid-left.jpg') repeat-y top left;
+}
+.leftMenu-cont-mid .m-left .m-right {
+  background: url('/wow2008/images/leftMenu-cont-mid-right.jpg') repeat-y top right;
+}
+.leftMenu-cnt {
+  padding-left: 5px;
+}
+.leftMenu-cont-bot {
+  width: 145px;
+  height: 8px;
+  background: url('/wow2008/images/leftMenu-cont-bot.png') no-repeat 0 0;
+}
+.mainNav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mainNav li {
+  margin: 0;
+  padding: 0;
+}
+.wow2008-menu-entry {
+  width: 139px;
+  height: 15px;
+  position: relative;
+  left: -3px;
+  margin: 0;
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+  background: url('/wow2008/images/menu/mainmenu/bullet-trans-bg.gif') no-repeat 0 0;
+  font: bold 11px/15px Arial, Helvetica, sans-serif;
+}
+.wow2008-menu-entry a,
+.wow2008-menu-entry a:link,
+.wow2008-menu-entry a:visited {
+  display: block;
+  width: 120px;
+  color: #d0a803;
+  font: bold 11px/15px Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+.wow2008-menu-entry a:hover {
+  color: #fff;
+}
+.wow2008-center {
+  grid-column: 2;
+  grid-row: 1;
+  width: 1018px;
+  min-width: 0;
+  min-height: 900px;
+  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+.wow2008-main-top {
+  height: 25px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 2;
+  background: url('/wow2008/images/layout/frame_top-bg.jpg') repeat-x 0 0;
+}
+.wow2008-main-top > div {
+  height: 25px;
+  background: url('/wow2008/images/layout/frame_top-left.jpg') no-repeat top left;
+}
+.wow2008-main-top > div > div {
+  height: 25px;
+  background: url('/wow2008/images/layout/frame_top-right.jpg') no-repeat top right;
+}
+.wow2008-main-content-wrapper {
+  min-height: 820px;
+  background: url('/wow2008/images/layout/frame_left-bg.jpg') repeat-y 0 0;
+}
+.wow2008-main-content {
+  min-height: 820px;
+  background: url('/wow2008/images/layout/frame_right-bg.jpg') repeat-y top right;
+}
+.wow2008-content-padding {
+  min-height: 820px;
+  margin: 0 19px 0 17px;
+  padding: 0;
+  position: relative;
+}
+.wow2008-content-columns {
+  display: grid;
+  grid-template-columns: 735px 226px;
+  align-items: start;
+  column-gap: 0;
+  margin: 3px 0 0 3px;
+}
+.wow2008-main-column {
+  width: 735px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+.wow2008-cnt-paper {
+  width: 735px;
+  background: url('/wow2008/images/layout/light.jpg') repeat 0 0;
+}
+.wow2008-cnt-top {
+  height: 13px;
+  background: url('/wow2008/images/layout/cnt-paper-top.jpg') repeat-x top left;
+}
+.wow2008-cnt-top > div {
+  height: 13px;
+  background: url('/wow2008/images/layout/cnt-paper-topleft.jpg') no-repeat top left;
+}
+.wow2008-cnt-top > div > div {
+  height: 13px;
+  background: url('/wow2008/images/layout/cnt-paper-topright.jpg') no-repeat top right;
+}
+.wow2008-content-left {
+  background: url('/wow2008/images/layout/cnt-paper-left.jpg') repeat-y top left;
+}
+.wow2008-content-right {
+  min-height: 600px;
+  background: url('/wow2008/images/layout/cnt-paper-right.jpg') repeat-y top right;
+}
+.wow2008-cnt-main {
+  min-height: 600px;
+  padding: 0 12px 10px;
+  background: url('/wow2008/images/layout/light.jpg') repeat 0 0;
+}
+.wow2008-cnt-bot {
+  height: 7px;
+  background: url('/wow2008/images/layout/cnt-paper-bot.jpg') repeat-x bottom left;
+}
+.wow2008-cnt-bot > div {
+  height: 7px;
+  background: url('/wow2008/images/layout/cnt-paper-botleft.jpg') no-repeat 0 100%;
+}
+.wow2008-cnt-bot > div > div {
+  height: 7px;
+  background: url('/wow2008/images/layout/cnt-paper-botright.jpg') no-repeat bottom right;
+}
+.wow2008-news-area {
+  display: grid;
+  grid-template-columns: 470px 226px;
+  gap: 0;
+  align-items: start;
+  min-height: 750px;
+  padding: 0;
+  background: transparent;
+  position: relative;
+}
+.wow2008-news-column {
+  width: 470px;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+.wow2008-flash-container {
+  width: 470px;
+  height: 190px;
+  position: relative;
+  margin: 0 0 12px;
+}
+.wow2008-flash-placeholder {
+  display: block;
+  width: 474px;
+  max-width: none;
+  height: auto;
+  position: relative;
+  margin: 0 0 0 -2px;
+}
+.wow2008-news-heading {
+  display: none;
+}
+.wow2008-news-column :deep(.topics) {
+  padding: 0 4px;
+}
+.wow2008-news-column :deep(.topic-intro) {
+  margin-bottom: 8px;
+}
+.wow2008-news-column :deep(.card) {
+  border: 1px solid #c6a65d;
+  background: #f5e6bd;
+}
+.wow2008-news-card {
+  padding: 16px;
+  background: #f1dfb4;
+  border: 1px solid #c2a15b;
+}
+.wow2008-news-card h1 {
+  font: 22px Georgia, serif;
+  color: #17416a;
+}
+.wow2008-archive {
+  text-align: center;
+  padding: 9px;
+  border-top: 1px solid #b99b62;
+}
+.wow2008-archive a {
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #eee0bc;
+  padding: 2px 12px;
+}
+.wow2008-promo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 10px;
+  margin: 10px 0;
+}
+.wow2008-promo {
+  width: 150px;
+  height: 123px;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #f2cf4b;
+  text-decoration: none;
+  background: url('/wow2008/images/smallTeaser-bg.gif') no-repeat 0 0;
+}
+.wow2008-promo-frame {
+  width: 150px;
+  height: 123px;
+  position: relative;
+}
+.wow2008-promo-frame > img {
+  display: block;
+  width: 133px;
+  height: 93px;
+  margin: 0 0 0 7px;
+  border: 0;
+}
+.wow2008-promo-icon {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  z-index: 2;
+  top: -5px;
+  left: -2px;
+  background-repeat: no-repeat;
+}
+.wow2008-promo-icon--contest {
+  background-image: url('/wow2008/images/visual-smallTeaser-contests.gif');
+}
+.wow2008-promo-icon--fanart {
+  background-image: url('/wow2008/images/visual-smallTeaser-fanarts.gif');
+}
+.wow2008-promo-icon--wallpaper {
+  top: -12px;
+  height: 43px;
+  background-image: url('/wow2008/images/visual-smallTeaser-wallp.gif');
+}
+.wow2008-promo-title {
+  height: 20px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 40px;
+  width: 105px;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+}
+.wow2008-promo-title span {
+  display: none;
+}
+.wow2008-promo-title--contest {
+  background-image: url('/wow2008/images/header-contest.gif');
+}
+.wow2008-promo-title--fanart {
+  background-image: url('/wow2008/images/header-fanarts.gif');
+}
+.wow2008-promo-title--wallpaper {
+  background-image: url('/wow2008/images/header-wallpapers.gif');
+}
+.wow2008-read-more {
+  width: 75px;
+  height: 15px;
+  position: absolute;
+  z-index: 3;
+  right: 6px;
+  bottom: 8px;
+  display: block;
+  background: url('/wow2008/images/button-readmore.gif') no-repeat;
+}
+.wow2008-community {
+  width: 470px;
+  min-height: 180px;
+  margin: 10px 0 12px;
+  position: relative;
+  background: url('/wow2008/images/phatLootBox-bg.gif') repeat-y 0 0;
+}
+.wow2008-community-top {
+  height: 27px;
+  margin: 0 4px;
+  background: url('/wow2008/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
+}
+.wow2008-community-top h2 {
+  margin: 0;
+  padding: 4px 0 0 10px;
+  color: #fff;
+  font: bold 13px "Trebuchet MS", Arial, sans-serif;
+}
+.wow2008-community-body {
+  min-height: 125px;
+  padding: 10px 14px 18px;
+  color: #17120a;
+  background: url('/wow2008/images/community-bg.jpg') repeat-y;
+  font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
+}
+.wow2008-community__note {
+  padding: 8px;
+  background: #dfc99a;
+  border: 1px solid #c2a675;
+}
+.wow2008-community__actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.wow2008-community__actions a {
+  padding: 4px 12px;
+  color: #ffd33c;
+  background: #4c1009;
+  border: 2px ridge #ad873e;
+  text-decoration: none;
+}
+.wow2008-community-bottom {
+  height: 20px;
+  background: url('/wow2008/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
+}
+.wow2008-banner-row {
+  display: grid;
+  grid-template-columns: 226px 226px;
+  gap: 8px;
+  margin: 12px 0 18px;
+}
+.wow2008-banner {
+  width: 226px;
+  height: 91px;
+  position: relative;
+  display: block;
+  background: url('/wow2008/images/2column-smallTeaser-bg.gif') no-repeat 0 0;
+}
+.wow2008-banner--help {
+  background-image: url('/wow2008/images/2column-smallTeaser-bg.gif'), url('/wow2008/images/needhelp-bg.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 8px 23px;
+}
+.wow2008-banner--jobs {
+  background-image: url('/wow2008/images/2column-smallTeaser-bg.gif'), url('/wow2008/images/jobs-bg.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 8px 23px;
+}
+.wow2008-banner-icon {
+  width: 36px;
+  height: 35px;
+  position: absolute;
+  z-index: 2;
+  top: -4px;
+  left: 0;
+  background-repeat: no-repeat;
+}
+.wow2008-banner-icon--help {
+  background-image: url('/wow2008/images/visual-smallTeaser-needhelp.gif');
+}
+.wow2008-banner-icon--jobs {
+  background-image: url('/wow2008/images/visual-smallTeaser-jobs.gif');
+}
+.wow2008-banner-label {
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  left: 38px;
+  width: 105px;
+  background-repeat: no-repeat;
+}
+.wow2008-banner-label--help {
+  background-image: url('/wow2008/images/header-needhelp.gif');
+}
+.wow2008-banner-label--jobs {
+  background-image: url('/wow2008/images/header-jobs.gif');
+}
+.wow2008-link-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+  padding: 0 5px 20px;
+}
+.wow2008-link-group {
+  min-height: 75px;
+  border-top: 2px solid #8b7549;
+}
+.wow2008-link-group h3 {
+  margin: -10px 0 7px;
+  padding: 0 5px;
+  display: table;
+  background: #e5d3a8;
+  color: #173d63;
+  font: bold 12px Georgia, serif;
+}
+.wow2008-link-group ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.wow2008-link-group li {
+  line-height: 14px;
+}
+.wow2008-link-group p {
+  margin: 0 0 4px;
+  font-size: 11px;
+}
+.wow2008-right {
+  width: 226px;
+  min-width: 0;
+  margin: 0 0 0 -1px;
+  padding: 0;
+  position: relative;
+}
+.wow2008-bc-upgrade {
+  width: 213px;
+  margin: 0 auto 12px;
+  position: relative;
+}
+.wow2008-bc-upgrade h2 {
+  height: 27px;
+  margin: 0;
+  background: url('/wow2008/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 43px 0;
+}
+.wow2008-bc-upgrade h2 img {
+  width: 121px;
+  height: auto;
+  display: block;
+  margin-left: 48px;
+}
+.wow2008-bc-upgrade__content {
+  min-height: 95px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 9px;
+  background: url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  box-sizing: border-box;
+  font: 11px/1.25 Arial, sans-serif;
+}
+.wow2008-bc-upgrade__content > img {
+  width: 55px;
+  height: 91px;
+  object-fit: contain;
+}
+.wow2008-bc-upgrade__content strong,
+.wow2008-bc-upgrade__content span,
+.wow2008-bc-upgrade__content a {
+  display: block;
+  margin-bottom: 4px;
+}
+.wow2008-bc-upgrade__content a {
+  padding: 2px 5px;
+  color: #f9df85;
+  text-align: center;
+  background: #8c260d;
+  font-size: 10px;
+  font-weight: bold;
+}
+.wow2008-quicklinks,
+.wow2008-screenshot,
+.wow2008-newcomers {
+  width: 213px;
+  margin: 0 auto 12px;
+  position: relative;
+}
+.wow2008-marginal-top {
+  width: 213px;
+  height: 27px;
+  position: relative;
+  background: url('/wow2008/images/marginal-infoBox-top-ie.jpg') no-repeat 43px 0;
+}
+.wow2008-marginal-top h2 {
+  height: 20px;
+  margin: 0;
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.wow2008-quicklinks .wow2008-marginal-top h2 {
+  background-image: url('/wow2008/images/header-quick_links.jpg');
+}
+.wow2008-screenshot .wow2008-marginal-top h2 {
+  background-image: url('/wow2008/images/header-ssotd.gif');
+}
+.wow2008-newcomers .wow2008-marginal-top h2 {
+  background-image: url('/wow2008/images/header-newcomers.jpg');
+}
+.wow2008-marginal-icon {
+  position: absolute;
+  z-index: 3;
+  top: -14px;
+  left: -3px;
+  width: 46px;
+  height: 54px;
+  background-repeat: no-repeat;
+}
+.wow2008-marginal-icon--quicklinks {
+  background-image: url('/wow2008/images/visual-infoBox-bg.gif');
+}
+.wow2008-marginal-icon--ssotd {
+  top: -6px;
+  background-image: url('/wow2008/images/visual-infoBox-ssotd.gif');
+}
+.wow2008-marginal-icon--newcomers {
+  top: -6px;
+  background-image: url('/wow2008/images/visual-infoBox-ng.gif');
+}
+.wow2008-marginal-body {
+  width: 213px;
+  box-sizing: border-box;
+  padding: 0 8px 6px;
+  background: url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+}
+.wow2008-quicklinks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 5px;
+}
+.wow2008-quicklinks li {
+  margin: 0 10px 0 0;
+  padding: 3px 0;
+  border-bottom: 1px solid #af9771;
+}
+.wow2008-quicklinks a {
+  display: block;
+  padding-left: 20px;
+  color: #1e4378;
+  font: bold 11px Arial, sans-serif;
+  background: url('/wow2008/images/icons/bullet.gif') no-repeat 0 40%;
+  text-decoration: none;
+}
+.wow2008-quicklinks a:hover {
+  color: #c60000;
+}
+.wow2008-marginal-bottom {
+  height: 10px;
+  background: url('/wow2008/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
+}
+.wow2008-screenshot-body {
+  padding: 0 8px 6px;
+  background: #050607 url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+}
+.wow2008-screenshot__image {
+  width: 197px;
+  height: 125px;
+  background: #030405 url('/wow2008/images/visual-infoBox-ssotd.gif') no-repeat 0 0;
+}
+.wow2008-screenshot select {
+  width: 179px;
+  height: 17px;
+  display: block;
+  margin: 3px auto 0;
+  border: 1px solid #835a20;
+  background: #ae813e;
+  color: #17120a;
+  font-size: 10px;
+}
+.wow2008-newcomers-body {
+  width: 213px;
+  padding: 7px 10px 8px;
+  box-sizing: border-box;
+  background: url('/wow2008/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  color: #17120a;
+  font: 10px/1.25 Arial, sans-serif;
+}
+.wow2008-newcomers-entry {
+  min-height: 67px;
+  margin: 0 0 6px;
+  position: relative;
+  padding-left: 65px;
+}
+.wow2008-newcomers-entry img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+}
+.wow2008-newcomers-entry strong,
+.wow2008-newcomers-entry span {
+  display: block;
+}
+.wow2008-newcomers-button {
+  display: block;
+  width: 103px;
+  margin: 4px auto 0;
+  padding: 3px 6px;
+  text-align: center;
+  color: #ffdc50 !important;
+  background: #7d1c08;
+  border: 2px ridge #9b793e;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+.wow2008-main-bottom {
+  height: 41px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -16px;
+  background: url('/wow2008/images/layout/frame_bottom-bg.jpg') repeat-x 0 0;
+}
+.wow2008-main-bottom > div {
+  height: 41px;
+  background: url('/wow2008/images/layout/frame_bottom-left.jpg') no-repeat top left;
+}
+.wow2008-main-bottom > div > div {
+  height: 41px;
+  background: url('/wow2008/images/layout/frame_bottom-right.jpg') no-repeat top right;
+}
+.wow2008-blizz-logo {
+  position: relative;
+  display: block;
+  top: -61px;
+  text-align: center;
+  z-index: 500;
+}
+.wow2008-blizz-logo img {
+  width: 97px;
+  height: 57px;
+  position: relative;
+}
+.wow2008-statue-left {
+  width: 243px;
+  height: 445px;
+  position: absolute;
+  left: -243px;
+  bottom: 41px;
+  z-index: 2;
+}
+.wow2008-iron-frame {
+  width: 100%;
+  height: 20px;
+  margin-top: -2px;
+  position: relative;
+  z-index: 0;
+  background: #000 url('/wow2008/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x top;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+@media (max-width: 1175px) {
+  .wow2008-stage {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 </style>
