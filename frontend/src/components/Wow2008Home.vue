@@ -42,6 +42,7 @@
         <main class="wow2008-center">
           <div class="wow2008-news-area">
             <div class="wow2008-news-column">
+              <img class="wow2008-flash-placeholder" src="/wow2008/images/no-flash.jpg" alt="Welcome to World of Warcraft.com">
               <div class="wow2008-news-heading">Latest News</div>
               <slot>
                 <article class="wow2008-news-card">
@@ -156,7 +157,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 .wow2008-nav a:before{content:'· ';color:#d5a900}
 .wow2008-center{min-width:0;position:relative;padding:14px 8px 0 4px;background:linear-gradient(90deg,#6b552f 0,#e9d6aa 8px,#e8d4a8 98%,#70572e 100%)}
 .wow2008-news-area{display:grid;grid-template-columns:minmax(0,1fr) 208px;gap:9px;min-height:850px;padding:0 0 20px;background:#e8d5aa url('/wow2008/images/page-bg-alt4.jpg') center top/cover repeat-y;border:1px solid #9e824d;box-shadow:inset 0 0 12px #b49a69}
-.wow2008-news-column{padding:215px 0 0 10px;min-width:0}
+.wow2008-news-column{padding:0 0 0 10px;min-width:0}.wow2008-flash-placeholder{display:block;width:100%;max-width:474px;height:auto;margin:0 auto 10px}
 .wow2008-news-heading{display:none}
 .wow2008-news-column :deep(.topics){padding:0 4px}
 .wow2008-news-column :deep(.topic-intro){margin-bottom:8px}
