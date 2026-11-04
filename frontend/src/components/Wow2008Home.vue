@@ -154,7 +154,11 @@
 
                             <section class="wow2008-community">
                               <div class="wow2008-community-top">
-                                <h2>Community Spotlight</h2>
+                                <span class="wow2008-community-icon" aria-hidden="true"></span>
+                                <h2>
+                                  <span class="wow2008-community-title" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Community Spotlight</span>
+                                </h2>
                               </div>
                               <div class="wow2008-community-body">
                                 <p>Discover artwork, stories, screenshots and creations from the World of Warcraft community.</p>
@@ -164,7 +168,9 @@
                                   <a href="#">Spotlight Archive</a>
                                 </div>
                               </div>
-                              <div class="wow2008-community-bottom"></div>
+                              <div class="wow2008-community-bottom">
+                                <a class="wow2008-community-read-more" href="#" aria-label="Read More"></a>
+                              </div>
                             </section>
 
                             <div class="wow2008-banner-row">
@@ -962,18 +968,32 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
 }
 .wow2008-community-top {
-  height: 25px;
+  height: 48px;
+  position: relative;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/phatlootbox-top.gif') no-repeat 0 0;
 }
+.wow2008-community-icon {
+  width: 46px;
+  height: 54px;
+  position: absolute;
+  z-index: 2;
+  top: -9px;
+  left: 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
+}
 .wow2008-community-top h2 {
-  height: 17px;
-  position: relative;
+  height: 34px;
+  position: absolute;
   top: 5px;
   left: 38px;
   margin: 0;
   padding: 0;
-  color: #fff;
-  font: bold 13px/17px "Trebuchet MS", Arial, sans-serif;
+}
+.wow2008-community-title {
+  width: 120px;
+  height: 27px;
+  display: block;
+  background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
 }
 .wow2008-community-body {
   min-height: 125px;
@@ -1000,8 +1020,18 @@ const quickLinks = [
   text-decoration: none;
 }
 .wow2008-community-bottom {
-  height: 20px;
+  height: 28px;
+  position: relative;
   background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
+}
+.wow2008-community-read-more {
+  width: 75px;
+  height: 15px;
+  position: absolute;
+  right: 6px;
+  bottom: 7px;
+  display: block;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat 0 0;
 }
 .wow2008-banner-row {
   display: grid;
