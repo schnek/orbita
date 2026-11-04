@@ -409,7 +409,7 @@ const quickLinks = [
   left: 0;
   right: 0;
   height: 88px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top2.jpg') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x 0 0;
   pointer-events: none;
 }
 .wow2008 a {
