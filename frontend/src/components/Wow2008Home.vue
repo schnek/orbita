@@ -1346,7 +1346,7 @@ const quickLinks = [
   }
 
   .wow2008-stage {
-    margin-left:: 0;
+    margin-left: 0;
     margin-right: 0;
   }
 }
