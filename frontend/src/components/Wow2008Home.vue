@@ -1005,7 +1005,7 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
 }
 .wow2008-community-top h2 {
-  height: 34px;
+  height: 44px;
   position: absolute;
   top: 5px;
   left: 38px;
@@ -1017,6 +1017,18 @@ const quickLinks = [
   height: 27px;
   display: block;
   background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
+}
+.wow2008-community-title::after {
+  content: "Community Spotlight";
+  width: 150px;
+  height: 16px;
+  display: block;
+  margin-top: 1px;
+  padding: 1px 5px 0;
+  box-sizing: border-box;
+  background: #17416a;
+  color: #fff;
+  font: bold 10px/15px "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community-body {
   min-height: 125px;
