@@ -638,7 +638,7 @@ const quickLinks = [
   height: 14px;
   position: absolute;
   top: 9px;
-  right: 13px;
+  right: -2px;
   display: block;
   background-repeat: no-repeat;
   background-position: 0 0;
