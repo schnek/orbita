@@ -154,24 +154,51 @@
                               </a>
                             </div>
 
-                            <section class="wow2008-community">
-                              <div class="wow2008-community-top">
-                                <span class="wow2008-community-icon" aria-hidden="true"></span>
-                                <h2>
-                                  <span class="wow2008-community-title" aria-hidden="true"></span>
-                                  <span class="wow2008-community-subtitle">Community Spotlight</span>
-                                </h2>
+                            <section id="container-community" class="wow2008-community">
+                              <div class="phatLootBox-top wow2008-community-top">
+                                <a href="/community/" class="wow2008-community-heading"><h2 class="community"><span class="visually-hidden">Community</span></h2></a>
+                                <a href="/community/" class="wow2008-community-visual" aria-label="Community"></a>
+                                <span class="arrow-readmore"><a href="/community/"><span>read more...</span></a></span>
                               </div>
-                              <div class="wow2008-community-body">
-                                <p>Discover artwork, stories, screenshots and creations from the World of Warcraft community.</p>
-                                <p class="wow2008-community__note">Have something you would like to share with the community? Send us a link.</p>
-                                <div class="wow2008-community__actions">
-                                  <a href="#">Warcraft Weekly</a>
-                                  <a href="#">Spotlight Archive</a>
+                              <div class="phatLootBox-wrapper wow2008-community-wrapper">
+                                <div class="community-top">
+                                  <h3>Community Spotlight<i> - sch on 04/04/08 </i></h3>
+                                </div>
+                                <div class="community-cnt">
+                                  <div class="community-portrait" aria-hidden="true">
+                                    <img alt="" src="/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif">
+                                  </div>
+                                  <p>
+                                    This week we've come across some extremely beautiful and interesting artistic editing of in-game screenshots and characters.
+                                    Wyndforge.com is home to an array of screenshots which he’s taken and dressed up with various filters, backdrops, and
+                                    effects that turn a normal screenshot into something just a bit fancier. Check out Wyndforge's Art Gallery by
+                                    <a href="http://wyndforge.com/" target="new_window" rel="noopener">clicking here</a>.
+                                  </p>
+                                  <div class="community-watch">
+                                    Have you made or seen something that you think deserves to be on the World of Warcraft Community Watch? Send us a link at:
+                                    <a href="mailto:">wowcommwatch</a>.
+                                  </div>
+                                  <p class="community-disclaimer"><small class="blood">
+                                    * Links are created by other companies/individuals that are neither affiliated with nor supported by Blizzard Entertainment.
+                                  </small></p>
+                                  <div class="community-buttons">
+                                    <ul>
+                                      <li><div class="redButton-container">
+                                        <span class="community-button-left"></span>
+                                        <span class="community-button-label"><a href="/community/warcraftweekly.html">Warcraft Weekly</a><span class="rdbtn_sh">Warcraft Weekly</span></span>
+                                        <span class="community-button-right"></span>
+                                      </div></li>
+                                      <li><div class="redButton-container">
+                                        <span class="community-button-left"></span>
+                                        <span class="community-button-label"><a href="/community/communitylinks.html">Spotlight Archive</a><span class="rdbtn_sh">Spotlight Archive</span></span>
+                                        <span class="community-button-right"></span>
+                                      </div></li>
+                                    </ul>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="wow2008-community-bottom">
-                                <a class="wow2008-community-read-more" href="#" aria-label="Read More"></a>
+                              <div class="phatLootBox-bottom wow2008-community-bottom">
+                                <a class="wow2008-community-read-more" href="/community/" aria-label="Read More"></a>
                               </div>
                             </section>
 
@@ -985,80 +1012,177 @@ const quickLinks = [
 }
 .wow2008-community {
   width: 470px;
-  min-height: 180px;
   margin: 10px 0 12px;
   position: relative;
-  background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
+  color: #17120a;
+  font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
 .wow2008-community-top {
   height: 48px;
   position: relative;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/phatlootbox-top.gif') no-repeat 0 0;
 }
-.wow2008-community-icon {
+.wow2008-community-heading {
+  width: 120px;
+  height: 27px;
+  position: absolute;
+  top: 5px;
+  left: 38px;
+  display: block;
+  background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
+}
+.wow2008-community-heading h2 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.wow2008-community-visual {
   width: 46px;
   height: 54px;
   position: absolute;
   z-index: 2;
   top: -9px;
   left: 0;
+  display: block;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/visual-community.gif') no-repeat 0 0;
 }
-.wow2008-community-top h2 {
-  height: 44px;
+.wow2008-community-top .arrow-readmore {
   position: absolute;
-  top: 5px;
-  left: 38px;
+  right: 12px;
+  bottom: 8px;
+  font: bold 10px Arial, sans-serif;
+}
+.wow2008-community-top .arrow-readmore a {
+  color: #f2cf4b;
+  text-decoration: none;
+}
+.wow2008-community-wrapper {
+  min-height: 210px;
+  padding: 0 12px 10px;
+  background: url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
+  box-sizing: border-box;
+}
+.wow2008-community .community-top {
+  min-height: 25px;
+  padding: 3px 8px 0 10px;
+  background: url('/ascemu_tbc/images/community-bg.jpg') no-repeat 0 0;
+  box-sizing: border-box;
+}
+.wow2008-community .community-top h3 {
+  margin: 0;
+  color: #173d63;
+  font: bold 12px/20px Georgia, "Times New Roman", serif;
+}
+.wow2008-community .community-top h3 i {
+  color: #6c4b23;
+  font: italic 10px Arial, sans-serif;
+}
+.wow2008-community .community-cnt {
+  min-height: 175px;
+  position: relative;
+  padding: 9px 10px 8px;
+  background: url('/ascemu_tbc/images/community-bg.jpg') repeat-y 0 0;
+  background-size: 100% 101px;
+  box-sizing: border-box;
+}
+.wow2008-community .community-cnt > p {
+  margin: 0 0 8px;
+  padding-left: 91px;
+  color: #17120a;
+  font: 11px/1.4 "Trebuchet MS", Arial, sans-serif;
+}
+.wow2008-community .community-cnt a {
+  color: #17416a;
+  text-decoration: underline;
+}
+.wow2008-community .community-portrait {
+  width: 82px;
+  height: 93px;
+  float: left;
+  margin: 0 9px 6px 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/portrait-frame.gif') no-repeat 0 0;
+}
+.wow2008-community .community-portrait img {
+  width: 82px;
+  height: 93px;
+  display: block;
+}
+.wow2008-community .community-watch {
+  clear: both;
+  margin: 8px 0 7px;
+  padding: 7px 9px;
+  color: #241b10;
+  background: #e4d1a8;
+  border: 1px solid #c5ad7c;
+  font: 10px/1.35 "Trebuchet MS", Arial, sans-serif;
+}
+.wow2008-community .community-disclaimer {
+  margin: 5px 0 8px;
+  padding: 0;
+  font-size: 9px;
+}
+.wow2008-community .blood {
+  color: #6c1b12;
+}
+.wow2008-community .community-buttons ul {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0 0 0 5px;
+}
+.wow2008-community .community-buttons li {
   margin: 0;
   padding: 0;
 }
-.wow2008-community-title {
-  width: 120px;
-  height: 27px;
-  display: block;
-  background: url('/ascemu_tbc/images/header-comm.gif') no-repeat 0 0;
-}
-.wow2008-community-subtitle {
-  width: 150px;
-  height: 16px;
-  display: block;
-  margin-top: 1px;
-  padding: 1px 5px 0;
-  box-sizing: border-box;
-  background: #17416a;
-  color: #fff;
-  font: bold 10px/15px "Trebuchet MS", Arial, sans-serif;
-}
-.wow2008-community-body {
-  min-height: 125px;
-  padding: 10px 14px 18px;
-  color: #17120a;
-  background-image:
-    url('/ascemu_tbc/images/community-bg.jpg'),
-    url('/ascemu_tbc/images/community-bg.jpg');
-  background-repeat: no-repeat, no-repeat;
-  background-size:
-    calc(100% - 12px) 101px,
-    calc(100% - 12px) 101px;
-  background-position: 6px 51px, 6px 152px;
-  font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
-}
-.wow2008-community__note {
-  padding: 8px;
-  background: #dfc99a;
-  border: 1px solid #c2a675;
-}
-.wow2008-community__actions {
+.wow2008-community .redButton-container {
+  height: 22px;
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  align-items: stretch;
+  white-space: nowrap;
 }
-.wow2008-community__actions a {
-  padding: 4px 12px;
-  color: #ffd33c;
-  background: #4c1009;
-  border: 2px ridge #ad873e;
+.wow2008-community .community-button-left,
+.wow2008-community .community-button-right {
+  height: 22px;
+  flex: 0 0 auto;
+  display: block;
+  background-repeat: no-repeat;
+}
+.wow2008-community .community-button-left {
+  width: 5px;
+  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-left.gif');
+}
+.wow2008-community .community-button-right {
+  width: 7px;
+  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-right.gif');
+}
+.wow2008-community .community-button-label {
+  width: 110px;
+  height: 22px;
+  position: relative;
+  display: block;
+  background: #8c160d;
+  text-align: center;
+  font: bold 10px/21px Arial, sans-serif;
+}
+.wow2008-community .community-button-label a,
+.wow2008-community .community-button-label .rdbtn_sh {
+  width: 110px;
+  height: 22px;
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: #ffe18a;
   text-decoration: none;
+}
+.wow2008-community .community-button-label .rdbtn_sh {
+  z-index: 0;
+  color: #3b0905;
+  text-shadow: 1px 1px #d39b45;
+}
+.wow2008-community .community-button-label a {
+  z-index: 1;
 }
 .wow2008-community-bottom {
   height: 28px;
