@@ -1116,8 +1116,8 @@ const quickLinks = [
   height: 64px;
   max-width: none;
   position: absolute;
-  top: 0;
-  left: 9px;
+  top: 8px;
+  left: 8px;
   object-fit: cover;
 }
 .wow2008-community .community-portrait::after {
