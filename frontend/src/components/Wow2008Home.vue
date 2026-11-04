@@ -127,7 +127,7 @@ const quickLinks = ['Account Management', 'Parental Controls', 'Support Site', '
 </script>
 
 <style scoped>
-.wow2008{min-height:100vh;background:#f3e8c9 url('/wow2008/images/layout/parchment-light.jpg') repeat;color:#17120a;font:12px Arial,Helvetica,sans-serif;overflow:hidden}
+.wow2008{min-height:100vh;background:#000 url('/wow2008/images/page-bg-alt3_2.jpg') center top no-repeat;color:#17120a;font:12px Arial,Helvetica,sans-serif;overflow:hidden}
 .wow2008 a{color:#003c80;text-decoration:underline}
 .wow2008-topbar{height:39px;background:linear-gradient(#050b12 0%,#101a24 55%,#392b19 58%,#070707 100%);border-bottom:4px ridge #6c6048;color:#e6b800}
 .wow2008-topbar__inner{max-width:930px;height:35px;margin:auto;display:flex;align-items:center;justify-content:flex-end;gap:24px}
