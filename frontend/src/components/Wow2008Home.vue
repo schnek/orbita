@@ -406,6 +406,17 @@ const quickLinks = [
   font: 12px Arial, Helvetica, sans-serif;
   background: #000 url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x center top;
 }
+.wow2008::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  height: 220px;
+  z-index: 0;
+  pointer-events: none;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') no-repeat center top;
+}
 .wow2008 a {
   color: #1e4378;
   text-decoration: underline;
@@ -540,7 +551,7 @@ const quickLinks = [
   top: 13px;
   margin: 0;
   padding: 0;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x 0 0;
+  background: transparent;
   box-sizing: border-box;
 }
 .wow2008-ne-top-left {
