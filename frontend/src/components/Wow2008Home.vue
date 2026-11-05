@@ -1185,8 +1185,7 @@ const quickLinks = [
   height: 22px;
   position: relative;
   display: block;
-  background: linear-gradient(to bottom, #a90000 0%, #8c160d 45%, #650b06 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 190, 120, 0.18), inset 0 -1px 0 rgba(35, 0, 0, 0.45);
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-center.gif') repeat-x 0 0;
   text-align: center;
   font: bold 10px/21px Arial, sans-serif;
 }
