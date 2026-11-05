@@ -1301,12 +1301,12 @@ const quickLinks = [
 }
 .wow2008-link-group h3 {
   height: 24px;
-  margin: -27px 0 7px;
+  margin: -10px 0 7px;
   padding: 0 8px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 -17px;
   color: #173d63;
   font: bold 10px/1 Georgia, "Times New Roman", serif;
 }
