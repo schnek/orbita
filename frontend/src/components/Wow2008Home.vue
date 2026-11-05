@@ -1185,7 +1185,8 @@ const quickLinks = [
   height: 22px;
   position: relative;
   display: block;
-  background: #8c160d;
+  background: linear-gradient(to bottom, #a90000 0%, #8c160d 45%, #650b06 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 190, 120, 0.18), inset 0 -1px 0 rgba(35, 0, 0, 0.45);
   text-align: center;
   font: bold 10px/21px Arial, sans-serif;
 }
