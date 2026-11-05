@@ -1063,7 +1063,7 @@ const quickLinks = [
   right: -7px;
   bottom: 0;
   left: -8px;
-  background: #fff;
+  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
 }
 .wow2008-community .community-top h3 {
   position: relative;
