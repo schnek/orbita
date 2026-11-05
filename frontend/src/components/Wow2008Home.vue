@@ -1243,6 +1243,7 @@ const quickLinks = [
   background-position: 0 0, 8px 23px;
 }
 .wow2008-banner--jobs {
+  transform: translateX(12px);
   background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif'), url('/ascemu_tbc/images/jobs-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 8px 23px;
