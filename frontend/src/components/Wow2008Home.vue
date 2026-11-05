@@ -1242,13 +1242,13 @@ const quickLinks = [
 .wow2008-banner--help {
   background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif'), url('/ascemu_tbc/images/needhelp-bg.jpg');
   background-repeat: no-repeat, no-repeat;
-  background-position: 0 0, 8px 23px;
+  background-position: 0 0, 8px 22px;
 }
 .wow2008-banner--jobs {
   transform: translateX(12px);
   background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif'), url('/ascemu_tbc/images/jobs-bg.jpg');
   background-repeat: no-repeat, no-repeat;
-  background-position: 0 0, 8px 23px;
+  background-position: 0 0, 8px 22px;
 }
 .wow2008-banner-read-more {
   width: 75px;
