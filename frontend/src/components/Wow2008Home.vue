@@ -1063,18 +1063,18 @@ const quickLinks = [
   right: -7px;
   bottom: 0;
   left: -8px;
-  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
+  background: #fff;
 }
 .wow2008-community .community-top h3 {
   position: relative;
   z-index: 1;
   margin: 0;
   color: #173d63;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: none;
   font: bold 12px/20px Georgia, "Times New Roman", serif;
 }
 .wow2008-community .community-top h3 i {
-  color: #8faac5;
+  color: #173d63;
   font: italic 10px Arial, sans-serif;
 }
 .wow2008-community .community-cnt {
@@ -1188,7 +1188,7 @@ const quickLinks = [
   display: block;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-center.gif') repeat-x 0 0;
   text-align: center;
-  font: bold 10px/21px Arial, sans-serif;
+  font: bold 11px/22px Arial, sans-serif;
 }
 .wow2008-community .community-button-label a,
 .wow2008-community .community-button-label .rdbtn_sh {
@@ -1197,16 +1197,15 @@ const quickLinks = [
   position: absolute;
   inset: 0;
   display: block;
-  color: #ffe18a;
+  color: #fff4cf;
   text-decoration: none;
 }
 .wow2008-community .community-button-label .rdbtn_sh {
-  z-index: 0;
-  color: #3b0905;
-  text-shadow: 1px 1px #d39b45;
+  display: none;
 }
 .wow2008-community .community-button-label a {
   z-index: 1;
+  text-shadow: 1px 1px 1px #3b0905, -1px 0 #3b0905, 0 1px #3b0905;
 }
 .wow2008-community-bottom {
   height: 28px;
