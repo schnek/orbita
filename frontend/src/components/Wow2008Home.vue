@@ -992,9 +992,11 @@ const quickLinks = [
   background-image: url('/ascemu_tbc/images/header-contest.gif');
 }
 .wow2008-promo-title--fanart {
+  left: 41px;
   background-image: url('/ascemu_tbc/images/header-fanarts.gif');
 }
 .wow2008-promo-title--wallpaper {
+  left: 41px;
   background-image: url('/ascemu_tbc/images/header-wallpapers.gif');
 }
 .wow2008-read-more {
