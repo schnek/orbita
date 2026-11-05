@@ -203,10 +203,12 @@
                               <a class="wow2008-banner wow2008-banner--help" href="#" aria-label="Need Help">
                                 <span class="wow2008-banner-icon wow2008-banner-icon--help"></span>
                                 <span class="wow2008-banner-label wow2008-banner-label--help"></span>
+                                <span class="wow2008-banner-read-more" aria-hidden="true"></span>
                               </a>
                               <a class="wow2008-banner wow2008-banner--jobs" href="#" aria-label="Jobs">
                                 <span class="wow2008-banner-icon wow2008-banner-icon--jobs"></span>
                                 <span class="wow2008-banner-label wow2008-banner-label--jobs"></span>
+                                <span class="wow2008-banner-read-more" aria-hidden="true"></span>
                               </a>
                             </div>
 
@@ -1247,6 +1249,16 @@ const quickLinks = [
   background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/service-smallteaser-bg.gif'), url('/ascemu_tbc/images/jobs-bg.jpg');
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 8px 23px;
+}
+.wow2008-banner-read-more {
+  width: 75px;
+  height: 15px;
+  position: absolute;
+  z-index: 3;
+  right: 8px;
+  bottom: 8px;
+  display: block;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat 0 0;
 }
 .wow2008-banner-icon {
   width: 36px;
