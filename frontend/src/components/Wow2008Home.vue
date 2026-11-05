@@ -1063,17 +1063,20 @@ const quickLinks = [
   right: -7px;
   bottom: 0;
   left: -8px;
-  background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
+  background: linear-gradient(to bottom, #172b43 0%, #0b1728 52%, #050d18 100%);
+  border-top: 1px solid #29496b;
+  border-bottom: 1px solid #02070e;
 }
 .wow2008-community .community-top h3 {
   position: relative;
   z-index: 1;
   margin: 0;
-  color: #173d63;
+  color: #d6e8f8;
+  text-shadow: 1px 1px 1px #000;
   font: bold 12px/20px Georgia, "Times New Roman", serif;
 }
 .wow2008-community .community-top h3 i {
-  color: #6c4b23;
+  color: #8faac5;
   font: italic 10px Arial, sans-serif;
 }
 .wow2008-community .community-cnt {
