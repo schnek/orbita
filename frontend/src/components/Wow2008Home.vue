@@ -1069,13 +1069,13 @@ const quickLinks = [
   position: relative;
   z-index: 1;
   margin: 0;
-  color: #173d63;
+  color: #fff;
   text-shadow: none;
   font: bold 12px/20px Georgia, "Times New Roman", serif;
 }
 .wow2008-community .community-top h3 i {
-  color: #173d63;
-  font: italic 10px Arial, sans-serif;
+  color: #fff4cf;
+  font: normal 10px Arial, sans-serif;
 }
 .wow2008-community .community-cnt {
   min-height: 175px;
