@@ -1046,7 +1046,7 @@ const quickLinks = [
 .wow2008-community-wrapper {
   min-height: 210px;
   padding: 0 12px 10px;
-  background: url('/ascemu_tbc/images/community-bg.jpg') no-repeat 1px 100%, url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
+  background: url('/ascemu_tbc/images/community-bg.jpg') no-repeat 8px 100%, url('/ascemu_tbc/images/phatLootBox-bg.gif') repeat-y 0 0;
   box-sizing: border-box;
 }
 .wow2008-community .community-top {
