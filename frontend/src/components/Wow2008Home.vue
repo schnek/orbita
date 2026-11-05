@@ -1301,7 +1301,7 @@ const quickLinks = [
 }
 .wow2008-link-group h3 {
   height: 24px;
-  margin: -10px 0 7px;
+  margin: -27px 0 7px;
   padding: 0 8px;
   display: flex;
   align-items: center;
