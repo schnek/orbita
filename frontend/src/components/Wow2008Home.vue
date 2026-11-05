@@ -930,6 +930,9 @@ const quickLinks = [
   gap: 10px;
   margin: 10px 0;
 }
+.wow2008-promo:nth-child(n + 2) {
+  transform: translateX(1px);
+}
 .wow2008-promo {
   width: 150px;
   height: 123px;
@@ -992,11 +995,9 @@ const quickLinks = [
   background-image: url('/ascemu_tbc/images/header-contest.gif');
 }
 .wow2008-promo-title--fanart {
-  left: 41px;
   background-image: url('/ascemu_tbc/images/header-fanarts.gif');
 }
 .wow2008-promo-title--wallpaper {
-  left: 41px;
   background-image: url('/ascemu_tbc/images/header-wallpapers.gif');
 }
 .wow2008-read-more {
