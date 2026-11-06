@@ -1314,8 +1314,8 @@ const quickLinks = [
 .wow2008-link-group h3::before {
   content: "";
   position: absolute;
-  z-index: 0;
-  top: -7px;
+  z-index: -1;
+  top: 1px;
   left: 0;
   width: 100%;
   height: 29px;
@@ -1324,11 +1324,6 @@ const quickLinks = [
 }
 .wow2008-link-group h3 {
   isolation: isolate;
-}
-.wow2008-link-group h3::after {
-  content: "";
-  position: relative;
-  z-index: 1;
 }
 .wow2008-link-group h3 {
   z-index: 0;
