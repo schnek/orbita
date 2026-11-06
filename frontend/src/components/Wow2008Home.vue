@@ -1315,7 +1315,7 @@ const quickLinks = [
   content: "";
   position: absolute;
   z-index: 0;
-  top: -17px;
+  top: -7px;
   left: 0;
   width: 100%;
   height: 29px;
@@ -1332,6 +1332,8 @@ const quickLinks = [
 }
 .wow2008-link-group h3 {
   z-index: 0;
+  padding-left: 4px;
+  transform: translateY(-5px);
 }
 .wow2008-link-group ul {
   list-style: none;
