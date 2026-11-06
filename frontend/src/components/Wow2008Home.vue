@@ -1376,9 +1376,9 @@ const quickLinks = [
 }
 .wow2008-link-group li {
   min-height: 14px;
-  padding-left: 12px;
+  padding-left: 16px;
   line-height: 14px;
-  background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 3px;
+  background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 0;
 }
 .wow2008-link-group li a {
   font-family: Arial, Helvetica, sans-serif;
