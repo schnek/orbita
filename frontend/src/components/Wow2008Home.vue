@@ -216,7 +216,7 @@
                               <section class="wow2008-link-group">
                                 <h3><span>WoW: Wrath of the Lich King</span></h3>
                                 <div class="wow2008-link-group__content">
-                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-1teaser.gif" alt="">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/image-wrath.gif" alt="">
                                   <ul>
                                     <li><a href="#">Bestiary</a></li>
                                     <li><a href="#">Dragonblight</a></li>
