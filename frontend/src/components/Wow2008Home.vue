@@ -1300,15 +1300,38 @@ const quickLinks = [
   border-top: 2px solid #8b7549;
 }
 .wow2008-link-group h3 {
-  height: 35px;
+  height: 29px;
   margin: -13px 0 7px;
   padding: 0 8px;
   display: flex;
   align-items: center;
+  position: relative;
   box-sizing: border-box;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 -17px;
+  background: none;
   color: #173d63;
   font: bold 10px/1 Georgia, "Times New Roman", serif;
+}
+.wow2008-link-group h3::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -17px;
+  left: 0;
+  width: 100%;
+  height: 29px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 0;
+  pointer-events: none;
+}
+.wow2008-link-group h3 {
+  isolation: isolate;
+}
+.wow2008-link-group h3::after {
+  content: "";
+  position: relative;
+  z-index: 1;
+}
+.wow2008-link-group h3 {
+  z-index: 0;
 }
 .wow2008-link-group ul {
   list-style: none;
