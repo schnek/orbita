@@ -215,39 +215,53 @@
                             <div class="wow2008-link-grid">
                               <section class="wow2008-link-group">
                                 <h3><span>WoW: Wrath of the Lich King</span></h3>
-                                <ul>
-                                  <li><a href="#">Bestiary</a></li>
-                                  <li><a href="#">Dragonblight</a></li>
-                                  <li><a href="#">Screenshots</a></li>
-                                  <li><a href="#">Features</a></li>
-                                  <li><a href="#">Movies</a></li>
-                                </ul>
+                                <div class="wow2008-link-group__content">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-1teaser.gif" alt="">
+                                  <ul>
+                                    <li><a href="#">Bestiary</a></li>
+                                    <li><a href="#">Dragonblight</a></li>
+                                    <li><a href="#">Screenshots</a></li>
+                                    <li><a href="#">Features</a></li>
+                                    <li><a href="#">Movies</a></li>
+                                  </ul>
+                                </div>
                               </section>
                               <section class="wow2008-link-group">
                                 <h3><span>Movies and Trailers</span></h3>
-                                <ul>
-                                  <li><a href="#">Sunwell Plateau</a></li>
-                                  <li><a href="#">Verne Troyer</a></li>
-                                  <li><a href="#">M.P.T.</a></li>
-                                  <li><a href="#">William Shatner</a></li>
-                                </ul>
+                                <div class="wow2008-link-group__content">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-icon-movies.gif" alt="">
+                                  <ul>
+                                    <li><a href="#">Sunwell Plateau</a></li>
+                                    <li><a href="#">Verne Troyer</a></li>
+                                    <li><a href="#">M.P.T.</a></li>
+                                    <li><a href="#">William Shatner</a></li>
+                                  </ul>
+                                </div>
                               </section>
                               <section class="wow2008-link-group">
                                 <h3><span>World of Warcraft Insider</span></h3>
-                                <p>Your number one source of up-to-date, behind the scenes information about World of Warcraft!</p>
-                                <ul>
-                                  <li><a href="#">Latest issue</a></li>
-                                  <li><a href="#">Subscribe now</a></li>
-                                </ul>
+                                <div class="wow2008-link-group__content">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-icon-insider.gif" alt="">
+                                  <div>
+                                    <p>Your number one source of up-to-date, behind the scenes information about World of Warcraft!</p>
+                                    <ul>
+                                      <li><a href="#">Latest issue</a></li>
+                                      <li><a href="#">Subscribe now</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
                               </section>
                               <section class="wow2008-link-group">
                                 <h3><span>Online Store</span></h3>
-                                <ul>
-                                  <li><a href="#">World of Warcraft Battle Chest</a></li>
-                                  <li><a href="#">World of Warcraft 2008 Daily Calendar</a></li>
-                                  <li><a href="#">Burning Crusade Strategy Guide</a></li>
-                                  <li><a href="#">TCG: Onyxia Raid Deck</a></li>
-                                </ul>
+                                <div class="wow2008-link-group__content">
+                                  <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/misc-image-bc.gif" alt="">
+                                  <ul>
+                                    <li><a href="#">World of Warcraft Battle Chest</a></li>
+                                    <li><a href="#">World of Warcraft 2008 Daily Calendar</a></li>
+                                    <li><a href="#">Burning Crusade Strategy Guide</a></li>
+                                    <li><a href="#">TCG: Onyxia Raid Deck</a></li>
+                                  </ul>
+                                </div>
                               </section>
                             </div>
                           </div>
@@ -1299,6 +1313,30 @@ const quickLinks = [
   min-height: 75px;
   border: 0;
 }
+.wow2008-link-group__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+.wow2008-link-group__content > img {
+  display: block;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 50px;
+  object-fit: contain;
+  border: 0;
+}
+.wow2008-link-group__content > ul,
+.wow2008-link-group__content > div {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.wow2008-link-group__content p {
+  margin: 0 0 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: normal;
+}
 .wow2008-link-group h3 {
   height: 29px;
   margin: -13px 0 7px;
@@ -1349,12 +1387,6 @@ const quickLinks = [
   color: #1e4378;
   text-decoration: underline;
   background-color: transparent;
-}
-.wow2008-link-group p {
-  margin: 0 0 4px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  line-height: normal;
 }
 .wow2008-right {
   width: 226px;
