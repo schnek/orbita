@@ -1325,6 +1325,8 @@ const quickLinks = [
 }
 .wow2008-link-group h3 {
   isolation: isolate;
+  z-index: 1;
+  transform: translateY(-2px);
 }
 .wow2008-link-group ul {
   list-style: none;
