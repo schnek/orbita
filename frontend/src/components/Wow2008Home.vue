@@ -214,7 +214,7 @@
 
                             <div class="wow2008-link-grid">
                               <section class="wow2008-link-group">
-                                <h3>WoW: Wrath of the Lich King</h3>
+                                <h3><span>WoW: Wrath of the Lich King</span></h3>
                                 <ul>
                                   <li><a href="#">Bestiary</a></li>
                                   <li><a href="#">Dragonblight</a></li>
@@ -224,7 +224,7 @@
                                 </ul>
                               </section>
                               <section class="wow2008-link-group">
-                                <h3>Movies and Trailers</h3>
+                                <h3><span>Movies and Trailers</span></h3>
                                 <ul>
                                   <li><a href="#">Sunwell Plateau</a></li>
                                   <li><a href="#">Verne Troyer</a></li>
@@ -233,7 +233,7 @@
                                 </ul>
                               </section>
                               <section class="wow2008-link-group">
-                                <h3>World of Warcraft Insider</h3>
+                                <h3><span>World of Warcraft Insider</span></h3>
                                 <p>Your number one source of up-to-date, behind the scenes information about World of Warcraft!</p>
                                 <ul>
                                   <li><a href="#">Latest issue</a></li>
@@ -241,7 +241,7 @@
                                 </ul>
                               </section>
                               <section class="wow2008-link-group">
-                                <h3>Online Store</h3>
+                                <h3><span>Online Store</span></h3>
                                 <ul>
                                   <li><a href="#">World of Warcraft Battle Chest</a></li>
                                   <li><a href="#">World of Warcraft 2008 Daily Calendar</a></li>
@@ -1310,12 +1310,14 @@ const quickLinks = [
   background: none;
   color: #173d63;
   font: bold 10px/1 Georgia, "Times New Roman", serif;
-  transform: translateY(-5px);
+  isolation: isolate;
+  z-index: 1;
+  transform: translateY(3px);
 }
 .wow2008-link-group h3::before {
   content: "";
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   top: 1px;
   left: 0;
   width: 100%;
@@ -1323,10 +1325,9 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 0;
   pointer-events: none;
 }
-.wow2008-link-group h3 {
-  isolation: isolate;
+.wow2008-link-group h3 span {
+  position: relative;
   z-index: 1;
-  transform: translateY(-2px);
 }
 .wow2008-link-group ul {
   list-style: none;
