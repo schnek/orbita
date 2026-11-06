@@ -1342,9 +1342,19 @@ const quickLinks = [
   line-height: 14px;
   background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 3px;
 }
+.wow2008-link-group li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  color: #1e4378;
+  text-decoration: underline;
+  background-color: transparent;
+}
 .wow2008-link-group p {
   margin: 0 0 4px;
-  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: normal;
 }
 .wow2008-right {
   width: 226px;
