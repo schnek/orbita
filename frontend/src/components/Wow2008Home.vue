@@ -1297,7 +1297,7 @@ const quickLinks = [
 }
 .wow2008-link-group {
   min-height: 75px;
-  border-top: 2px solid #8b7549;
+  border: 0;
 }
 .wow2008-link-group h3 {
   height: 29px;
@@ -1310,11 +1310,12 @@ const quickLinks = [
   background: none;
   color: #173d63;
   font: bold 10px/1 Georgia, "Times New Roman", serif;
+  transform: translateY(-5px);
 }
 .wow2008-link-group h3::before {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 1px;
   left: 0;
   width: 100%;
@@ -1324,11 +1325,6 @@ const quickLinks = [
 }
 .wow2008-link-group h3 {
   isolation: isolate;
-}
-.wow2008-link-group h3 {
-  z-index: 0;
-  padding-left: 4px;
-  transform: translateY(-5px);
 }
 .wow2008-link-group ul {
   list-style: none;
