@@ -1300,13 +1300,13 @@ const quickLinks = [
   border-top: 2px solid #8b7549;
 }
 .wow2008-link-group h3 {
-  height: 24px;
-  margin: -16px 0 7px;
+  height: 29px;
+  margin: -13px 0 7px;
   padding: 0 8px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 -17px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 0;
   color: #173d63;
   font: bold 10px/1 Georgia, "Times New Roman", serif;
 }
