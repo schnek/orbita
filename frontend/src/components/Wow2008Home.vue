@@ -1328,7 +1328,7 @@ const quickLinks = [
 .wow2008-link-group h3 span {
   position: relative;
   z-index: 1;
-  transform: translateY(10px);
+  transform: translate(12px, 10px);
   color: #fff;
 }
 .wow2008-link-group ul {
