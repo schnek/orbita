@@ -565,7 +565,7 @@ const quickLinks = [
   display: grid;
   grid-template-columns: 157px 1018px;
   align-items: stretch;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top, url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
 }
 .wow2008-header {
   position: absolute;
