@@ -443,6 +443,8 @@ const quickLinks = [
 
 <style scoped>
 .wow2008 {
+  width: 100%;
+  min-width: 920px;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -459,7 +461,7 @@ const quickLinks = [
   height: 88px;
   z-index: 0;
   pointer-events: none;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x 0 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top;
 }
 .wow2008 a {
   color: #1e4378;
@@ -810,6 +812,7 @@ const quickLinks = [
   padding: 10px;
   position: relative;
   box-sizing: border-box;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 .wow2008-content-columns {
   display: grid;
@@ -818,6 +821,7 @@ const quickLinks = [
   column-gap: 7px;
   width: 697px;
   margin: 3px 0 0 3px;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 .wow2008-main-column {
   width: 470px;
@@ -1387,9 +1391,11 @@ const quickLinks = [
 .wow2008-right {
   width: 220px;
   min-width: 0;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   position: relative;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 .wow2008-bc-upgrade {
   width: 213px;
@@ -1655,6 +1661,7 @@ const quickLinks = [
 }
 @media (max-width: 920px) {
   .wow2008 {
+    min-width: 0;
     width: 920px;
     zoom: calc(100vw / 920);
   }
