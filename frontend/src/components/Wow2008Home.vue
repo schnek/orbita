@@ -27,7 +27,9 @@
       </div>
     </div>
 
-    <div class="wow2008-stage">
+    <div id="bg-top" class="wow2008-bg-top" aria-hidden="true"></div>
+
+    <div id="hp" class="wow2008-stage">
       <header class="wow2008-header">
         <a class="wow2008-logo" href="/" aria-label="World of Warcraft home">
           <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/wowlogo-front.gif" alt="World of Warcraft The Burning Crusade">
@@ -452,16 +454,12 @@ const quickLinks = [
   font: 12px Arial, Helvetica, sans-serif;
   background: #000 url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg.jpg') repeat-x center top;
 }
-.wow2008::before {
-  content: '';
-  position: absolute;
-  top: 32px;
-  left: 0;
-  right: 0;
+.wow2008-bg-top {
   height: 88px;
+  width: 100%;
+  position: relative;
   z-index: 0;
-  pointer-events: none;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x 0 0;
 }
 .wow2008 a {
   color: #1e4378;
@@ -805,7 +803,8 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/layout/frame_left-bg.jpg') repeat-y 0 0;
 }
 .wow2008-main-content {
-  background: url('/ascemu_tbc/images/layout/frame_right-bg.jpg') repeat-y top right;
+  min-height: 100%;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 .wow2008-content-padding {
   margin: 0 19px 0 17px;
@@ -817,7 +816,7 @@ const quickLinks = [
 .wow2008-content-columns {
   display: grid;
   grid-template-columns: 470px 220px;
-  align-items: start;
+  align-items: stretch;
   column-gap: 7px;
   width: 697px;
   margin: 3px 0 0 3px;
@@ -1396,6 +1395,7 @@ const quickLinks = [
   padding: 0;
   position: relative;
   background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
+  align-self: stretch;
 }
 .wow2008-bc-upgrade {
   width: 213px;
