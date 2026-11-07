@@ -347,9 +347,11 @@
             </div>
           </div></div>
         </footer>
+        <div class="wow2008-statues" aria-hidden="true">
+          <img class="wow2008-statue-left" src="/ascemu_tbc/images/templates/The_Burning_Crusade/statue-left.jpg" alt="">
+          <img class="wow2008-statue-right" src="/ascemu_tbc/images/templates/The_Burning_Crusade/statue-right.png" alt="">
+        </div>
       </main>
-
-      <img class="wow2008-statue-left" src="/ascemu_tbc/images/templates/The_Burning_Crusade/statue-left.jpg" alt="">
     </div>
 
     <div class="wow2008-iron-frame"></div>
@@ -555,15 +557,14 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/layout/search/search-right.gif') no-repeat;
 }
 .wow2008-stage {
-  width: 1175px;
+  width: 970px;
   max-width: none;
-  min-height: 950px;
   margin: -85px auto 0;
   padding-top: 60px;
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 157px 1018px;
+  grid-template-columns: 157px 813px;
   align-items: stretch;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
 }
@@ -588,7 +589,6 @@ const quickLinks = [
   grid-column: 1;
   grid-row: 1;
   width: 157px;
-  min-height: 900px;
   position: relative;
   top: 13px;
   margin: 0;
@@ -776,13 +776,12 @@ const quickLinks = [
 .wow2008-center {
   grid-column: 2;
   grid-row: 1;
-  width: 1018px;
+  width: 813px;
   min-width: 0;
-  min-height: 900px;
   position: relative;
   padding: 0;
   box-sizing: border-box;
-  background: transparent;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 .wow2008-main-top {
   height: 25px;
@@ -801,15 +800,12 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/layout/frame_top-right.jpg') no-repeat top right;
 }
 .wow2008-main-content-wrapper {
-  min-height: 820px;
   background: url('/ascemu_tbc/images/layout/frame_left-bg.jpg') repeat-y 0 0;
 }
 .wow2008-main-content {
-  min-height: 820px;
   background: url('/ascemu_tbc/images/layout/frame_right-bg.jpg') repeat-y top right;
 }
 .wow2008-content-padding {
-  min-height: 820px;
   margin: 0 19px 0 17px;
   padding: 10px;
   position: relative;
@@ -817,20 +813,20 @@ const quickLinks = [
 }
 .wow2008-content-columns {
   display: grid;
-  grid-template-columns: 735px 220px;
+  grid-template-columns: 470px 220px;
   align-items: start;
-  column-gap: 5px;
-  width: 960px;
-  margin: 0;
+  column-gap: 7px;
+  width: 735px;
+  margin: 3px 0 0 3px;
 }
 .wow2008-main-column {
-  width: 735px;
+  width: 470px;
   min-width: 0;
   margin: 0;
   padding: 0;
 }
 .wow2008-cnt-paper {
-  width: 735px;
+  width: 470px;
   background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 .wow2008-cnt-top {
@@ -849,12 +845,10 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/layout/cnt-paper-left.jpg') repeat-y top left;
 }
 .wow2008-content-right {
-  min-height: 600px;
   background: url('/ascemu_tbc/images/layout/cnt-paper-right.jpg') repeat-y top right;
 }
 .wow2008-cnt-main {
-  min-height: 600px;
-  padding: 0 12px 10px;
+  padding: 0 0 10px;
   background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 .wow2008-cnt-bot {
@@ -1610,19 +1604,33 @@ const quickLinks = [
   height: 57px;
   position: relative;
 }
+.wow2008-statues {
+  width: 100%;
+  height: 0;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
 .wow2008-statue-left {
   width: 243px;
   height: 445px;
   position: absolute;
-  left: -185px;
-  bottom: 41px;
+  top: -461px;
+  left: -243px;
   z-index: 2;
-  pointer-events: none;
+}
+.wow2008-statue-right {
+  width: 95px;
+  height: 352px;
+  position: absolute;
+  top: -358px;
+  left: 0;
+  z-index: 2002;
 }
 .wow2008-iron-frame {
   width: 100%;
   height: 20px;
-  margin-top: -2px;
+  margin-top: -16px;
   position: relative;
   z-index: 0;
   background: #000 url('/ascemu_tbc/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x top;
@@ -1635,10 +1643,10 @@ const quickLinks = [
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
-@media (max-width: 1175px) {
+@media (max-width: 970px) {
   .wow2008 {
-    width: 1175px;
-    zoom: calc(100vw / 1175);
+    width: 970px;
+    zoom: calc(100vw / 970);
   }
 
   .wow2008-stage {
