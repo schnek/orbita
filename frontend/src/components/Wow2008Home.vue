@@ -565,7 +565,7 @@ const quickLinks = [
   display: grid;
   grid-template-columns: 157px 1018px;
   align-items: stretch;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/page-bg-top.jpg') repeat-x center top, url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 0;
 }
 .wow2008-header {
   position: absolute;
@@ -811,15 +811,17 @@ const quickLinks = [
 .wow2008-content-padding {
   min-height: 820px;
   margin: 0 19px 0 17px;
-  padding: 0;
+  padding: 10px;
   position: relative;
+  box-sizing: border-box;
 }
 .wow2008-content-columns {
   display: grid;
-  grid-template-columns: 735px 226px;
+  grid-template-columns: 735px 220px;
   align-items: start;
-  column-gap: 0;
-  margin: 3px 0 0 3px;
+  column-gap: 5px;
+  width: 960px;
+  margin: 0;
 }
 .wow2008-main-column {
   width: 735px;
@@ -1389,9 +1391,9 @@ const quickLinks = [
   background-color: transparent;
 }
 .wow2008-right {
-  width: 226px;
+  width: 220px;
   min-width: 0;
-  margin: 0 0 0 -1px;
+  margin: 0;
   padding: 0;
   position: relative;
 }
