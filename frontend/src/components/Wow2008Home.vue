@@ -894,6 +894,7 @@ const quickLinks = [
   position: relative;
   display: grid;
   grid-template-columns: 491px 220px;
+  align-items: stretch;
   column-gap: 8px;
   width: 719px;
   margin: 0 0 0 3px;
@@ -1501,6 +1502,8 @@ const quickLinks = [
 
 .wow2008-right {
   position: relative;
+  align-self: stretch;
+  box-sizing: border-box;
   width: 220px;
   min-width: 0;
   padding: 0;
