@@ -896,6 +896,7 @@ const quickLinks = [
   column-gap: 8px;
   width: 719px;
   margin: 0 0 0 3px;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 
 .wow2008-main-column {
