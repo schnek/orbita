@@ -876,13 +876,13 @@ const quickLinks = [
 .wow2008-main-content-wrapper {
   min-width: 0;
   max-width: 100%;
-  background: url('/ascemu_tbc/images/layout/frame_left-bg.jpg') repeat-y 0 0;
 }
 
 .wow2008-main-content {
   min-width: 0;
   max-width: 100%;
   background:
+    url('/ascemu_tbc/images/layout/frame_left-bg.jpg') repeat-y top left,
     url('/ascemu_tbc/images/layout/frame_right-bg.jpg') repeat-y top right,
     url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
 }
