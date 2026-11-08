@@ -874,10 +874,14 @@ const quickLinks = [
 }
 
 .wow2008-main-content-wrapper {
+  min-width: 0;
+  max-width: 100%;
   background: url('/ascemu_tbc/images/layout/frame_left-bg.jpg') repeat-y 0 0;
 }
 
 .wow2008-main-content {
+  min-width: 0;
+  max-width: 100%;
   background:
     url('/ascemu_tbc/images/layout/frame_right-bg.jpg') repeat-y top right,
     url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
@@ -885,6 +889,7 @@ const quickLinks = [
 
 .wow2008-content-padding {
   position: relative;
+  min-width: 0;
   margin: 0 19px 0 17px;
   padding: 0 10px 24px;
   background: url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
@@ -907,7 +912,9 @@ const quickLinks = [
 }
 
 .wow2008-cnt-paper {
+  box-sizing: border-box;
   width: 491px;
+  max-width: 100%;
   background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 
@@ -927,14 +934,17 @@ const quickLinks = [
 }
 
 .wow2008-content-left {
+  min-width: 0;
   background: url('/ascemu_tbc/images/layout/cnt-paper-left.jpg') repeat-y top left;
 }
 
 .wow2008-content-right {
+  min-width: 0;
   background: url('/ascemu_tbc/images/layout/cnt-paper-right.jpg') repeat-y top right;
 }
 
 .wow2008-cnt-main {
+  min-width: 0;
   padding: 0 0 10px;
 }
 
@@ -1420,10 +1430,15 @@ const quickLinks = [
 }
 
 .wow2008-link-grid {
+  min-width: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px 16px;
   padding: 0 5px 20px;
+}
+
+.wow2008-link-group {
+  min-width: 0;
 }
 
 .wow2008-link-group h3 {
@@ -1475,6 +1490,8 @@ const quickLinks = [
 .wow2008-link-group__content > ul,
 .wow2008-link-group__content > div {
   flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .wow2008-link-group__content p {
@@ -1735,6 +1752,8 @@ const quickLinks = [
 }
 
 .wow2008-main-bottom {
+  box-sizing: border-box;
+  max-width: 100%;
   position: relative;
   z-index: 10;
   width: 763px;
