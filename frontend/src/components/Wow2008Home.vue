@@ -892,13 +892,11 @@ const quickLinks = [
 
 .wow2008-content-columns {
   position: relative;
-  top: -24px;
   display: grid;
   grid-template-columns: 491px 220px;
   column-gap: 8px;
   width: 719px;
-  margin: 0 0 -24px 3px;
-  background-color: #e8d5ad;
+  margin: 0 0 0 3px;
 }
 
 .wow2008-main-column {
