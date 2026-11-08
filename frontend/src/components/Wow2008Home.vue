@@ -1326,7 +1326,9 @@ const quickLinks = [
 
 .wow2008-community-bottom {
   position: relative;
+  width: 471px;
   height: 28px;
+  transform: translateX(-5px);
   background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
 }
 
@@ -1335,8 +1337,9 @@ const quickLinks = [
   right: 6px;
   bottom: 16px;
   display: block;
-  width: 75px;
+  width: 70px;
   height: 15px;
+  transform: translateX(-5px);
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-readmore.gif') no-repeat 0 0;
 }
 
