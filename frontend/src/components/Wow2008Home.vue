@@ -1502,7 +1502,7 @@ const quickLinks = [
   width: 220px;
   min-width: 0;
   padding: 0;
-  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
+  background: url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
 }
 
 .wow2008-bc-upgrade {
