@@ -933,7 +933,6 @@ const quickLinks = [
 
 .wow2008-cnt-main {
   padding: 0 0 10px;
-  background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 
 .wow2008-cnt-bot {
