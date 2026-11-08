@@ -1170,7 +1170,7 @@ const quickLinks = [
   content: "";
   position: absolute;
   z-index: 0;
-  inset: -3px -7px 0 -8px;
+  inset: -3px -7px 0 -13px;
   background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
 }
 
@@ -1326,9 +1326,7 @@ const quickLinks = [
 
 .wow2008-community-bottom {
   position: relative;
-  width: 471px;
   height: 28px;
-  transform: translateX(-5px);
   background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
 }
 
