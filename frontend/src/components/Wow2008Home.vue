@@ -1114,7 +1114,7 @@ const quickLinks = [
 
 .wow2008-community {
   position: relative;
-  width: 491px;
+  width: 476px;
   margin: 10px 0 12px;
   color: #17120a;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
@@ -1326,14 +1326,13 @@ const quickLinks = [
 
 .wow2008-community-bottom {
   position: relative;
-  width: 483px;
   height: 28px;
   background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
 }
 
 .wow2008-community-read-more {
   position: absolute;
-  right: 14px;
+  right: 6px;
   bottom: 16px;
   display: block;
   width: 75px;
