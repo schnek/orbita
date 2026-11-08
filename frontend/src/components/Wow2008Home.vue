@@ -951,6 +951,8 @@ const quickLinks = [
 }
 
 .wow2008-news-column {
+  position: relative;
+  left: 6px;
   width: 470px;
   min-width: 0;
 }
