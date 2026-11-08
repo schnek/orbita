@@ -886,17 +886,19 @@ const quickLinks = [
 .wow2008-content-padding {
   position: relative;
   margin: 0 19px 0 17px;
-  padding: 0 10px 0;
+  padding: 0 10px 24px;
   background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 
 .wow2008-content-columns {
+  position: relative;
+  top: -24px;
   display: grid;
   grid-template-columns: 491px 220px;
   column-gap: 8px;
   width: 719px;
-  margin: 0 0 0 3px;
-  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
+  margin: 0 0 -24px 3px;
+  background-color: #e8d5ad;
 }
 
 .wow2008-main-column {
