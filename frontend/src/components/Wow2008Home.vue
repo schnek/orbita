@@ -649,7 +649,7 @@ const quickLinks = [
 
 .wow2008-ne-top-left {
   position: absolute;
-  top: -73px;
+  top: -72px;
   left: -314px;
   width: 264px;
   height: 346px;
@@ -659,7 +659,7 @@ const quickLinks = [
 
 .wow2008-ne-center {
   position: absolute;
-  top: -73px;
+  top: -72px;
   left: -50px;
   width: 64px;
   height: 578px;
@@ -669,7 +669,7 @@ const quickLinks = [
 
 .wow2008-ne-bottom-left {
   position: absolute;
-  top: 267px;
+  top: 268px;
   left: -176px;
   width: 144px;
   height: 126px;
@@ -679,7 +679,7 @@ const quickLinks = [
 
 .wow2008-ne-nav-bg {
   position: absolute;
-  top: -23px;
+  top: -22px;
   left: 11px;
   width: 157px;
   height: 546px;
