@@ -614,11 +614,11 @@ const quickLinks = [
 .wow2008-stage {
   position: relative;
   z-index: 1;
-  width: 927px;
+  width: 947px;
   margin: -109px auto 0;
   padding-top: 60px;
   display: grid;
-  grid-template-columns: 157px 770px;
+  grid-template-columns: 157px 790px;
   align-items: stretch;
 }
 
@@ -851,7 +851,7 @@ const quickLinks = [
   position: relative;
   grid-column: 2;
   grid-row: 1;
-  width: 770px;
+  width: 790px;
   background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 
@@ -1756,7 +1756,7 @@ const quickLinks = [
   max-width: 100%;
   position: relative;
   z-index: 10;
-  width: 770px;
+  width: 790px;
   height: 41px;
   background: url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x 0 0;
 }
@@ -1825,7 +1825,7 @@ const quickLinks = [
 
 @media (max-width: 1100px) {
   .wow2008 {
-    min-width: 927px;
+    min-width: 947px;
   }
 }
 </style>
