@@ -892,19 +892,19 @@ const quickLinks = [
 
 .wow2008-content-columns {
   display: grid;
-  grid-template-columns: 476px 220px;
+  grid-template-columns: 483px 220px;
   column-gap: 8px;
-  width: 704px;
+  width: 711px;
   margin: 0 0 0 3px;
 }
 
 .wow2008-main-column {
-  width: 476px;
+  width: 483px;
   min-width: 0;
 }
 
 .wow2008-cnt-paper {
-  width: 476px;
+  width: 483px;
   background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 
@@ -953,12 +953,12 @@ const quickLinks = [
 .wow2008-news-column {
   position: relative;
   left: 6px;
-  width: 476px;
+  width: 483px;
   min-width: 0;
 }
 
 .wow2008-flash-container {
-  width: 476px;
+  width: 483px;
   height: 190px;
   margin: 0 0 12px;
 }
@@ -994,7 +994,7 @@ const quickLinks = [
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 476px;
+  width: 483px;
   height: 31px;
   background: url('/ascemu_tbc/images/archives.jpg') no-repeat center top;
 }
@@ -1114,7 +1114,7 @@ const quickLinks = [
 
 .wow2008-community {
   position: relative;
-  width: 476px;
+  width: 483px;
   margin: 10px 0 12px;
   color: #17120a;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
