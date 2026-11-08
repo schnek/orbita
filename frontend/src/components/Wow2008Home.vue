@@ -880,14 +880,14 @@ const quickLinks = [
 .wow2008-main-content {
   background:
     url('/ascemu_tbc/images/layout/frame_right-bg.jpg') repeat-y top right,
-    url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
+    url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
 }
 
 .wow2008-content-padding {
   position: relative;
   margin: 0 19px 0 17px;
   padding: 0 10px 24px;
-  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
+  background: url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
 }
 
 .wow2008-content-columns {
@@ -898,6 +898,7 @@ const quickLinks = [
   column-gap: 8px;
   width: 719px;
   margin: 0 0 0 3px;
+  background: url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
 }
 
 .wow2008-main-column {
@@ -1507,7 +1508,7 @@ const quickLinks = [
   width: 220px;
   min-width: 0;
   padding: 0;
-  background: url('/ascemu_tbc/images/layout/light2.jpg') repeat 0 0;
+  background: transparent;
 }
 
 .wow2008-bc-upgrade {
