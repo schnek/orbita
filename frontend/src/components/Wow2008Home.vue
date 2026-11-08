@@ -644,12 +644,12 @@ const quickLinks = [
   grid-row: 1;
   width: 157px;
   padding-top: 18px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px -13px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/menu-bg.jpg') repeat-y 65px 11px;
 }
 
 .wow2008-ne-top-left {
   position: absolute;
-  top: -72px;
+  top: -48px;
   left: -304px;
   width: 264px;
   height: 346px;
@@ -659,7 +659,7 @@ const quickLinks = [
 
 .wow2008-ne-center {
   position: absolute;
-  top: -72px;
+  top: -48px;
   left: -40px;
   width: 64px;
   height: 578px;
@@ -669,7 +669,7 @@ const quickLinks = [
 
 .wow2008-ne-bottom-left {
   position: absolute;
-  top: 268px;
+  top: 292px;
   left: -166px;
   width: 144px;
   height: 126px;
@@ -679,7 +679,7 @@ const quickLinks = [
 
 .wow2008-ne-nav-bg {
   position: absolute;
-  top: -22px;
+  top: 2px;
   left: 21px;
   width: 157px;
   height: 546px;
