@@ -892,19 +892,19 @@ const quickLinks = [
 
 .wow2008-content-columns {
   display: grid;
-  grid-template-columns: 483px 220px;
+  grid-template-columns: 491px 220px;
   column-gap: 8px;
-  width: 711px;
+  width: 719px;
   margin: 0 0 0 3px;
 }
 
 .wow2008-main-column {
-  width: 483px;
+  width: 491px;
   min-width: 0;
 }
 
 .wow2008-cnt-paper {
-  width: 483px;
+  width: 491px;
   background: url('/ascemu_tbc/images/layout/light.jpg') repeat 0 0;
 }
 
@@ -1114,7 +1114,7 @@ const quickLinks = [
 
 .wow2008-community {
   position: relative;
-  width: 483px;
+  width: 491px;
   margin: 10px 0 12px;
   color: #17120a;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
@@ -1326,13 +1326,14 @@ const quickLinks = [
 
 .wow2008-community-bottom {
   position: relative;
+  width: 483px;
   height: 28px;
   background: url('/ascemu_tbc/images/phatLootBox-bottom.jpg') no-repeat 0 -1px;
 }
 
 .wow2008-community-read-more {
   position: absolute;
-  right: 6px;
+  right: 14px;
   bottom: 16px;
   display: block;
   width: 75px;
