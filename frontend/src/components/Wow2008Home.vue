@@ -624,7 +624,7 @@ const quickLinks = [
 
 .wow2008-header {
   position: absolute;
-  top: 0;
+  top: -28px;
   left: -16px;
   z-index: 40;
   width: 252px;
