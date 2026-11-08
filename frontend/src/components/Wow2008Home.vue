@@ -615,7 +615,7 @@ const quickLinks = [
   position: relative;
   z-index: 1;
   width: 920px;
-  margin: -85px auto 0;
+  margin: -109px auto 0;
   padding-top: 60px;
   display: grid;
   grid-template-columns: 157px 763px;
