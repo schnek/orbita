@@ -887,9 +887,7 @@ const quickLinks = [
   position: relative;
   margin: 0 19px 0 17px;
   padding: 0 10px 0;
-  background:
-    url('/ascemu_tbc/images/layout/cnt-paper-right.jpg') repeat-y top right,
-    url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
+  background: url('/ascemu_tbc/images/parchment/plain/light2.jpg') repeat 0 0;
 }
 
 .wow2008-content-columns {
@@ -930,7 +928,7 @@ const quickLinks = [
 }
 
 .wow2008-content-right {
-  background: none;
+  background: url('/ascemu_tbc/images/layout/cnt-paper-right.jpg') repeat-y top right;
 }
 
 .wow2008-cnt-main {
