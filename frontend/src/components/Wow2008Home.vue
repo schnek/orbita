@@ -1752,10 +1752,11 @@ const quickLinks = [
 
 .wow2008-main-bottom {
   box-sizing: border-box;
-  max-width: 100%;
   position: relative;
   z-index: 10;
-  width: 790px;
+  left: calc(50% - 29.5px);
+  transform: translateX(-50%);
+  width: 100vw;
   height: 41px;
   background: url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x 0 0;
 }
@@ -1787,7 +1788,9 @@ const quickLinks = [
 .wow2008-statues {
   position: relative;
   z-index: 2;
-  width: 100%;
+  left: calc(50% - 29.5px);
+  transform: translateX(-50%);
+  width: 100vw;
   height: 0;
   pointer-events: none;
 }
@@ -1795,7 +1798,7 @@ const quickLinks = [
 .wow2008-statue-left {
   position: absolute;
   top: -461px;
-  left: -243px;
+  left: 0;
   width: 243px;
   height: 445px;
   z-index: 2;
@@ -1804,7 +1807,7 @@ const quickLinks = [
 .wow2008-statue-right {
   position: absolute;
   top: -358px;
-  right: -95px;
+  right: 0;
   width: 95px;
   height: 342px;
   z-index: 2002;
