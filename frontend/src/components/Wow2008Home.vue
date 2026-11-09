@@ -1380,8 +1380,8 @@ const quickLinks = [
   content: "";
   position: absolute;
   z-index: 4;
-  right: 8px;
-  bottom: 0;
+  right: 20px;
+  bottom: 9px;
   width: 110px;
   height: 120px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/needhelp-gnome.gif') no-repeat right bottom;
@@ -1768,11 +1768,20 @@ const quickLinks = [
   box-sizing: border-box;
   position: relative;
   z-index: 10;
-  left: calc(50% - 29.5px);
-  transform: translateX(-50%);
+  left: calc(316.5px - 50vw);
   width: 100vw;
   height: 41px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x 0 0;
+}
+
+.wow2008-main-bottom > div {
+  height: 41px;
+  background: url('/ascemu_tbc/images/layout/frame_bottom-left.jpg') no-repeat top left;
+}
+
+.wow2008-main-bottom > div > div {
+  height: 41px;
+  background: url('/ascemu_tbc/images/layout/frame_bottom-right.jpg') no-repeat top right;
 }
 
 .wow2008-main-bottom > div,
