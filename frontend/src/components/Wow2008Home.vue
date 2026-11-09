@@ -205,11 +205,13 @@
 
                             <div class="wow2008-banner-row">
                               <a class="wow2008-banner wow2008-banner--help" href="#" aria-label="Need Help">
+                                <span class="wow2008-chains wow2008-chains--banner" aria-hidden="true"></span>
                                 <span class="wow2008-banner-icon wow2008-banner-icon--help"></span>
                                 <span class="wow2008-banner-label wow2008-banner-label--help"></span>
                                 <span class="wow2008-banner-read-more" aria-hidden="true"></span>
                               </a>
                               <a class="wow2008-banner wow2008-banner--jobs" href="#" aria-label="Jobs">
+                                <span class="wow2008-chains wow2008-chains--banner" aria-hidden="true"></span>
                                 <span class="wow2008-banner-icon wow2008-banner-icon--jobs"></span>
                                 <span class="wow2008-banner-label wow2008-banner-label--jobs"></span>
                                 <span class="wow2008-banner-read-more" aria-hidden="true"></span>
@@ -1040,6 +1042,26 @@ const quickLinks = [
   height: 123px;
   text-decoration: none;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/community-smallteaser-bg.gif') no-repeat 0 0;
+}
+
+.wow2008-chains {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  width: 73px;
+  height: 15px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/chains.gif') no-repeat 0 0;
+  pointer-events: none;
+}
+
+.wow2008-chains--promo {
+  top: -15px;
+  left: 38px;
+}
+
+.wow2008-chains--banner {
+  top: -15px;
+  left: 80px;
 }
 
 .wow2008-promo:nth-child(n + 2) {
