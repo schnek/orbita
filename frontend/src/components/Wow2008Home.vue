@@ -1771,7 +1771,9 @@ const quickLinks = [
   left: calc(316.5px - 50vw);
   width: 100vw;
   height: 41px;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x 0 0;
+  background:
+    url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x 0 0,
+    url('/ascemu_tbc/images/templates/The_Burning_Crusade/ironframe-bg.jpg') repeat-x 0 0;
 }
 
 .wow2008-main-bottom > div {
