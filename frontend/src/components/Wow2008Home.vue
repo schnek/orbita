@@ -1808,8 +1808,7 @@ const quickLinks = [
 .wow2008-statues {
   position: relative;
   z-index: 2;
-  left: calc(50% - 29.5px);
-  transform: translateX(-50%);
+  left: calc(316.5px - 50vw);
   width: 100vw;
   height: 0;
   pointer-events: none;
