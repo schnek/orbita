@@ -345,11 +345,11 @@
         </div>
 
         <footer class="wow2008-main-bottom">
-          <div><div>
+          <div>
             <div class="wow2008-blizz-logo">
               <img src="/ascemu_tbc/images/new/bot-blizzlogo.gif" alt="Blizzard Entertainment">
             </div>
-          </div></div>
+          </div>
         </footer>
         <div class="wow2008-statues" aria-hidden="true">
           <img class="wow2008-statue-left" src="/ascemu_tbc/images/templates/The_Burning_Crusade/statue-left.jpg" alt="">
@@ -1781,14 +1781,9 @@ const quickLinks = [
   height: 41px;
   margin-left: calc(50vw - 316.5px);
   background:
-    url('/ascemu_tbc/images/layout/frame_bottom-left.jpg') no-repeat top left,
-    url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x 0 0;
-}
-
-.wow2008-main-bottom > div > div {
-  width: 790px;
-  height: 41px;
-  background: url('/ascemu_tbc/images/layout/frame_bottom-right.jpg') no-repeat top right;
+    url('/ascemu_tbc/images/layout/frame_bottom-left.jpg') no-repeat left top,
+    url('/ascemu_tbc/images/layout/frame_bottom-right.jpg') no-repeat right top,
+    url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x left top;
 }
 
 .wow2008-main-bottom > div,
