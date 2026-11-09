@@ -1775,11 +1775,14 @@ const quickLinks = [
 }
 
 .wow2008-main-bottom > div {
+  width: 790px;
   height: 41px;
+  margin-left: calc(50vw - 316.5px);
   background: url('/ascemu_tbc/images/layout/frame_bottom-left.jpg') no-repeat top left;
 }
 
 .wow2008-main-bottom > div > div {
+  width: 790px;
   height: 41px;
   background: url('/ascemu_tbc/images/layout/frame_bottom-right.jpg') no-repeat top right;
 }
