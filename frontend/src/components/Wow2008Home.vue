@@ -1807,7 +1807,7 @@ const quickLinks = [
 
 .wow2008-statues {
   position: relative;
-  z-index: 2;
+  z-index: 2001;
   width: 100%;
   height: 0;
   pointer-events: none;
@@ -1828,7 +1828,7 @@ const quickLinks = [
   left: 0px;
   width: 95px;
   height: 342px;
-  z-index: 2002;
+  z-index: 2003;
 }
 
 .visually-hidden {
