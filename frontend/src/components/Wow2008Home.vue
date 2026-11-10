@@ -1662,7 +1662,8 @@ const quickLinks = [
 }
 
 .wow2008-quicklinks .wow2008-marginal-top h2 {
-  left: 50px;
+  top: 6px;
+  left: 35px;
   width: 78px;
   height: 14px;
   background: none;
