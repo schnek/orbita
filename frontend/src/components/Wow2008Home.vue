@@ -1061,7 +1061,8 @@ const quickLinks = [
 
 .wow2008-chains--banner {
   top: -15px;
-  left: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .wow2008-promo:nth-child(n + 2) {
