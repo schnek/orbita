@@ -1417,6 +1417,19 @@ const quickLinks = [
   background-position: 0 0, 8px 22px;
 }
 
+.wow2008-banner--jobs::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 92px;
+  height: 79px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/jobs-orc.gif') no-repeat right bottom;
+  pointer-events: none;
+}
+
 .wow2008-banner-read-more {
   position: absolute;
   z-index: 3;
