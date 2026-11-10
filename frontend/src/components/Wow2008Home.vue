@@ -1376,6 +1376,8 @@ const quickLinks = [
 }
 
 .wow2008-banner-row {
+  position: relative;
+  top: -6px;
   display: grid;
   grid-template-columns: 226px 226px;
   gap: 8px;
