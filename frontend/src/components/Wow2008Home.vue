@@ -1687,7 +1687,7 @@ const quickLinks = [
 
 .wow2008-quicklinks .wow2008-marginal-body {
   background:
-    url('/ascemu_tbc/images/ql-plainBox-cnt-bot.jpg') no-repeat center bottom,
+    url('/ascemu_tbc/images/ql-plainBox-cnt-bot.jpg') no-repeat calc(50% - 1px) bottom,
     url('/ascemu_tbc/images/ql-plainBox-cnt-bg.jpg') repeat-y 0 0;
 }
 
