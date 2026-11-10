@@ -1424,7 +1424,7 @@ const quickLinks = [
   position: absolute;
   z-index: 1;
   right: 9px;
-  bottom: 11px;
+  bottom: 9px;
   display: block;
   width: 92px;
   height: 79px;
