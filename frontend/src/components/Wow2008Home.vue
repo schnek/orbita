@@ -1674,6 +1674,22 @@ const quickLinks = [
   height: 14px;
 }
 
+.wow2008-quicklinks .wow2008-marginal-top {
+  height: 25px;
+  background: url('/ascemu_tbc/images/ql-plainBox-top.jpg') no-repeat 0 0;
+}
+
+.wow2008-quicklinks .wow2008-marginal-body {
+  background:
+    url('/ascemu_tbc/images/ql-plainBox-cnt-bot.jpg') no-repeat center bottom,
+    url('/ascemu_tbc/images/ql-plainBox-cnt-bg.jpg') repeat-y 0 0;
+}
+
+.wow2008-quicklinks .wow2008-marginal-bottom {
+  height: 13px;
+  background: url('/ascemu_tbc/images/ql-plainBox-bot.jpg') no-repeat 0 0;
+}
+
 .wow2008-screenshot .wow2008-marginal-top h2 {
   background-image: url('/ascemu_tbc/images/header-ssotd.gif');
 }
