@@ -282,7 +282,10 @@
 
                 <aside class="wow2008-right">
                   <section class="wow2008-bc-upgrade">
-                    <h2><img src="/ascemu_tbc/images/templates/The_Burning_Crusade/header-expansion.jpg" alt="The Burning Crusade"></h2>
+                    <h2>
+                      <span class="wow2008-marginal-icon wow2008-marginal-icon--bc-upgrade"></span>
+                      <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/header-expansion.jpg" alt="The Burning Crusade">
+                    </h2>
                     <div class="wow2008-bc-upgrade__content">
                       <img src="/ascemu_tbc/images/image-retailbox.gif" alt="World of Warcraft The Burning Crusade">
                       <div>
@@ -295,7 +298,6 @@
 
                   <section class="wow2008-quicklinks">
                     <div class="wow2008-marginal-top">
-                      <span class="wow2008-marginal-icon wow2008-marginal-icon--quicklinks"></span>
                       <h2 class="wow2008-quicklinks-title"><img src="/ascemu_tbc/images/header-quick_links.jpg" alt="Quick Links"></h2>
                     </div>
                     <div class="wow2008-marginal-body">
@@ -1709,7 +1711,7 @@ const quickLinks = [
   background-repeat: no-repeat;
 }
 
-.wow2008-marginal-icon--quicklinks {
+.wow2008-marginal-icon--bc-upgrade {
   background-image: url('/ascemu_tbc/images/visual-infoBox-bg.gif');
 }
 
