@@ -1048,7 +1048,7 @@ const quickLinks = [
   position: absolute;
   z-index: 3;
   display: block;
-  width: 73px;
+  width: 140px;
   height: 15px;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/chains.gif') no-repeat 0 0;
   pointer-events: none;
