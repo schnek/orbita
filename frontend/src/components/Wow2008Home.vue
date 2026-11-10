@@ -300,7 +300,12 @@
                     </div>
                     <div class="wow2008-marginal-body">
                       <ul>
-                        <li v-for="link in quickLinks" :key="link"><a href="#">{{ link }}</a></li>
+                        <li v-for="link in quickLinks" :key="link.label">
+                          <a href="#">
+                            <img :src="`/ascemu_tbc/images/icons/${link.icon}`" alt="">
+                            <span>{{ link.label }}</span>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                     <div class="wow2008-marginal-bottom"></div>
@@ -435,15 +440,15 @@ const toggleGroup = (key: string) => {
 }
 
 const quickLinks = [
-  'Account Management',
-  'Parental Controls',
-  'Support Site',
-  'Realm Status',
-  'Account Creation',
-  'Retrieve Password',
-  'Account Security',
-  'Latest Patch Notes',
-  'Free 10-Day WoW Trial',
+  { label: 'Account Management', icon: 'acct_management.jpg' },
+  { label: 'Parental Controls', icon: 'faq.jpg' },
+  { label: 'Support Site', icon: 'support.jpg' },
+  { label: 'Realm Status', icon: 'realmstatus.jpg' },
+  { label: 'Account Creation', icon: 'acc_creation.jpg' },
+  { label: 'Retrieve Password', icon: 'retrieve_pwd.jpg' },
+  { label: 'Account Security', icon: 'change_email.jpg' },
+  { label: 'Latest Patch Notes', icon: 'patch_notes.jpg' },
+  { label: 'Free 10-Day WoW Trial', icon: 'download.jpg' },
 ]
 </script>
 
@@ -1721,12 +1726,24 @@ const quickLinks = [
 }
 
 .wow2008-quicklinks a {
-  display: block;
-  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 25px;
   color: #1e4378;
   font: bold 11px Arial, sans-serif;
   text-decoration: none;
-  background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 40%;
+}
+
+.wow2008-quicklinks a img {
+  display: block;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.wow2008-quicklinks a span {
+  display: block;
 }
 
 .wow2008-quicklinks a:hover {
