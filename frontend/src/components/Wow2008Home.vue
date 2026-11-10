@@ -1212,7 +1212,7 @@ const quickLinks = [
   content: "";
   position: absolute;
   z-index: 0;
-  inset: -3px -7px 0 -13px;
+  inset: -3px -1px 0 -13px;
   background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
 }
 
