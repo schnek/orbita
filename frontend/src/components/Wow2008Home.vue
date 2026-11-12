@@ -1157,7 +1157,7 @@ const quickLinks = [
 .wow2008-community {
   position: relative;
   width: 476px;
-  margin: 10px 0 12px 8px;
+  margin: 10px 0 12px;
   color: #17120a;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
@@ -1213,9 +1213,10 @@ const quickLinks = [
   position: absolute;
   z-index: 0;
   top: -3px;
-  right: 0;
+  right: -10px;
   bottom: 0;
   left: 0;
+  transform: translateX(-8px);
   background: url('/ascemu_tbc/images/phatLootBox-hdlbg.jpg') repeat-x 0 0;
 }
 
