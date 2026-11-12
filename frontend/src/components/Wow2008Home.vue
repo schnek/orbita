@@ -1157,7 +1157,7 @@ const quickLinks = [
 .wow2008-community {
   position: relative;
   width: 476px;
-  margin: 10px 0 12px;
+  margin: 10px 0 12px 8px;
   color: #17120a;
   font: 11px/1.35 "Trebuchet MS", Arial, sans-serif;
 }
@@ -1743,7 +1743,7 @@ const quickLinks = [
 
 .wow2008-quicklinks li {
   margin: 0 10px 0 0;
-  padding: 3px 0;
+  padding: 0;
   border-bottom: 1px solid #af9771;
 }
 
