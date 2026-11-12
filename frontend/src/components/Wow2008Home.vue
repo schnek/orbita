@@ -447,10 +447,10 @@ const quickLinks = [
   { label: 'Support Site', icon: 'support.jpg' },
   { label: 'Realm Status', icon: 'realmstatus.jpg' },
   { label: 'Account Creation', icon: 'acc_creation.jpg' },
-  { label: 'Retrieve Password', icon: 'retrieve_pwd.jpg' },
+  { label: 'Free 10-Day WoW Trial', icon: 'download.jpg' },
   { label: 'Account Security', icon: 'change_email.jpg' },
   { label: 'Latest Patch Notes', icon: 'patch_notes.jpg' },
-  { label: 'Free 10-Day WoW Trial', icon: 'download.jpg' },
+  { label: 'Retrieve Password', icon: 'retrieve_pwd.jpg' },
 ]
 </script>
 
