@@ -472,21 +472,26 @@ const quickLinks = [
 .wow2008-topbar {
   position: relative;
   z-index: 20;
+  width: 989px;
+  max-width: calc(100% - 24px);
   height: 32px;
-  background: linear-gradient(180deg, #1b527d 0%, #123f66 48%, #0b2d4d 100%);
-  border-bottom: 1px solid #071f38;
+  margin: 0 auto;
+  background: #072540 url('/ascemu_tbc/images/templates/The_Burning_Crusade/bg.gif') 50% 0 repeat-x;
+  border-bottom: 1px solid #143352;
+  box-sizing: border-box;
 }
 
 .wow2008-topbar__inner {
-  width: 955px;
-  max-width: calc(100% - 24px);
+  width: 100%;
+  max-width: 100%;
   height: 32px;
   margin: 0 auto;
   padding: 0 17px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  box-sizing: border-box;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
 }
 
 .wow2008-topbar nav {
