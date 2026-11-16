@@ -518,7 +518,7 @@ const quickLinks = [
 
 .wow2008-search {
   position: relative;
-  top: 38px;
+  top: 41px;
   display: flex;
   align-items: center;
   height: 34px;
