@@ -585,16 +585,6 @@ const quickLinks = [
   margin-left: 3px;
 }
 
-.wow2008-community .wow2008-community-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  padding: 0 8px;
-  color: #ffdb59;
-  white-space: nowrap;
-}
-
 .wow2008-search button:hover,
 .wow2008-search button:focus-visible,
 .wow2008-community .wow2008-community-action:hover,
