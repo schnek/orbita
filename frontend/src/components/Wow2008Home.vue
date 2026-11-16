@@ -1610,7 +1610,7 @@ const quickLinks = [
   position: relative;
   width: 213px;
   height: 27px;
-  background: url('/ascemu_tbc/images/marginal-infoBox-top-ie.jpg') no-repeat 43px 0;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 0 0;
 }
 
 .wow2008-marginal-top h2 {
@@ -1787,8 +1787,9 @@ const quickLinks = [
   left: 0;
   display: block;
   width: 58px;
-  height: 58px;
-  object-fit: cover;
+  height: 67px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .wow2008-newcomers-entry strong,
