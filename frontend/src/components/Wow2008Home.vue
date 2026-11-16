@@ -1611,18 +1611,27 @@ const quickLinks = [
 
 .wow2008-bc-upgrade__content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width: 213px;
+  min-height: 107px;
   gap: 8px;
-  min-height: 95px;
-  padding: 6px 9px;
+  padding: 7px 10px 8px;
   background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
   font: 11px/1.25 Arial, sans-serif;
 }
 
 .wow2008-bc-upgrade__content > img {
+  display: block;
+  flex: 0 0 55px;
   width: 55px;
   height: 91px;
   object-fit: contain;
+}
+
+.wow2008-bc-upgrade__content > div {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .wow2008-bc-upgrade__content strong,
@@ -1630,6 +1639,17 @@ const quickLinks = [
 .wow2008-bc-upgrade__content a {
   display: block;
   margin-bottom: 4px;
+}
+
+.wow2008-bc-upgrade__content strong {
+  color: #4b2c13;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.wow2008-bc-upgrade__content span {
+  color: #49351f;
+  font-size: 10px;
 }
 
 .wow2008-bc-upgrade__content a {
