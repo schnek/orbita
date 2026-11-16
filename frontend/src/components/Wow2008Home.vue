@@ -1592,20 +1592,30 @@ const quickLinks = [
 }
 
 .wow2008-bc-upgrade {
+  position: relative;
+  box-sizing: border-box;
   width: 213px;
   margin: 0 auto 12px;
-  position: relative;
 }
 
 .wow2008-bc-upgrade h2 {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 213px;
   height: 27px;
   margin: 0;
+  padding: 0;
   background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 43px 0;
+  line-height: 0;
 }
 
 .wow2008-bc-upgrade h2 img {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 121px;
+  height: auto;
   margin-left: 48px;
 }
 
@@ -1662,8 +1672,19 @@ const quickLinks = [
   text-decoration: none;
 }
 
+.wow2008-bc-upgrade__content a:hover {
+  background: #a63a16;
+  color: #fff0b2;
+}
+
+.wow2008-bc-upgrade__content a:last-child {
+  margin-bottom: 0;
+}
+
 .wow2008-bc-upgrade__bottom {
+  width: 213px;
   height: 10px;
+  margin: 0;
   background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
 }
 
