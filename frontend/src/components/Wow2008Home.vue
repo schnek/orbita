@@ -318,23 +318,39 @@
                     </div>
                   </section>
 
-                  <section class="wow2008-newcomers">
-                    <div class="wow2008-marginal-top">
-                      <span class="wow2008-marginal-icon wow2008-marginal-icon--newcomers"></span>
+                  <section class="wow2008-newcomers" aria-label="Newcomers Section">
+                    <div class="wow2008-newcomers-top">
+                      <span class="wow2008-newcomers-icon" aria-hidden="true"></span>
                       <h2>Newcomers Section</h2>
                     </div>
                     <div class="wow2008-newcomers-body">
-                      <div class="wow2008-newcomers-entry">
-                        <img src="/ascemu_tbc/images/bg-newcomers.jpg" alt="">
-                        <strong>Looking to purchase World of Warcraft?</strong>
-                        <span>Follow the links below to learn more.</span>
-                      </div>
-                      <div class="wow2008-newcomers-entry">
-                        <img src="/ascemu_tbc/images/bg-discover.jpg" alt="">
-                        <strong>Lost in Azeroth?</strong>
-                        <span>Find your way with our Beginner's Guide.</span>
-                      </div>
-                      <a href="#" class="wow2008-newcomers-button">General FAQ</a>
+                      <section class="wow2008-newcomers-panel wow2008-newcomers-panel--discover">
+                        <h3>Discover World of Warcraft</h3>
+                        <div class="wow2008-newcomers-purchase">
+                          <img class="wow2008-newcomers-box" src="/ascemu_tbc/images/image-retailbox.gif" alt="World of Warcraft game box">
+                          <div>
+                            <strong>Looking to purchase World of Warcraft?</strong>
+                            <span>Follow the links below to learn more.</span>
+                          </div>
+                        </div>
+                        <ul class="wow2008-newcomers-links">
+                          <li><a href="#">Cinematic Trailer</a></li>
+                          <li><a href="#">Features Page</a></li>
+                          <li><a href="#">Online Store</a></li>
+                        </ul>
+                      </section>
+                      <section class="wow2008-newcomers-panel wow2008-newcomers-panel--journey">
+                        <h3>Begin Your Journey</h3>
+                        <div class="wow2008-newcomers-guide">
+                          <div>
+                            <strong>Lost in Azeroth?</strong>
+                            <span>Find your way with our Beginner's Guide!</span>
+                          </div>
+                        </div>
+                        <a href="#" class="wow2008-newcomers-guide-button">Beginner's Guide</a>
+                        <p>Read everything you ever wanted to know about <a href="#">Azeroth</a>.</p>
+                        <a href="#" class="wow2008-newcomers-button">General FAQ</a>
+                      </section>
                     </div>
                     <div class="wow2008-marginal-bottom"></div>
                   </section>
@@ -1654,181 +1670,185 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/ql-plainBox-bot.jpg') no-repeat 0 0;
 }
 
-.wow2008-newcomers .wow2008-marginal-top h2 {
+.wow2008-newcomers-top {
+  position: relative;
+  box-sizing: border-box;
+  width: 213px;
+  height: 36px;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 0 0;
+}
+
+.wow2008-newcomers-top h2 {
+  position: absolute;
+  top: 6px;
+  left: 42px;
   width: 150px;
   height: 20px;
+  margin: 0;
   background: url('/ascemu_tbc/images/header-newcomers.jpg') no-repeat 0 0;
   text-indent: -9999px;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.wow2008-marginal-icon {
+.wow2008-newcomers-icon {
   position: absolute;
   z-index: 3;
-  top: -14px;
+  top: -4px;
   left: -3px;
   width: 46px;
-  height: 54px;
-  background-repeat: no-repeat;
-}
-
-.wow2008-marginal-icon--newcomers {
-  top: -6px;
-  background-image: url('/ascemu_tbc/images/visual-infoBox-ng.gif');
-}
-
-.wow2008-marginal-body {
-  box-sizing: border-box;
-  width: 213px;
-  padding: 0 8px 6px;
-  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
-}
-
-.wow2008-quicklinks ul {
-  list-style: none;
-  margin: 0;
-  padding: 0 10px 5px;
-}
-
-.wow2008-quicklinks li {
-  margin: 0 10px 0 0;
-  padding: 0;
-  border-bottom: 1px solid #af9771;
-}
-
-.wow2008-quicklinks a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 25px;
-  color: #1e4378;
-  font: bold 11px Arial, sans-serif;
-  text-decoration: none;
-}
-
-.wow2008-quicklinks a img {
-  display: block;
-  flex: 0 0 25px;
-  width: 25px;
-  height: 25px;
-}
-
-.wow2008-quicklinks a span {
-  display: block;
-}
-
-.wow2008-quicklinks a:hover {
-  color: #c60000;
-}
-
-.wow2008-marginal-bottom {
-  height: 10px;
-  background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
-}
-
-.wow2008-promo-carousel {
-  width: 213px;
-  margin: 0 auto 5px;
-  overflow: hidden;
-}
-
-.wow2008-promo-carousel__slides {
-  display: grid;
-  width: 100%;
-}
-
-.wow2008-promo-carousel__slides img {
-  display: block;
-  grid-area: 1 / 1;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  animation: wow2008-promo-rotate 15s infinite;
-}
-
-.wow2008-promo-carousel__slides img:nth-child(2) {
-  animation-delay: 5s;
-}
-
-.wow2008-promo-carousel__slides img:nth-child(3) {
-  animation-delay: 10s;
-}
-
-@keyframes wow2008-promo-rotate {
-  0%, 30% {
-    opacity: 1;
-  }
-  33.333%, 100% {
-    opacity: 0;
-  }
+  height: 46px;
+  background: url('/ascemu_tbc/images/visual-infoBox-ng.gif') no-repeat 0 0;
 }
 
 .wow2008-newcomers-body {
   box-sizing: border-box;
   width: 213px;
-  padding: 7px 10px 8px;
+  padding: 0 8px 8px;
   background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
-  color: #333;
-  font: 10px/1.25 Arial, Helvetica, sans-serif;
+  color: #332b1c;
+  font: 10px/1.2 Arial, Helvetica, sans-serif;
 }
 
-.wow2008-newcomers-entry {
+.wow2008-newcomers-panel {
   position: relative;
   box-sizing: border-box;
-  min-height: 58px;
-  margin: 0 0 9px;
-  padding: 0 0 0 65px;
+  width: 197px;
+  padding: 0 7px 7px;
+  overflow: hidden;
 }
 
-.wow2008-newcomers-entry img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.wow2008-newcomers-panel h3 {
+  box-sizing: border-box;
+  height: 18px;
+  margin: 0 -7px 6px;
+  padding: 3px 0 0 40px;
+  color: #e7bd38;
+  font: bold 9px/12px Georgia, 'Times New Roman', serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px #281006;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/miscbox-top.gif') repeat-x 0 0;
+}
+
+.wow2008-newcomers-panel--discover {
+  min-height: 155px;
+  background: url('/ascemu_tbc/images/bg-newcomers.jpg') no-repeat right bottom;
+}
+
+.wow2008-newcomers-purchase {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  min-height: 66px;
+}
+
+.wow2008-newcomers-box {
   display: block;
-  width: 58px;
-  height: 67px;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 61px;
   object-fit: contain;
-  object-position: center;
 }
 
-.wow2008-newcomers-entry strong,
-.wow2008-newcomers-entry span {
+.wow2008-newcomers-purchase > div {
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.wow2008-newcomers-purchase strong,
+.wow2008-newcomers-purchase span {
   display: block;
 }
 
-.wow2008-newcomers-entry strong {
-  margin: 0 0 3px;
-  color: #1e4378;
-  font: bold 11px/13px Arial, Helvetica, sans-serif;
+.wow2008-newcomers-purchase strong,
+.wow2008-newcomers-guide strong {
+  color: #174a85;
+  font: bold 10px/12px Arial, Helvetica, sans-serif;
 }
 
-.wow2008-newcomers-entry span {
-  color: #555;
-  font: normal 10px/13px Arial, Helvetica, sans-serif;
+.wow2008-newcomers-purchase span,
+.wow2008-newcomers-guide span {
+  display: block;
+  margin-top: 3px;
+  color: #4c463d;
+  font: 9px/11px Arial, Helvetica, sans-serif;
 }
 
+.wow2008-newcomers-links {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0 0 0 5px;
+}
+
+.wow2008-newcomers-links li {
+  padding-left: 11px;
+  line-height: 12px;
+  background: url('/ascemu_tbc/images/icons/bullet.gif') no-repeat 0 1px;
+}
+
+.wow2008-newcomers-links a,
+.wow2008-newcomers-panel p a {
+  color: #173f76;
+  font: bold 9px/12px Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+.wow2008-newcomers-panel--journey {
+  min-height: 174px;
+  padding-bottom: 7px;
+  background: url('/ascemu_tbc/images/bg-discover.jpg') no-repeat right bottom;
+}
+
+.wow2008-newcomers-guide {
+  min-height: 54px;
+  padding: 5px 0 0 73px;
+  background: url('/ascemu_tbc/images/bg-newcomers.jpg') no-repeat right bottom;
+}
+
+.wow2008-newcomers-guide strong,
+.wow2008-newcomers-guide span {
+  display: block;
+}
+
+.wow2008-newcomers-guide-button,
 .wow2008-newcomers-button {
   display: block;
   box-sizing: border-box;
-  width: 115px;
-  height: 25px;
-  margin: 2px auto 0;
-  padding: 5px 6px;
+  height: 19px;
+  padding: 2px 5px;
   border: 1px solid #8d5e17;
   border-radius: 2px;
   background: linear-gradient(180deg, #a02d0a, #7d1f09);
   color: #ffdb59 !important;
+  font: bold 10px/13px Arial, Helvetica, sans-serif;
   text-align: center;
   text-decoration: none !important;
-  font: bold 10px/13px Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 
+.wow2008-newcomers-guide-button {
+  width: 104px;
+  margin: 2px auto 3px;
+}
+
+.wow2008-newcomers-panel p {
+  margin: 0 0 4px;
+  color: #40382b;
+  font: 9px/11px Arial, Helvetica, sans-serif;
+}
+
+.wow2008-newcomers-button {
+  width: 98px;
+  margin: 0 auto;
+}
+
 .wow2008-newcomers-button:hover,
-.wow2008-newcomers-button:focus-visible {
+.wow2008-newcomers-guide-button:hover {
   filter: brightness(1.08);
 }
+
 
 .wow2008-main-bottom {
   box-sizing: border-box;

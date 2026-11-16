@@ -3,7 +3,7 @@ name: WoW 2008 homepage preview
 on:
   push:
     branches:
-      - wow-2008-theme
+      - feature/wow-2008-theme
   pull_request:
     branches:
       - main
