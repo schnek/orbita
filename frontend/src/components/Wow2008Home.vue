@@ -569,20 +569,28 @@ const quickLinks = [
 
 .wow2008-search button,
 .wow2008-community .wow2008-community-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   height: 21px;
+  padding: 0 6px;
   border: 1px solid #8d5e17;
   border-radius: 2px;
+  appearance: none;
   background: linear-gradient(180deg, #a02d0a, #7d1f09);
   color: #ffdb59;
   font: bold 10px Arial, sans-serif;
+  line-height: normal;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
 }
 
 .wow2008-search button {
   width: 55px;
   margin-left: 3px;
+  padding: 0;
 }
 
 .wow2008-search button:hover,
