@@ -294,6 +294,7 @@
                         <a href="#">Download Now</a>
                       </div>
                     </div>
+                    <div class="wow2008-bc-upgrade__bottom"></div>
                   </section>
 
                   <section class="wow2008-quicklinks">
@@ -1639,6 +1640,11 @@ const quickLinks = [
   font-weight: bold;
   text-align: center;
   text-decoration: none;
+}
+
+.wow2008-bc-upgrade__bottom {
+  height: 10px;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
 }
 
 .wow2008-quicklinks,
