@@ -591,6 +591,7 @@ const quickLinks = [
   justify-content: center;
   width: auto;
   padding: 0 8px;
+  color: #ffdb59;
   white-space: nowrap;
 }
 
