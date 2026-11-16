@@ -1764,20 +1764,23 @@ const quickLinks = [
   width: 213px;
   padding: 7px 10px 8px;
   background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
-  font: 10px/1.25 Arial, sans-serif;
+  color: #333;
+  font: 10px/1.25 Arial, Helvetica, sans-serif;
 }
 
 .wow2008-newcomers-entry {
   position: relative;
-  min-height: 67px;
-  margin: 0 0 6px;
-  padding-left: 65px;
+  box-sizing: border-box;
+  min-height: 58px;
+  margin: 0 0 9px;
+  padding: 0 0 0 65px;
 }
 
 .wow2008-newcomers-entry img {
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 58px;
   height: 58px;
   object-fit: cover;
@@ -1788,17 +1791,29 @@ const quickLinks = [
   display: block;
 }
 
+.wow2008-newcomers-entry strong {
+  margin: 0 0 3px;
+  color: #1e4378;
+  font: bold 11px/13px Arial, Helvetica, sans-serif;
+}
+
+.wow2008-newcomers-entry span {
+  color: #555;
+  font: normal 10px/13px Arial, Helvetica, sans-serif;
+}
+
 .wow2008-newcomers-button {
   display: block;
-  width: 103px;
-  margin: 4px auto 0;
+  width: 115px;
+  box-sizing: border-box;
+  margin: 2px auto 0;
   padding: 3px 6px;
   text-align: center;
   color: #ffdc50 !important;
   background: #7d1c08;
   border: 2px ridge #9b793e;
   text-decoration: none !important;
-  font-weight: bold;
+  font: bold 10px/13px Arial, Helvetica, sans-serif;
 }
 
 .wow2008-main-bottom {
