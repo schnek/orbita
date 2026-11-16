@@ -316,9 +316,28 @@
                       <h2></h2>
                     </div>
                     <div class="wow2008-marginal-body wow2008-screenshot-body">
-                      <div class="wow2008-screenshot__image" role="img" aria-label="Screenshot of the day"></div>
-                      <select aria-label="Screenshot gallery">
-                        <option>Screenshot Galleries</option>
+                      <div v-if="screenshotImage" class="wow2008-screenshot__image wow2008-screenshot__image--loaded">
+                        <button
+                          type="button"
+                          class="wow2008-screenshot__preview"
+                          :aria-label="`View screenshot: ${screenshot.title}`"
+                          @click="openScreenshot"
+                        >
+                          <img :src="screenshotImageUrl" :alt="screenshot.title || 'Screenshot of the Day'">
+                        </button>
+                      </div>
+                      <div v-else class="wow2008-screenshot__image" role="img" aria-label="No screenshot available"></div>
+                      <a
+                        v-if="screenshot"
+                        class="wow2008-screenshot__title"
+                        :href="`/${screenshot.category?.uri || 'screenshots'}/${screenshot.uuid}`"
+                      >{{ screenshot.title }}</a>
+                      <div v-else class="wow2008-screenshot__empty">
+                        {{ screenshotLoading ? 'Loading screenshot…' : 'No screenshots available' }}
+                      </div>
+                      <select v-model="selectedScreenshotVersion" aria-label="Screenshot gallery" @change="loadScreenshot">
+                        <option value="Classic">Classic</option>
+                        <option value="The Burning Crusade">The Burning Crusade</option>
                       </select>
                     </div>
                     <div class="wow2008-marginal-bottom"></div>
@@ -368,6 +387,67 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
+const {$categories, $image, $lightbox} = useNuxtApp()
+const selectedScreenshotVersion = ref('Classic')
+const screenshot = ref<VespTopic>()
+const screenshotLoading = ref(false)
+const screenshotImage = computed(() => {
+  if (screenshot.value?.cover) {
+    return screenshot.value.cover as VespFile
+  }
+  const block = screenshot.value?.content?.blocks?.find((item: any) => item.type === 'image' && item.data?.uuid)
+  return block?.data as VespFile | undefined
+})
+const screenshotImageUrl = computed(() => {
+  if (!screenshotImage.value) {
+    return ''
+  }
+  return $image(screenshotImage.value, {w: 197, h: 125, fit: 'crop'})
+})
+
+async function loadScreenshot() {
+  screenshotLoading.value = true
+  screenshot.value = undefined
+  try {
+    const category = ($categories.value || []).find((item: VespCategory) => {
+      return item.title?.toLowerCase() === 'screenshots' || item.uri?.toLowerCase() === 'screenshots'
+    })
+    if (!category) {
+      return
+    }
+
+    const {rows: tags} = await useGet('web/tags', {limit: 0})
+    const tag = (tags || []).find((item: VespTag) => item.title === selectedScreenshotVersion.value)
+    if (!tag) {
+      return
+    }
+
+    const data = await useGet('web/topics', {
+      category_id: category.id,
+      tags: String(tag.id),
+      page: 1,
+      limit: 1,
+      sort: 'date',
+    })
+    screenshot.value = data.rows?.[0]
+  } catch (e) {
+    screenshot.value = undefined
+  } finally {
+    screenshotLoading.value = false
+  }
+}
+
+function openScreenshot() {
+  if (!screenshotImage.value) {
+    return
+  }
+  const format = screenshotImage.value.type === 'image/gif' ? 'gif' : 'webp'
+  const href = $image(screenshotImage.value, {fm: format})
+  $lightbox({elements: [{href, type: 'image'}]}).open()
+}
+
+onMounted(loadScreenshot)
 
 const menuAssets = '/ascemu_tbc/images/menu/leftMenu/'
 
@@ -1746,7 +1826,53 @@ const quickLinks = [
 .wow2008-screenshot__image {
   width: 197px;
   height: 125px;
+  overflow: hidden;
   background: #030405 url('/ascemu_tbc/images/visual-infoBox-ssotd.gif') no-repeat 0 0;
+}
+
+.wow2008-screenshot__image--loaded {
+  background: #030405;
+}
+
+.wow2008-screenshot__preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wow2008-screenshot__preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wow2008-screenshot__title {
+  display: block;
+  max-width: 197px;
+  margin: 4px auto 0;
+  overflow: hidden;
+  color: #d7b77a;
+  font: bold 10px/1.25 Arial, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.wow2008-screenshot__title:hover {
+  color: #fff;
+}
+
+.wow2008-screenshot__empty {
+  width: 179px;
+  margin: 4px auto 0;
+  color: #bda77f;
+  font: 10px/1.3 Arial, sans-serif;
+  text-align: center;
 }
 
 .wow2008-screenshot select {
