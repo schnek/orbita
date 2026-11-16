@@ -1582,7 +1582,6 @@ const quickLinks = [
 }
 
 .wow2008-quicklinks,
-.wow2008-screenshot,
 .wow2008-newcomers {
   width: 213px;
   margin: 0 auto 12px;
@@ -1591,10 +1590,10 @@ const quickLinks = [
 
 .wow2008-featured-buttons {
   width: 213px;
-  margin: 0 auto 12px;
+  margin: 0 auto 5px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
 }
 
 .wow2008-featured-buttons a,
@@ -1725,7 +1724,7 @@ const quickLinks = [
 
 .wow2008-promo-carousel {
   width: 213px;
-  margin: 0 auto 12px;
+  margin: 0 auto 5px;
   overflow: hidden;
 }
 
