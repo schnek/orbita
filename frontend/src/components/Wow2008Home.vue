@@ -1655,7 +1655,12 @@ const quickLinks = [
 }
 
 .wow2008-newcomers .wow2008-marginal-top h2 {
-  background-image: url('/ascemu_tbc/images/header-newcomers.jpg');
+  width: 150px;
+  height: 20px;
+  background: url('/ascemu_tbc/images/header-newcomers.jpg') no-repeat 0 0;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .wow2008-marginal-icon {
@@ -1804,16 +1809,24 @@ const quickLinks = [
 
 .wow2008-newcomers-button {
   display: block;
-  width: 115px;
   box-sizing: border-box;
+  width: 115px;
+  height: 25px;
   margin: 2px auto 0;
-  padding: 3px 6px;
+  padding: 5px 6px;
+  border: 1px solid #8d5e17;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #a02d0a, #7d1f09);
+  color: #ffdb59 !important;
   text-align: center;
-  color: #ffdc50 !important;
-  background: #7d1c08;
-  border: 2px ridge #9b793e;
   text-decoration: none !important;
   font: bold 10px/13px Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.wow2008-newcomers-button:hover,
+.wow2008-newcomers-button:focus-visible {
+  filter: brightness(1.08);
 }
 
 .wow2008-main-bottom {
