@@ -473,9 +473,9 @@ const quickLinks = [
   position: relative;
   z-index: 20;
   width: 100%;
-  height: 32px;
+  height: 25px;
   margin: 0;
-  background: linear-gradient(180deg, #174b70 0%, #0c3558 55%, #082744 100%);
+  background: #082744 url('/ascemu_tbc/images/templates/The_Burning_Crusade/bg.gif') repeat-x 50% 0;
   border-bottom: 1px solid #061b30;
   box-sizing: border-box;
 }
@@ -484,13 +484,14 @@ const quickLinks = [
   position: relative;
   width: 989px;
   max-width: 100%;
-  height: 32px;
+  height: 25px;
   margin: 0 auto;
   padding: 0 17px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
 }
 
 .wow2008-topbar nav {
@@ -523,7 +524,7 @@ const quickLinks = [
 
 .wow2008-search {
   position: absolute;
-  top: 40px;
+  top: 39px;
   right: 17px;
   display: flex;
   align-items: center;
