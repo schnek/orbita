@@ -298,6 +298,18 @@
                     <div class="wow2008-marginal-bottom"></div>
                   </section>
 
+                  <section class="wow2008-featured-buttons" aria-label="Featured links">
+                    <a href="#" aria-label="World of Warcraft: Wrath of the Lich King">
+                      <img src="/ascemu_tbc/images/featured/button_wowxnew.jpg" alt="World of Warcraft: Wrath of the Lich King">
+                    </a>
+                    <a href="#" aria-label="World of Warcraft Anniversary">
+                      <img src="/ascemu_tbc/images/featured/button_anniversary.jpg" alt="World of Warcraft Anniversary">
+                    </a>
+                    <a href="#" aria-label="Recruit a Friend">
+                      <img src="/ascemu_tbc/images/featured/button_raf.gif" alt="Recruit a Friend">
+                    </a>
+                  </section>
+
                   <section class="wow2008-screenshot">
                     <div class="wow2008-marginal-top">
                       <span class="wow2008-marginal-icon wow2008-marginal-icon--ssotd"></span>
@@ -1581,6 +1593,24 @@ const quickLinks = [
   width: 213px;
   margin: 0 auto 12px;
   position: relative;
+}
+
+.wow2008-featured-buttons {
+  width: 213px;
+  margin: 0 auto 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wow2008-featured-buttons a,
+.wow2008-featured-buttons img {
+  display: block;
+  width: 100%;
+}
+
+.wow2008-featured-buttons img {
+  height: auto;
 }
 
 .wow2008-marginal-top {
