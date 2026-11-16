@@ -1672,6 +1672,7 @@ const quickLinks = [
 
 .wow2008-newcomers-top {
   position: relative;
+  left: 33px;
   box-sizing: border-box;
   width: 213px;
   height: 36px;
