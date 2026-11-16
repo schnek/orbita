@@ -1295,13 +1295,14 @@ const quickLinks = [
   padding: 0;
 }
 
-.wow2008-community .wow2008-community-action,
-.wow2008-community .wow2008-community-action:visited,
-.wow2008-community .wow2008-community-action:hover,
-.wow2008-community .wow2008-community-action:focus-visible,
-.wow2008-community .wow2008-community-action:active {
-  color: #ffdb59;
-  text-decoration: none;
+.wow2008-community .community-cnt .community-buttons a.wow2008-community-action,
+.wow2008-community .community-cnt .community-buttons a.wow2008-community-action:link,
+.wow2008-community .community-cnt .community-buttons a.wow2008-community-action:visited,
+.wow2008-community .community-cnt .community-buttons a.wow2008-community-action:hover,
+.wow2008-community .community-cnt .community-buttons a.wow2008-community-action:focus,
+.wow2008-community .community-cnt .community-buttons a.wow2008-community-action:active {
+  color: #ffdb59 !important;
+  text-decoration: none !important;
 }
 
 .wow2008-community-bottom {
