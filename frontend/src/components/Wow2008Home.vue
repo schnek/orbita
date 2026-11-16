@@ -281,22 +281,6 @@
                 </section>
 
                 <aside class="wow2008-right">
-                  <section class="wow2008-bc-upgrade">
-                    <h2>
-                      <span class="wow2008-marginal-icon wow2008-marginal-icon--bc-upgrade"></span>
-                      <img src="/ascemu_tbc/images/templates/The_Burning_Crusade/header-expansion.jpg" alt="The Burning Crusade">
-                    </h2>
-                    <div class="wow2008-bc-upgrade__content">
-                      <img src="/ascemu_tbc/images/image-retailbox.gif" alt="World of Warcraft The Burning Crusade">
-                      <div>
-                        <strong>Digital Upgrade</strong>
-                        <span>Burning Crusade</span>
-                        <a href="#">Download Now</a>
-                      </div>
-                    </div>
-                    <div class="wow2008-bc-upgrade__bottom"></div>
-                  </section>
-
                   <section class="wow2008-quicklinks">
                     <div class="wow2008-marginal-top">
                       <h2 class="wow2008-quicklinks-title"><img src="/ascemu_tbc/images/header-quick_links.jpg" alt="Quick Links"></h2>
@@ -1591,103 +1575,6 @@ const quickLinks = [
   background: transparent;
 }
 
-.wow2008-bc-upgrade {
-  position: relative;
-  box-sizing: border-box;
-  width: 213px;
-  margin: 0 auto 12px;
-}
-
-.wow2008-bc-upgrade h2 {
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-  width: 213px;
-  height: 27px;
-  margin: 0;
-  padding: 0;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/marginal-infobox-top.jpg') no-repeat 43px 0;
-  line-height: 0;
-}
-
-.wow2008-bc-upgrade h2 img {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 121px;
-  height: auto;
-  margin-left: 48px;
-}
-
-.wow2008-bc-upgrade__content {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  width: 213px;
-  min-height: 107px;
-  gap: 8px;
-  padding: 7px 10px 8px;
-  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
-  font: 11px/1.25 Arial, sans-serif;
-}
-
-.wow2008-bc-upgrade__content > img {
-  display: block;
-  flex: 0 0 55px;
-  width: 55px;
-  height: 91px;
-  object-fit: contain;
-}
-
-.wow2008-bc-upgrade__content > div {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.wow2008-bc-upgrade__content strong,
-.wow2008-bc-upgrade__content span,
-.wow2008-bc-upgrade__content a {
-  display: block;
-  margin-bottom: 4px;
-}
-
-.wow2008-bc-upgrade__content strong {
-  color: #4b2c13;
-  font-size: 11px;
-  font-weight: bold;
-}
-
-.wow2008-bc-upgrade__content span {
-  color: #49351f;
-  font-size: 10px;
-}
-
-.wow2008-bc-upgrade__content a {
-  padding: 2px 5px;
-  background: #8c260d;
-  color: #f9df85;
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-}
-
-.wow2008-bc-upgrade__content a:hover {
-  background: #a63a16;
-  color: #fff0b2;
-}
-
-.wow2008-bc-upgrade__content a:last-child {
-  margin-bottom: 0;
-}
-
-.wow2008-bc-upgrade__bottom {
-  width: 213px;
-  height: 10px;
-  margin: 0;
-  background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
-}
-
 .wow2008-quicklinks,
 .wow2008-screenshot,
 .wow2008-newcomers {
@@ -1760,10 +1647,6 @@ const quickLinks = [
   width: 46px;
   height: 54px;
   background-repeat: no-repeat;
-}
-
-.wow2008-marginal-icon--bc-upgrade {
-  background-image: url('/ascemu_tbc/images/visual-infoBox-bg.gif');
 }
 
 .wow2008-marginal-icon--ssotd {
