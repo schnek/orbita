@@ -327,12 +327,10 @@
                       <section class="wow2008-newcomers-panel wow2008-newcomers-panel--discover">
                         <h3>Discover World of Warcraft</h3>
                         <div class="wow2008-newcomers-purchase">
-                          <img class="wow2008-newcomers-box" src="/ascemu_tbc/images/image-retailbox.gif" alt="World of Warcraft game box">
-                          <div>
-                            <strong>Looking to purchase World of Warcraft?</strong>
-                            <span>Follow the links below to learn more.</span>
-                          </div>
+                          <strong>Looking to purchase World of Warcraft?</strong>
+                          <span>Follow the links below to learn more.</span>
                         </div>
+                        <img class="wow2008-newcomers-banner" src="/ascemu_tbc/images/marginal-infoBox-cnt-banner.jpg" alt="Discover World of Warcraft">
                         <ul class="wow2008-newcomers-links">
                           <li><a href="#">Cinematic Trailer</a></li>
                           <li><a href="#">Features Page</a></li>
@@ -1737,28 +1735,14 @@ const quickLinks = [
 }
 
 .wow2008-newcomers-purchase {
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  min-height: 66px;
+  min-height: 0;
 }
 
-.wow2008-newcomers-box {
+.wow2008-newcomers-banner {
   display: block;
-  flex: 0 0 42px;
-  width: 42px;
-  height: 61px;
-  object-fit: contain;
-}
-
-.wow2008-newcomers-purchase > div {
-  min-width: 0;
-  padding-top: 1px;
-}
-
-.wow2008-newcomers-purchase strong,
-.wow2008-newcomers-purchase span {
-  display: block;
+  width: 100%;
+  height: auto;
+  margin: 5px 0 3px;
 }
 
 .wow2008-newcomers-purchase strong,
