@@ -184,16 +184,8 @@
                                   </small></p>
                                   <div class="community-buttons">
                                     <ul>
-                                      <li><div class="redButton-container">
-                                        <span class="community-button-left"></span>
-                                        <span class="community-button-label"><a href="/community/warcraftweekly.html">Warcraft Weekly</a><span class="rdbtn_sh">Warcraft Weekly</span></span>
-                                        <span class="community-button-right"></span>
-                                      </div></li>
-                                      <li><div class="redButton-container">
-                                        <span class="community-button-left"></span>
-                                        <span class="community-button-label"><a href="/community/communitylinks.html">Spotlight Archive</a><span class="rdbtn_sh">Spotlight Archive</span></span>
-                                        <span class="community-button-right"></span>
-                                      </div></li>
+                                      <li><a class="wow2008-community-action" href="/community/warcraftweekly.html">Warcraft Weekly</a></li>
+                                      <li><a class="wow2008-community-action" href="/community/communitylinks.html">Spotlight Archive</a></li>
                                     </ul>
                                   </div>
                                 </div>
@@ -1287,59 +1279,27 @@ const quickLinks = [
   padding: 0;
 }
 
-.wow2008-community .redButton-container {
-  display: flex;
-  align-items: stretch;
-  height: 22px;
-  white-space: nowrap;
-}
-
-.wow2008-community .community-button-left,
-.wow2008-community .community-button-right {
-  display: block;
-  flex: 0 0 auto;
-  height: 22px;
-  background-repeat: no-repeat;
-}
-
-.wow2008-community .community-button-left {
-  width: 5px;
-  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-left.gif');
-}
-
-.wow2008-community .community-button-right {
-  width: 7px;
-  background-image: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-right.gif');
-}
-
-.wow2008-community .community-button-label {
-  position: relative;
-  width: 110px;
-  height: 22px;
-  display: block;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/button-center.gif') repeat-x 0 0;
-  text-align: center;
-  font: bold 11px/22px Arial, sans-serif;
-}
-
-.wow2008-community .community-button-label a,
-.wow2008-community .community-button-label .rdbtn_sh {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 110px;
-  height: 22px;
-  color: #fff4cf;
+.wow2008-community .wow2008-community-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 55px;
+  height: 21px;
+  padding: 0 8px;
+  border: 1px solid #8d5e17;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #a02d0a, #7d1f09);
+  color: #ffdb59;
+  font: bold 10px Arial, sans-serif;
   text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.wow2008-community .community-button-label .rdbtn_sh {
-  display: none;
-}
-
-.wow2008-community .community-button-label a {
-  z-index: 1;
-  text-shadow: 1px 1px 1px #3b0905, -1px 0 #3b0905, 0 1px #3b0905;
+.wow2008-community .wow2008-community-action:hover,
+.wow2008-community .wow2008-community-action:focus-visible {
+  filter: brightness(1.08);
 }
 
 .wow2008-community-bottom {
