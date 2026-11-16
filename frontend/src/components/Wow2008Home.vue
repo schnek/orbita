@@ -1850,6 +1850,135 @@ const quickLinks = [
 }
 
 
+.wow2008-marginal-body {
+  box-sizing: border-box;
+  width: 213px;
+  padding: 0 8px 6px;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+}
+
+.wow2008-quicklinks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 5px;
+}
+
+.wow2008-quicklinks li {
+  margin: 0 10px 0 0;
+  padding: 0;
+  border-bottom: 1px solid #af9771;
+}
+
+.wow2008-quicklinks a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 25px;
+  color: #1e4378;
+  font: bold 11px Arial, sans-serif;
+  text-decoration: none;
+}
+
+.wow2008-quicklinks a img {
+  display: block;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.wow2008-quicklinks a span {
+  display: block;
+}
+
+.wow2008-quicklinks a:hover {
+  color: #c60000;
+}
+
+.wow2008-marginal-bottom {
+  height: 10px;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
+}
+
+.wow2008-promo-carousel {
+  width: 213px;
+  margin: 0 auto 5px;
+  overflow: hidden;
+}
+
+.wow2008-promo-carousel__slides {
+  display: grid;
+  width: 100%;
+}
+
+.wow2008-promo-carousel__slides img {
+  display: block;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: wow2008-promo-rotate 15s infinite;
+}
+
+.wow2008-promo-carousel__slides img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.wow2008-promo-carousel__slides img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes wow2008-promo-rotate {
+  0%, 30% {
+    opacity: 1;
+  }
+  33.333%, 100% {
+    opacity: 0;
+  }
+}
+
+.wow2008-newcomers-body {
+  box-sizing: border-box;
+  width: 213px;
+  padding: 7px 10px 8px;
+  background: url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
+  font: 10px/1.25 Arial, sans-serif;
+}
+
+.wow2008-newcomers-entry {
+  position: relative;
+  min-height: 67px;
+  margin: 0 0 6px;
+  padding-left: 65px;
+}
+
+.wow2008-newcomers-entry img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+}
+
+.wow2008-newcomers-entry strong,
+.wow2008-newcomers-entry span {
+  display: block;
+}
+
+.wow2008-newcomers-button {
+  display: block;
+  width: 103px;
+  margin: 4px auto 0;
+  padding: 3px 6px;
+  text-align: center;
+  color: #ffdc50 !important;
+  background: #7d1c08;
+  border: 2px ridge #9b793e;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+
 .wow2008-main-bottom {
   box-sizing: border-box;
   position: relative;
