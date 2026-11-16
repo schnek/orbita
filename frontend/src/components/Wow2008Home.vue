@@ -472,39 +472,39 @@ const quickLinks = [
 .wow2008-topbar {
   position: relative;
   z-index: 20;
-  width: 989px;
-  max-width: calc(100% - 24px);
+  width: 100%;
   height: 32px;
-  margin: 0 auto;
-  background: #072540 url('/ascemu_tbc/images/templates/The_Burning_Crusade/bg.gif') 50% 0 repeat-x;
-  border-bottom: 1px solid #143352;
+  margin: 0;
+  background: linear-gradient(180deg, #174b70 0%, #0c3558 55%, #082744 100%);
+  border-bottom: 1px solid #061b30;
   box-sizing: border-box;
 }
 
 .wow2008-topbar__inner {
-  width: 100%;
+  position: relative;
+  width: 989px;
   max-width: 100%;
   height: 32px;
   margin: 0 auto;
   padding: 0 17px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
 }
 
 .wow2008-topbar nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 10px;
   height: 100%;
   white-space: nowrap;
 }
 
 .wow2008-topbar nav a {
   color: #fbb917;
-  font: bold 11px Tahoma, Arial, sans-serif;
+  font: bold 10px Tahoma, Arial, sans-serif;
   text-decoration: none;
   text-shadow: 1px 1px #001027;
 }
@@ -516,14 +516,15 @@ const quickLinks = [
 
 .wow2008-topbar__divider {
   display: block;
-  width: 2px;
-  height: 18px;
-  background: linear-gradient(90deg, #172d46, #91a7b8 45%, #172d46);
+  width: 1px;
+  height: 15px;
+  background: linear-gradient(180deg, #426783, #9aafbf 50%, #426783);
 }
 
 .wow2008-search {
-  position: relative;
+  position: absolute;
   top: 40px;
+  right: 17px;
   display: flex;
   align-items: center;
   height: 34px;
