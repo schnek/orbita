@@ -473,8 +473,8 @@ const quickLinks = [
   position: relative;
   z-index: 20;
   height: 32px;
-  background: #072540 url('/ascemu_tbc/images/templates/The_Burning_Crusade/bg.gif') 50% 0 repeat-x;
-  border-bottom: 1px solid #143352;
+  background: linear-gradient(180deg, #1b527d 0%, #123f66 48%, #0b2d4d 100%);
+  border-bottom: 1px solid #071f38;
 }
 
 .wow2008-topbar__inner {
@@ -486,7 +486,7 @@ const quickLinks = [
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: url('/ascemu_tbc/images/templates/The_Burning_Crusade/topbg2.gif') no-repeat 50% 0;
+  background: transparent;
 }
 
 .wow2008-topbar nav {
