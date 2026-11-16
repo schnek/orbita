@@ -310,37 +310,12 @@
                     </a>
                   </section>
 
-                  <section class="wow2008-screenshot">
-                    <div class="wow2008-marginal-top">
-                      <span class="wow2008-marginal-icon wow2008-marginal-icon--ssotd"></span>
-                      <h2></h2>
+                  <section class="wow2008-promo-carousel" aria-label="World of Warcraft promotions">
+                    <div class="wow2008-promo-carousel__slides">
+                      <img src="/ascemu_tbc/images/teasers/en/ad_bctrial.jpg" alt="The Burning Crusade trial">
+                      <img src="/ascemu_tbc/images/teasers/en/ad_recruitafriend.jpg" alt="Recruit a Friend">
+                      <img src="/ascemu_tbc/images/teasers/en/switcher_banner_pcnc.jpg" alt="World of Warcraft editions">
                     </div>
-                    <div class="wow2008-marginal-body wow2008-screenshot-body">
-                      <div v-if="screenshotImage" class="wow2008-screenshot__image wow2008-screenshot__image--loaded">
-                        <button
-                          type="button"
-                          class="wow2008-screenshot__preview"
-                          :aria-label="`View screenshot: ${screenshot.title}`"
-                          @click="openScreenshot"
-                        >
-                          <img :src="screenshotImageUrl" :alt="screenshot.title || 'Screenshot of the Day'">
-                        </button>
-                      </div>
-                      <div v-else class="wow2008-screenshot__image" role="img" aria-label="No screenshot available"></div>
-                      <a
-                        v-if="screenshot"
-                        class="wow2008-screenshot__title"
-                        :href="`/${screenshot.category?.uri || 'screenshots'}/${screenshot.uuid}`"
-                      >{{ screenshot.title }}</a>
-                      <div v-else class="wow2008-screenshot__empty">
-                        {{ screenshotLoading ? 'Loading screenshot…' : 'No screenshots available' }}
-                      </div>
-                      <select v-model="selectedScreenshotVersion" aria-label="Screenshot gallery" @change="loadScreenshot">
-                        <option value="Classic">Classic</option>
-                        <option value="The Burning Crusade">The Burning Crusade</option>
-                      </select>
-                    </div>
-                    <div class="wow2008-marginal-bottom"></div>
                   </section>
 
                   <section class="wow2008-newcomers">
@@ -387,67 +362,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
-const {$categories, $image, $lightbox} = useNuxtApp()
-const selectedScreenshotVersion = ref('Classic')
-const screenshot = ref<VespTopic>()
-const screenshotLoading = ref(false)
-const screenshotImage = computed(() => {
-  if (screenshot.value?.cover) {
-    return screenshot.value.cover as VespFile
-  }
-  const block = screenshot.value?.content?.blocks?.find((item: any) => item.type === 'image' && item.data?.uuid)
-  return block?.data as VespFile | undefined
-})
-const screenshotImageUrl = computed(() => {
-  if (!screenshotImage.value) {
-    return ''
-  }
-  return $image(screenshotImage.value, {w: 197, h: 125, fit: 'crop'})
-})
-
-async function loadScreenshot() {
-  screenshotLoading.value = true
-  screenshot.value = undefined
-  try {
-    const category = ($categories.value || []).find((item: VespCategory) => {
-      return item.title?.toLowerCase() === 'screenshots' || item.uri?.toLowerCase() === 'screenshots'
-    })
-    if (!category) {
-      return
-    }
-
-    const {rows: tags} = await useGet('web/tags', {limit: 0})
-    const tag = (tags || []).find((item: VespTag) => item.title === selectedScreenshotVersion.value)
-    if (!tag) {
-      return
-    }
-
-    const data = await useGet('web/topics', {
-      category_id: category.id,
-      tags: String(tag.id),
-      page: 1,
-      limit: 1,
-      sort: 'date',
-    })
-    screenshot.value = data.rows?.[0]
-  } catch (e) {
-    screenshot.value = undefined
-  } finally {
-    screenshotLoading.value = false
-  }
-}
-
-function openScreenshot() {
-  if (!screenshotImage.value) {
-    return
-  }
-  const format = screenshotImage.value.type === 'image/gif' ? 'gif' : 'webp'
-  const href = $image(screenshotImage.value, {fm: format})
-  $lightbox({elements: [{href, type: 'image'}]}).open()
-}
-
-onMounted(loadScreenshot)
 
 const menuAssets = '/ascemu_tbc/images/menu/leftMenu/'
 
@@ -1741,10 +1655,6 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/ql-plainBox-bot.jpg') no-repeat 0 0;
 }
 
-.wow2008-screenshot .wow2008-marginal-top h2 {
-  background-image: url('/ascemu_tbc/images/header-ssotd.gif');
-}
-
 .wow2008-newcomers .wow2008-marginal-top h2 {
   background-image: url('/ascemu_tbc/images/header-newcomers.jpg');
 }
@@ -1757,11 +1667,6 @@ const quickLinks = [
   width: 46px;
   height: 54px;
   background-repeat: no-repeat;
-}
-
-.wow2008-marginal-icon--ssotd {
-  top: -6px;
-  background-image: url('/ascemu_tbc/images/visual-infoBox-ssotd.gif');
 }
 
 .wow2008-marginal-icon--newcomers {
@@ -1818,72 +1723,41 @@ const quickLinks = [
   background: url('/ascemu_tbc/images/marginal-infoBox-bottom.gif') no-repeat 0 0;
 }
 
-.wow2008-screenshot-body {
-  padding: 0 8px 6px;
-  background: #050607 url('/ascemu_tbc/images/marginal-infoBox-bg.gif') repeat-y 0 0;
-}
-
-.wow2008-screenshot__image {
-  width: 197px;
-  height: 125px;
+.wow2008-promo-carousel {
+  width: 213px;
+  margin: 0 auto 12px;
   overflow: hidden;
-  background: #030405 url('/ascemu_tbc/images/visual-infoBox-ssotd.gif') no-repeat 0 0;
 }
 
-.wow2008-screenshot__image--loaded {
-  background: #030405;
-}
-
-.wow2008-screenshot__preview {
-  display: block;
+.wow2008-promo-carousel__slides {
+  display: grid;
   width: 100%;
-  height: 100%;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
 }
 
-.wow2008-screenshot__preview img {
+.wow2008-promo-carousel__slides img {
   display: block;
+  grid-area: 1 / 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  opacity: 0;
+  animation: wow2008-promo-rotate 15s infinite;
 }
 
-.wow2008-screenshot__title {
-  display: block;
-  max-width: 197px;
-  margin: 4px auto 0;
-  overflow: hidden;
-  color: #d7b77a;
-  font: bold 10px/1.25 Arial, sans-serif;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-decoration: none;
+.wow2008-promo-carousel__slides img:nth-child(2) {
+  animation-delay: 5s;
 }
 
-.wow2008-screenshot__title:hover {
-  color: #fff;
+.wow2008-promo-carousel__slides img:nth-child(3) {
+  animation-delay: 10s;
 }
 
-.wow2008-screenshot__empty {
-  width: 179px;
-  margin: 4px auto 0;
-  color: #bda77f;
-  font: 10px/1.3 Arial, sans-serif;
-  text-align: center;
-}
-
-.wow2008-screenshot select {
-  display: block;
-  width: 179px;
-  height: 17px;
-  margin: 3px auto 0;
-  border: 1px solid #835a20;
-  background: #ae813e;
-  color: #17120a;
-  font-size: 10px;
+@keyframes wow2008-promo-rotate {
+  0%, 30% {
+    opacity: 1;
+  }
+  33.333%, 100% {
+    opacity: 0;
+  }
 }
 
 .wow2008-newcomers-body {
