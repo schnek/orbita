@@ -1777,6 +1777,7 @@ const quickLinks = [
   width: 243px;
   height: 445px;
   z-index: 2;
+  clip-path: inset(0 0 70px 0);
 }
 
 .wow2008-statue-right {
@@ -1786,6 +1787,7 @@ const quickLinks = [
   width: 95px;
   height: 342px;
   z-index: 2003;
+  clip-path: inset(0 0 70px 0);
 }
 
 .visually-hidden {
