@@ -1737,10 +1737,7 @@ const quickLinks = [
   width: 790px;
   height: 41px;
   margin-left: calc(50vw - 316.5px);
-  background:
-    url('/ascemu_tbc/images/layout/frame_bottom-left.jpg') no-repeat left top,
-    url('/ascemu_tbc/images/layout/frame_bottom-right.jpg') no-repeat right top,
-    url('/ascemu_tbc/images/layout/frame_bottom-bg.jpg') repeat-x left top;
+  background: none;
 }
 
 .wow2008-main-bottom > div,
@@ -1777,7 +1774,6 @@ const quickLinks = [
   width: 243px;
   height: 445px;
   z-index: 2;
-  clip-path: inset(0 0 70px 0);
 }
 
 .wow2008-statue-right {
@@ -1787,7 +1783,6 @@ const quickLinks = [
   width: 95px;
   height: 342px;
   z-index: 2003;
-  clip-path: inset(0 0 70px 0);
 }
 
 .visually-hidden {
